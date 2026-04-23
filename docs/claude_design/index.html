@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KIDS e.V. - Kindergarten & Elterninitiative Berlin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link id="display-font-link" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Page-scoped extras */
+.hero-two { grid-template-columns: 1.2fr 1fr; }
+.two-col { grid-template-columns: 1fr 1fr; }
+.features { grid-template-columns: 1fr 1fr; }
+.values-grid { grid-template-columns: repeat(3, 1fr); }
+.day-grid { grid-template-columns: repeat(6, 1fr); }
+.pillars { grid-template-columns: repeat(4, 1fr); }
+.team-grid { grid-template-columns: repeat(4, 1fr); }
+.news-grid { grid-template-columns: 1.3fr 1fr 1fr; }
+
+/* Gallery mosaic */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  gap: 16px;
+}
+.tile { border-radius: 24px; overflow: hidden; }
+.tile-sq { grid-column: span 1; grid-row: span 1; }
+.tile-wide { grid-column: span 2; grid-row: span 1; }
+.tile-tall { grid-column: span 1; grid-row: span 2; }
+
+/* Tweaks panel */
+.tweaks-panel {
+  position: fixed; bottom: 20px; right: 20px; z-index: 100;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,.18), 0 2px 8px rgba(0,0,0,.06);
+  padding: 20px;
+  width: 300px;
+  font-family: var(--body);
+  display: none;
+}
+.tweaks-panel.open { display: block; }
+.tweaks-title { font-family: var(--display); font-size: 20px; margin: 0 0 14px; }
+.tweaks-row { margin-bottom: 16px; }
+.tweaks-row label { display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin-bottom: 8px; }
+.tweaks-opts { display: flex; gap: 6px; flex-wrap: wrap; }
+.tweaks-opt {
+  padding: 8px 12px; border-radius: 999px; border: 2px solid var(--cream-2); background: white;
+  cursor: pointer; font-size: 13px; font-weight: 700; color: var(--ink); font-family: var(--body);
+}
+.tweaks-opt.active { background: var(--ink); color: white; border-color: var(--ink); }
+
+@media (max-width: 880px) {
+  .hero-two, .two-col, .features, .values-grid, .news-grid { grid-template-columns: 1fr !important; }
+  .day-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .pillars { grid-template-columns: repeat(2, 1fr) !important; }
+  .team-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .gallery { grid-template-columns: repeat(2, 1fr) !important; grid-auto-rows: 140px !important; }
+  .tile-wide { grid-column: span 2 !important; }
+  .tile-tall { grid-column: span 1 !important; grid-row: span 2 !important; }
+  .tweaks-panel { left: 12px; right: 12px; bottom: 12px; width: auto; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="shapes.js"></script>
+<script type="text/babel" src="chrome.jsx"></script>
+<script type="text/babel" src="page-home.jsx"></script>
+<script type="text/babel" src="page-ueber.jsx"></script>
+<script type="text/babel" src="page-rest.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "displayFont": "Caprasimo",
+  "heroVariant": "typo"
+}/*EDITMODE-END*/;
+
+const FONT_OPTIONS = [
+  { id: "Caprasimo",  label: "Caprasimo",  url: "Caprasimo", stack: '"Caprasimo", Georgia, serif' },
+  { id: "Lobster",    label: "Lobster",    url: "Lobster", stack: '"Lobster", Georgia, serif' },
+  { id: "Fredoka",    label: "Fredoka",    url: "Fredoka:wght@600", stack: '"Fredoka", system-ui, sans-serif' },
+  { id: "Bagel Fat One", label: "Bagel",   url: "Bagel+Fat+One", stack: '"Bagel Fat One", Georgia, serif' },
+  { id: "Gloock",     label: "Gloock",     url: "Gloock", stack: '"Gloock", Georgia, serif' },
+];
+
+const HERO_OPTIONS = [
+  { id: "formen", label: "Formen" },
+  { id: "typo",   label: "Typo" },
+  { id: "foto",   label: "Foto" },
+];
+
+const App = () => {
+  const getInitial = () => {
+    try { return JSON.parse(localStorage.getItem("kids_tweaks") || "null") || TWEAK_DEFAULTS; }
+    catch { return TWEAK_DEFAULTS; }
+  };
+  const [tweaks, setTweaks] = React.useState(getInitial);
+  const [page, setPage] = React.useState(() => {
+    const h = location.hash.replace("#", "");
+    return PAGES.find(p => p.id === h) ? h : "home";
+  });
+  const [editPanelOpen, setEditPanelOpen] = React.useState(false);
+
+  // Apply display font
+  React.useEffect(() => {
+    const font = FONT_OPTIONS.find(f => f.id === tweaks.displayFont) || FONT_OPTIONS[0];
+    document.getElementById("display-font-link").href =
+      `https://fonts.googleapis.com/css2?family=${font.url}&family=Nunito:wght@400;600;700;800;900&display=swap`;
+    document.documentElement.style.setProperty("--display", font.stack);
+    localStorage.setItem("kids_tweaks", JSON.stringify(tweaks));
+  }, [tweaks]);
+
+  // Edit mode listener
+  React.useEffect(() => {
+    const handler = (e) => {
+      if (e.data?.type === "__activate_edit_mode") setEditPanelOpen(true);
+      if (e.data?.type === "__deactivate_edit_mode") setEditPanelOpen(false);
+    };
+    window.addEventListener("message", handler);
+    window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+    return () => window.removeEventListener("message", handler);
+  }, []);
+
+  const updateTweak = (key, value) => {
+    setTweaks(t => {
+      const next = { ...t, [key]: value };
+      window.parent.postMessage({ type: "__edit_mode_set_keys", edits: { [key]: value } }, "*");
+      return next;
+    });
+  };
+
+  const navigate = (id) => {
+    setPage(id);
+    location.hash = id;
+  };
+
+  const pageProps = { onNavigate: navigate };
+
+  let PageComp = null;
+  if (page === "home")    PageComp = <Home {...pageProps} heroVariant={tweaks.heroVariant}/>;
+  else if (page === "ueber")   PageComp = <Ueber {...pageProps}/>;
+  else if (page === "wie")     PageComp = <Wie {...pageProps}/>;
+  else if (page === "team")    PageComp = <Team {...pageProps}/>;
+  else if (page === "galerie") PageComp = <Galerie {...pageProps}/>;
+  else if (page === "news")    PageComp = <News {...pageProps}/>;
+  else if (page === "faq")     PageComp = <FAQ {...pageProps}/>;
+  else if (page === "kontakt") PageComp = <Kontakt {...pageProps}/>;
+
+  return (
+    <div data-screen-label={`${PAGES.findIndex(p=>p.id===page)+1} ${PAGES.find(p=>p.id===page)?.label || page}`}>
+      <Nav current={page} onNavigate={navigate}/>
+      {PageComp}
+      <Footer onNavigate={navigate}/>
+
+      <div className={`tweaks-panel ${editPanelOpen ? "open" : ""}`}>
+        <h3 className="tweaks-title">Tweaks</h3>
+        <div className="tweaks-row">
+          <label>Display-Font</label>
+          <div className="tweaks-opts">
+            {FONT_OPTIONS.map(f => (
+              <button key={f.id}
+                className={`tweaks-opt ${tweaks.displayFont === f.id ? "active" : ""}`}
+                style={{ fontFamily: f.stack }}
+                onClick={() => updateTweak("displayFont", f.id)}>{f.label}</button>
+            ))}
+          </div>
+        </div>
+        <div className="tweaks-row">
+          <label>Hero-Variante (Startseite)</label>
+          <div className="tweaks-opts">
+            {HERO_OPTIONS.map(h => (
+              <button key={h.id}
+                className={`tweaks-opt ${tweaks.heroVariant === h.id ? "active" : ""}`}
+                onClick={() => updateTweak("heroVariant", h.id)}>{h.label}</button>
+            ))}
+          </div>
+        </div>
+        <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: "12px 0 0" }}>
+          Wechsle zu <a href="#home" onClick={(e)=>{e.preventDefault();navigate("home");}}>Start</a>, um Hero-Varianten zu sehen.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

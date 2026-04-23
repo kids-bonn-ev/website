@@ -1,0 +1,72 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = "KIDS e.V. - Elterninitiative Kindergarten in Bonn. Kleine Gruppen, Freispiel, echte Mitgestaltung.",
+  ogImage = "/logos/schriftzug-regenwurm.png",
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://kids-bonn.de");
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical.toString()} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    {/* Preload the two most-used Maybug weights so headings don't flash during navigation */}
+    <link
+      rel="preload"
+      href="/fonts/MaybugMSBlack.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/MaybugMSDecorative.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="de_DE" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>{title}</title>
+
+    <meta name="generator" content={Astro.generator} />
+
+    {/* View Transitions + persistent Header/Footer. Auto-prefetches linked pages on hover. */}
+    <ClientRouter />
+  </head>
+  <body>
+    <a href="#main" class="visually-hidden">Zum Inhalt springen</a>
+    <Header transition:persist="site-header" />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer transition:persist="site-footer" />
+  </body>
+</html>

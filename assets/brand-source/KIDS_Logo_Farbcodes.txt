@@ -1,0 +1,25 @@
+KIDS-Farben
+
+Grün
+a2ce91
+RGB: 64, 81, 57
+
+Rosa
+f9c7b7
+RGB: 100, 78, 71
+
+Lila
+dcb8d8
+RGB: 86, 72, 85
+
+Gelb
+ffd00a
+RGB: 100, 82, 4
+
+Blau
+9bc2e1
+RGB: 61, 76, 88
+
+Rot
+ee7436
+RGB: 93, 46, 21

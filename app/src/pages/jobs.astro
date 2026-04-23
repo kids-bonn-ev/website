@@ -1,0 +1,419 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+import Deko from "../components/Deko.astro";
+
+const benefits = [
+  {
+    title: "Mitgestalten, nicht abarbeiten.",
+    text: "Konzept, Tagesablauf, Material — du prägst das mit. Keine hundertste Trägervorgabe.",
+  },
+  {
+    title: "Pädagogik bleibt Pädagogik.",
+    text: "Eltern tragen den Rahmen: Einkauf, Gebäude, Feste, Finanzen. Du bist Expert:in für die pädagogische Arbeit. Klare Rollen, klare Köpfe.",
+  },
+  {
+    title: "TvöD und Weihnachtsgeld.",
+    text: "Faire, transparente Vergütung nach Tarif. Dazu Weihnachtsgeld.",
+  },
+  {
+    title: "Wachsen gehört zur Arbeit.",
+    text: "Supervision, Fortbildungen, wöchentliche Teambesprechungen, betriebliche Weiterbildung.",
+  },
+  {
+    title: "Neubau mit 1.700 m² Garten.",
+    text: "Turnhalle mit Kletterwand, Werkstatt, Atelier, eigene Küche. Pädagogik im Freien, jeden Tag.",
+  },
+  {
+    title: "Eltern auf Augenhöhe.",
+    text: "Keine Kunden. Partner:innen, die Verantwortung mittragen.",
+  },
+];
+
+const mitbringen = [
+  "Abgeschlossene Ausbildung für pädagogische Arbeit in einer Kita",
+  "Wertschätzende Grundhaltung",
+  "Motivation und Engagement",
+  "Teamfähigkeit",
+  "Zuverlässigkeit",
+  "Gestaltungswillen",
+];
+---
+
+<BaseLayout
+  title="Jobs im KIDS e.V. - Elterninitiative Kindergarten in Bonn"
+  description="Pädagogische Fachkräfte (m/w/d) gesucht. TvöD, Weihnachtsgeld, Supervision, Neubau mit 1.700 m² Garten."
+>
+
+  <section class="jobs-hero">
+    <Deko name="kreis"   size={70}  top="20%" right="10%" class="deko--hide-mobile" />
+    <Deko name="blume01" size={90}  bottom="10%" left="8%" rotate={-10} class="deko--hide-mobile" />
+    <Deko name="welle"   size={130} top="12%" left="12%" opacity={0.7} class="deko--hide-mobile" />
+
+    <div class="container jobs-hero__inner">
+      <p class="eyebrow">Jobs @ KIDS</p>
+      <h1>Pädagogik mit Rückenwind.</h1>
+      <p class="lede">
+        Arbeiten in einer Bonner Elterninitiative: kleine Gruppen, starke Eltern-Community,
+        und der Raum, wirklich pädagogisch zu arbeiten.
+      </p>
+      <div class="hero__ctas">
+        <Button href="#stelle">Zur Stelle</Button>
+        <Button href="mailto:kita@kids-bonn.de" variant="outline">Direkt bewerben</Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Warum KIDS?</p>
+        <h2>Was bei uns konkret anders ist.</h2>
+      </div>
+
+      <div class="benefits">
+        {benefits.map((b) => (
+          <article class="benefits__item">
+            <h3>{b.title}</h3>
+            <p>{b.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container paedagogik">
+      <div class="paedagogik__left">
+        <p class="eyebrow">Unser Ansatz</p>
+        <h2>Das Kind<br />als Akteur.</h2>
+      </div>
+      <div class="paedagogik__right">
+        <p>
+          Wir sehen das Kind als <strong>selbstbestimmten Akteur seiner
+          Entwicklung</strong> und gestalten den Alltag situationsorientiert.
+        </p>
+        <p>
+          Eine offene und freundliche Atmosphäre liegt uns am Herzen. Wir leben
+          den Kita-Alltag so nachhaltig wie möglich. Und wir freuen uns,
+          gemeinsam mit dem Team unseren neuen Kindergarten in der Limpericher
+          Straße weiter zu entwickeln und wachsen zu lassen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stelle">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Offene Stelle</p>
+        <h2>Pädagogische Mitarbeiter:innen<br/>(m/w/d).</h2>
+      </div>
+
+      <div class="stelle-card">
+        <p class="stelle-card__meta">
+          <span>Eintritt: <strong>ab sofort</strong></span>
+          <span>·</span>
+          <span>Laufend offen</span>
+          <span>·</span>
+          <span>Teil- oder Vollzeit</span>
+        </p>
+
+        <p class="stelle-card__intro">
+          Wir suchen <strong>laufend</strong> pädagogische Fachkräfte für unsere
+          drei Gruppen Mond, Sonne und Zwerge. Die Stelle ist evergreen. Auch
+          wenn du externe Ausschreibungen mit abgelaufenen Fristen findest,
+          nehmen wir Bewerbungen jederzeit entgegen.
+        </p>
+
+        <div class="stelle-card__grid">
+          <div class="stelle-card__col">
+            <h3>Was dich erwartet</h3>
+            <ul class="stelle-list">
+              <li>Neubau mit 1.700&nbsp;m² Garten und vielfältigen Möglichkeiten</li>
+              <li>Raum, dich aktiv und kreativ einzubringen</li>
+              <li>Enge Zusammenarbeit mit einer engagierten Elternschaft</li>
+              <li>Supervision, Fortbildungen, wöchentliche Teambesprechungen</li>
+              <li>Vergütung nach TvöD</li>
+              <li>Weihnachtsgeld</li>
+            </ul>
+          </div>
+
+          <div class="stelle-card__col">
+            <h3>Was du mitbringst</h3>
+            <ul class="stelle-list">
+              {mitbringen.map((m) => <li>{m}</li>)}
+            </ul>
+          </div>
+        </div>
+
+        <div class="stelle-card__cta">
+          <Button href="mailto:kita@kids-bonn.de">Jetzt bewerben</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Bewerbung</p>
+        <h2>Kein Ritual. Kein Papierberg.</h2>
+      </div>
+
+      <div class="apply">
+        <ol class="apply__steps">
+          <li>
+            <strong>Schreib uns eine Mail.</strong>
+            Ein kurzer Lebenslauf reicht. Wir brauchen keine Mappe.
+          </li>
+          <li>
+            <strong>Wir melden uns innerhalb weniger Tage.</strong>
+            Telefonisch oder per Mail.
+          </li>
+          <li>
+            <strong>Wir lernen uns kennen.</strong>
+            Erst im Gespräch, dann bei einem Hospitationstag im Haus.
+          </li>
+          <li>
+            <strong>Entscheidung.</strong>
+            Für beide Seiten, in Ruhe.
+          </li>
+        </ol>
+
+        <aside class="apply__side">
+          <h3>Deine Ansprechperson</h3>
+          <p class="apply__name">Lena&nbsp;Steib</p>
+          <p class="apply__contacts">
+            <a href="mailto:kita@kids-bonn.de">kita@kids-bonn.de</a><br />
+            <a href="tel:+492284787950">0228&nbsp;478795</a>
+          </p>
+          <p class="hand apply__hand">
+            Lieber erst ein Kaffee? Ruf einfach an.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .jobs-hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(4rem, 9vw, 7rem);
+    background: var(--c-bg-cream);
+  }
+  .jobs-hero__inner {
+    position: relative;
+    text-align: center;
+  }
+  .jobs-hero__inner .lede {
+    max-width: 42rem;
+    margin-inline: auto;
+  }
+  .jobs-hero__inner h1 {
+    margin-block: var(--s-3) var(--s-5);
+  }
+  .hero__ctas {
+    display: flex;
+    justify-content: center;
+    gap: var(--s-4);
+    margin-top: var(--s-6);
+    flex-wrap: wrap;
+  }
+
+  /* --- Warum KIDS? --- */
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: var(--s-5);
+  }
+  .benefits__item {
+    background: #fff;
+    border-radius: var(--r-lg);
+    padding: var(--s-5);
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+  .benefits__item h3 {
+    margin-bottom: var(--s-3);
+    font-size: 1.3rem;
+  }
+  .benefits__item p {
+    margin: 0;
+    color: var(--c-ink-soft);
+  }
+  .benefits__item::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: var(--s-5);
+    width: 40px;
+    height: 6px;
+    background: var(--c-orange);
+    border-radius: var(--r-pill);
+  }
+
+  /* --- Pädagogischer Ansatz --- */
+  .paedagogik {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.9fr) minmax(0, 1.4fr);
+    gap: var(--s-6) var(--s-8);
+    align-items: start;
+  }
+  .paedagogik__left h2 { margin: 0; }
+  .paedagogik__right p {
+    margin: 0 0 var(--s-4);
+    max-width: 38rem;
+  }
+  .paedagogik__right p:last-child { margin-bottom: 0; }
+  @media (max-width: 800px) {
+    .paedagogik { grid-template-columns: 1fr; gap: var(--s-4); }
+  }
+
+  /* --- Stelle-Card --- */
+  .stelle-card {
+    background: #fff;
+    border-radius: var(--r-lg);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    box-shadow: var(--shadow-md);
+    max-width: 60rem;
+    margin-inline: auto;
+  }
+  .stelle-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    color: var(--c-ink-soft);
+    font-size: 0.95rem;
+    margin: 0 0 var(--s-5);
+  }
+  .stelle-card__meta span:nth-child(even) {
+    opacity: 0.5;
+  }
+  .stelle-card__intro {
+    margin: 0 0 var(--s-6);
+    max-width: 40rem;
+  }
+
+  .stelle-card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-6);
+    padding-top: var(--s-5);
+    border-top: 1px solid var(--c-bg-sand);
+  }
+  .stelle-card__col h3 {
+    font-size: 1.25rem;
+    margin: 0 0 var(--s-4);
+  }
+
+  .stelle-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+  }
+  .stelle-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    line-height: 1.45;
+  }
+  .stelle-list li::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url("/deco/bullet.svg") center / contain no-repeat;
+    margin-top: calc(0.725em - 0.4rem);
+  }
+
+  .stelle-card__cta {
+    margin-top: var(--s-6);
+    text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    .stelle-card__grid { grid-template-columns: 1fr; gap: var(--s-5); }
+  }
+
+  /* --- Bewerbung --- */
+  .apply {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--s-7);
+    align-items: start;
+  }
+  .apply__steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .apply__steps li {
+    background: #fff;
+    padding: var(--s-5) var(--s-5) var(--s-5) calc(var(--s-5) + 3rem);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+  .apply__steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    top: 50%;
+    left: var(--s-4);
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--c-orange);
+    color: #fff;
+    font-family: var(--font-display-black);
+  }
+  .apply__side {
+    background: #fff;
+    padding: var(--s-6);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .apply__side h3 {
+    margin: 0 0 var(--s-2);
+    font-size: 1.2rem;
+  }
+  .apply__name {
+    margin: 0 0 var(--s-3);
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--c-ink);
+  }
+  .apply__contacts {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .apply__contacts a {
+    font-weight: 700;
+    color: var(--c-ink);
+    text-decoration: none;
+    word-break: break-word;
+  }
+  .apply__contacts a:hover { color: var(--c-link); }
+  .apply__hand {
+    font-size: 1.3rem;
+    color: var(--c-orange);
+    margin-top: var(--s-4);
+    margin-bottom: 0;
+  }
+  @media (max-width: 800px) {
+    .apply { grid-template-columns: 1fr; }
+  }
+</style>
