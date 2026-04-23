@@ -1,0 +1,466 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// "Gewünschter Eintritt" — Ab sofort plus "Nächster [Monat]" für alle 12 Monate.
+const eintrittOptionen = [
+  "Ab sofort",
+  "Nächster Januar", "Nächster Februar", "Nächster März",
+  "Nächster April", "Nächster Mai", "Nächster Juni",
+  "Nächster Juli", "Nächster August", "Nächster September",
+  "Nächster Oktober", "Nächster November", "Nächster Dezember",
+];
+
+const alterOptionen = [
+  "Unter 1 Jahr",
+  "1 Jahr",
+  "2 Jahre",
+  "3 Jahre",
+  "4 Jahre",
+  "5 Jahre",
+  "6 Jahre",
+];
+---
+
+<BaseLayout
+  title="Kennenlernen - KIDS e.V. Bonn"
+  description="So lernt ihr uns kennen: Tag der offenen Tür und persönliches Gespräch. In fünf Schritten von der ersten Neugier bis zur Eingewöhnung."
+>
+
+  <section class="anm-hero">
+    <div class="container">
+      <p class="eyebrow">Kommt uns besuchen</p>
+      <h1>Kennenlernen.</h1>
+      <p class="lede">
+        Bevor wir über einen Platz sprechen, lernen wir uns erst einmal kennen.
+        Beim Tag der offenen Tür oder im persönlichen Gespräch. Tragt euch gern
+        in unsere Info-Liste ein, damit wir euch Bescheid geben, sobald der
+        nächste Termin feststeht.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="anm-steps__head">
+        <h2>So kommt ihr zu uns.</h2>
+        <p class="lede">
+          Vom ersten Interesse bis zur Eingewöhnung. In fünf Schritten.
+        </p>
+      </div>
+
+      <ol class="anm-steps">
+        <li class="anm-step">
+          <span class="anm-step__num">01</span>
+          <div class="anm-step__body">
+            <h3>Interesse signalisieren.</h3>
+            <p>
+              Ruft uns an, schreibt eine Mail oder füllt das Formular unten aus.
+              Wir melden uns persönlich zurück.
+            </p>
+          </div>
+        </li>
+
+        <li class="anm-step">
+          <span class="anm-step__num">02</span>
+          <div class="anm-step__body">
+            <h3>Tag der offenen Tür.</h3>
+            <p>
+              Zweimal pro Jahr öffnen wir unsere Türen. Kinder können spielen,
+              Eltern können fragen, alle dürfen bleiben, so lange sie mögen.
+              Wir benachrichtigen euch, sobald der nächste Termin feststeht.
+            </p>
+          </div>
+        </li>
+
+        <li class="anm-step">
+          <span class="anm-step__num">03</span>
+          <div class="anm-step__body">
+            <h3>Persönliches Gespräch.</h3>
+            <p>
+              Ihr könnt jederzeit ein 1:1-Gespräch mit uns vereinbaren. Ganz in
+              Ruhe, ohne Zeitdruck. Alle Fragen sind willkommen.
+            </p>
+          </div>
+        </li>
+
+        <li class="anm-step">
+          <span class="anm-step__num">04</span>
+          <div class="anm-step__body">
+            <h3>Anmeldung im KITA-NET Bonn.</h3>
+            <p>
+              In Bonn läuft die offizielle Vormerkung zentral über das städtische
+              Portal. Das gehört dazu. Wir zeigen euch, wie es geht.
+            </p>
+            <p class="anm-step__extlink">
+              <a
+                href="https://kita-planer.kdo.de/bonn-elternportal/elternportal/de/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--outline btn--sm"
+                data-external
+              >
+                Zum KITA-NET&nbsp;Bonn öffnen
+              </a>
+            </p>
+          </div>
+        </li>
+
+        <li class="anm-step">
+          <span class="anm-step__num">05</span>
+          <div class="anm-step__body">
+            <h3>Platzzusage und Eingewöhnung.</h3>
+            <p>
+              Das Aufnahmegremium entscheidet gemeinsam über neue Familien.
+              Bei Zusage starten wir die Eingewöhnung nach dem Berliner Modell.
+              Drei bis sechs Wochen, ganz im Tempo eures Kindes.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container anm-grid">
+      {/* ---- Direktkontakt ---- */}
+      <aside class="anm-direct">
+        <h2>Lieber direkt?</h2>
+        <p>
+          Ruft uns an oder schreibt eine Mail. So geht's am schnellsten.
+        </p>
+        <p class="anm-direct__contacts">
+          <a href="tel:+492284787950"><strong>0228&nbsp;478795</strong></a><br />
+          <a href="mailto:kita@kids-bonn.de"><strong>kita@kids-bonn.de</strong></a>
+        </p>
+      </aside>
+
+      {/* ---- Formular ---- */}
+      <form class="anm-form" method="post" action="/api/submit">
+        <input type="hidden" name="_form" value="kennenlernen" />
+        {/* Honeypot — a real field but hidden from real users; bots fill it. */}
+        <div class="honeypot" aria-hidden="true">
+          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <h2>Wir bleiben in Kontakt.</h2>
+        <p class="anm-form__note">
+          Trag dich ein, damit wir dich zum nächsten Tag der offenen Tür
+          informieren oder ein persönliches Gespräch mit dir vereinbaren.
+          Pflichtfelder sind mit <span aria-hidden="true">*</span> markiert.
+        </p>
+
+        <fieldset class="field field--group">
+          <legend>Worum geht's?</legend>
+          <div class="radio-row">
+            <label>
+              <input type="radio" name="Anlass" value="Tag der offenen Tür" checked />
+              <span>Tag der offenen Tür</span>
+            </label>
+            <label>
+              <input type="radio" name="Anlass" value="Persönliches Gespräch" />
+              <span>1:1-Gespräch</span>
+            </label>
+            <label>
+              <input type="radio" name="Anlass" value="Nur Fragen" />
+              <span>Nur Fragen stellen</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="f-name">Euer Name <span aria-hidden="true">*</span></label>
+          <input id="f-name" name="Name" type="text" required autocomplete="name" />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">E-Mail <span aria-hidden="true">*</span></label>
+            <input id="f-email" name="E-Mail" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="f-phone">Telefon</label>
+            <input id="f-phone" name="Telefon" type="tel" autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-child-name">Name des Kindes</label>
+            <input id="f-child-name" name="Name_des_Kindes" type="text" />
+          </div>
+          <div class="field">
+            <label for="f-child-age">Alter des Kindes</label>
+            <select id="f-child-age" name="Alter">
+              <option value="" disabled selected>– Bitte auswählen –</option>
+              {alterOptionen.map((a) => <option value={a}>{a}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-start">Gewünschter Eintritt</label>
+          <select id="f-start" name="Eintritt">
+            <option value="" disabled selected>– Bitte auswählen –</option>
+            {eintrittOptionen.map((m) => <option value={m}>{m}</option>)}
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-message">Was interessiert euch besonders?</label>
+          <textarea
+            id="f-message"
+            name="Nachricht"
+            rows="5"
+            placeholder="Erzählt uns gern, was euch wichtig ist. So können wir uns auf das Gespräch vorbereiten."
+          ></textarea>
+        </div>
+
+        <p class="form-datenschutz-note">
+          Ihre Angaben verarbeiten wir ausschließlich zur Bearbeitung dieser
+          Anfrage. Details dazu in unserer <a href="/datenschutz">Datenschutzerklärung</a>.
+        </p>
+
+        <div class="anm-form__actions">
+          <button type="submit" class="btn btn--primary">Nachricht senden</button>
+        </div>
+
+        <p class="anm-form__fineprint">
+          <strong>Hinweis:</strong> Dieses Formular ist aktuell ein Platzhalter
+          und öffnet ein Mailprogramm. Vor dem Live-Gang wird ein echtes
+          Formular-Backend angebunden (TBD).
+        </p>
+      </form>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .anm-hero {
+    background: var(--c-bg-cream);
+    padding-block: clamp(3rem, 7vw, 5rem);
+    text-align: center;
+  }
+  .anm-hero h1 { margin-block: var(--s-3) var(--s-5); }
+  .anm-hero .lede { max-width: 42rem; margin-inline: auto; }
+
+  /* "So läuft die Anmeldung" — 5 numbered steps */
+  .anm-steps__head {
+    max-width: 44rem;
+    margin: 0 auto var(--s-7);
+    text-align: center;
+  }
+  .anm-steps__head h2 { margin-bottom: var(--s-3); }
+  .anm-steps__head .lede { max-width: 36rem; margin-inline: auto; }
+
+  .anm-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 52rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+  }
+
+  .anm-step {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: var(--s-5);
+    align-items: start;
+    padding: var(--s-5) var(--s-6);
+    background: #fff;
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .anm-step__num {
+    font-family: var(--font-display-black);
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1;
+    color: var(--c-orange);
+  }
+
+  .anm-step__body h3 {
+    margin: 0 0 var(--s-2);
+    font-size: 1.4rem;
+  }
+
+  .anm-step__body p {
+    margin: 0 0 var(--s-2);
+    color: var(--c-ink-soft);
+    max-width: 34rem;
+  }
+  .anm-step__body p:last-child { margin-bottom: 0; }
+
+  .anm-step__extlink {
+    margin-top: var(--s-3);
+  }
+
+  @media (max-width: 600px) {
+    .anm-step {
+      grid-template-columns: 1fr;
+      gap: var(--s-2);
+      padding: var(--s-4) var(--s-5);
+    }
+    .anm-step__num { font-size: 2rem; }
+  }
+
+  .anm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--s-8);
+    align-items: start;
+  }
+  @media (max-width: 800px) {
+    .anm-grid { grid-template-columns: 1fr; gap: var(--s-6); }
+  }
+
+  .anm-direct {
+    background: var(--c-bg-cream);
+    border-radius: var(--r-lg);
+    padding: var(--s-6);
+    position: sticky;
+    top: calc(72px + var(--s-4));
+  }
+  .anm-direct h2 { margin-bottom: var(--s-3); }
+  .anm-direct h3 {
+    font-size: 1.2rem;
+    margin-top: var(--s-5);
+    margin-bottom: var(--s-2);
+  }
+  .anm-direct__contacts {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .anm-flow {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+  .anm-flow li {
+    margin-bottom: var(--s-2);
+  }
+  .anm-wiki { margin-top: var(--s-5); }
+
+  .anm-form {
+    background: #fff;
+    border-radius: var(--r-lg);
+    padding: var(--s-7);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+  .anm-form h2 { margin-bottom: var(--s-2); }
+  .anm-form__note {
+    color: var(--c-ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: var(--s-2);
+  }
+
+  /* Honeypot — hidden from sighted users and assistive tech, bots find it. */
+  .honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+  }
+  .field label {
+    font-weight: 700;
+    color: var(--c-ink);
+    font-size: 0.95rem;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    font: inherit;
+    padding: 0.7rem 0.9rem;
+    border: 2px solid var(--c-bg-sand);
+    border-radius: var(--r-md);
+    background: var(--c-bg);
+    color: var(--c-ink);
+    transition: border-color 140ms ease;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--c-orange);
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-4);
+  }
+  @media (max-width: 600px) {
+    .field-row { grid-template-columns: 1fr; }
+  }
+
+  .field--group {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .field--group legend {
+    font-weight: 700;
+    color: var(--c-ink);
+    font-size: 0.95rem;
+    margin-bottom: var(--s-2);
+  }
+  .radio-row {
+    display: flex;
+    gap: var(--s-4);
+    flex-wrap: wrap;
+  }
+  .radio-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--c-ink);
+    cursor: pointer;
+  }
+  .radio-row input[type="radio"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--c-orange);
+    margin: 0;
+  }
+
+  .field--check {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--s-3);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--c-ink-soft);
+    line-height: 1.5;
+  }
+  .field--check input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.25rem;
+    accent-color: var(--c-orange);
+  }
+
+  .anm-form__actions {
+    margin-top: var(--s-3);
+  }
+
+  .anm-form__fineprint {
+    margin-top: var(--s-4);
+    padding: var(--s-4);
+    background: color-mix(in srgb, var(--c-gelb) 25%, #fff);
+    border-radius: var(--r-md);
+    font-size: 0.9rem;
+    color: var(--c-ink-soft);
+  }
+</style>

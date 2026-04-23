@@ -1,0 +1,169 @@
+---
+const WIKI_URL = "https://docs.kids-bonn.de/docs/f5f02dd9-0071-4b55-8301-8d6ee5411431/";
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__top">
+    <div class="site-footer__brand">
+      <img
+        src="/logos/schriftzug-schwarz.png"
+        alt="KIDS e.V."
+        class="site-footer__logo"
+      />
+      <p class="site-footer__tag">Elterninitiative Kindergarten, Bonn-Beuel</p>
+      <p class="site-footer__contact">
+        <a href="tel:+492284787950">0228&nbsp;478795</a><br />
+        <a href="mailto:kita@kids-bonn.de">kita@kids-bonn.de</a>
+      </p>
+    </div>
+
+    <div class="site-footer__cols">
+      <nav aria-label="Seitennavigation">
+        <p class="site-footer__heading">Über uns</p>
+        <ul>
+          <li><a href="/#leitbild">Leitbild</a></li>
+          <li><a href="/#alltag">Alltag</a></li>
+          <li><a href="/#haus">Unser Haus</a></li>
+          <li><a href="/#mitmachen">Mitmachen</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Angebote">
+        <p class="site-footer__heading">Angebote</p>
+        <ul>
+          <li><a href="/kennenlernen">Kennenlernen</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="/spenden">Spenden</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Service und Rechtliches">
+        <p class="site-footer__heading">Service</p>
+        <ul>
+          <li><a href="/kontakt">Kontakt</a></li>
+          <li><a href={WIKI_URL} data-external target="_blank" rel="noopener">Wiki</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container site-footer__bottom">
+    <p class="site-footer__meta">© {year} KIDS e.V.</p>
+    <p class="site-footer__signature">Gemacht mit Elternhand in Bonn.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--c-bg-sand);
+    padding-block: var(--s-8) var(--s-5);
+  }
+
+  /* --- Top area: brand left, link columns right --- */
+  .site-footer__top {
+    display: grid;
+    grid-template-columns: minmax(14rem, 1fr) minmax(0, 2fr);
+    gap: var(--s-8);
+    align-items: start;
+    padding-bottom: var(--s-6);
+  }
+
+  .site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+  }
+  .site-footer__logo {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+  }
+  .site-footer__tag {
+    margin: 0;
+    color: var(--c-ink-soft);
+    font-size: 0.9rem;
+  }
+  .site-footer__contact {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .site-footer__contact a {
+    color: var(--c-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .site-footer__contact a:hover { color: var(--c-link); }
+
+  /* --- Link columns --- */
+  .site-footer__cols {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-6);
+  }
+  .site-footer__cols nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+  }
+  .site-footer__heading {
+    margin: 0 0 var(--s-3);
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--c-ink);
+  }
+  .site-footer__cols a {
+    color: var(--c-ink-soft);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 140ms ease;
+  }
+  .site-footer__cols a:hover { color: var(--c-link); }
+
+  /* --- Bottom bar --- */
+  .site-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-4);
+    padding-top: var(--s-4);
+    border-top: 1px solid color-mix(in srgb, var(--c-sand) 25%, transparent);
+    flex-wrap: wrap;
+  }
+  .site-footer__meta,
+  .site-footer__signature {
+    margin: 0;
+    color: var(--c-ink-soft);
+    font-size: 0.85rem;
+  }
+  .site-footer__signature {
+    font-style: italic;
+  }
+
+  /* --- Tablet: columns stack sooner --- */
+  @media (max-width: 900px) {
+    .site-footer__top {
+      grid-template-columns: 1fr;
+      gap: var(--s-7);
+    }
+  }
+  @media (max-width: 560px) {
+    .site-footer__cols {
+      grid-template-columns: 1fr 1fr;
+    }
+    .site-footer__bottom {
+      justify-content: flex-start;
+    }
+  }
+</style>

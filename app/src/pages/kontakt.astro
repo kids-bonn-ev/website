@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Deko from "../components/Deko.astro";
+import Button from "../components/Button.astro";
+---
+
+<BaseLayout
+  title="Kontakt - KIDS e.V. Bonn"
+  description="Kontaktdaten, Anfahrt und Ansprechpersonen des KIDS e.V. - Elterninitiative Kindergarten in Bonn."
+>
+
+  <section class="kontakt-hero">
+    <Deko name="welle" size={130} top="20%" right="8%" opacity={0.7} class="deko--hide-mobile" />
+    <Deko name="blume02" size={80} bottom="15%" left="12%" rotate={-10} class="deko--hide-mobile" />
+
+    <div class="container">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Schreibt uns. Ruft an. Besucht uns.</h1>
+      <p class="lede">
+        Egal ob Platzanfrage, Bewerbung oder einfach eine Frage —
+        wir freuen uns, von euch zu hören.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container kontakt-grid">
+      <div class="kontakt-card">
+        <h2>Direkt erreichbar</h2>
+        <p>
+          <strong>Telefon</strong><br />
+          <a href="tel:+492284787950">0228&nbsp;478795</a><br />
+          <span class="kontakt-muted">Mo–Fr 9:00–11:00&nbsp;Uhr</span>
+        </p>
+        <p>
+          <strong>E-Mail</strong><br />
+          <a href="mailto:kita@kids-bonn.de">kita@kids-bonn.de</a>
+        </p>
+        <p>
+          <strong>Öffnungszeiten</strong><br />
+          Mo–Do 7:30&nbsp;–&nbsp;15:00&nbsp;Uhr<br />
+          Fr 7:30&nbsp;–&nbsp;13:00&nbsp;Uhr
+        </p>
+      </div>
+
+      <div class="kontakt-card">
+        <h2>Adresse</h2>
+        <p>
+          KIDS&nbsp;e.V.<br />
+          Limpericher&nbsp;Str.&nbsp;122b<br />
+          53225&nbsp;Bonn-Beuel
+        </p>
+        <Button
+          href="https://www.google.com/maps/search/?api=1&query=Limpericher+Str.+122b+53225+Bonn"
+          variant="outline"
+          external
+        >
+          In Google Maps öffnen
+        </Button>
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>
+
+<style>
+  .kontakt-hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(3rem, 8vw, 6rem);
+    background: var(--c-bg-cream);
+  }
+
+  .kontakt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: var(--s-5);
+  }
+
+  .kontakt-card {
+    background: #fff;
+    border-radius: var(--r-lg);
+    padding: var(--s-6);
+    box-shadow: var(--shadow-md);
+  }
+  .kontakt-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--s-4);
+  }
+  .kontakt-card p {
+    margin-bottom: var(--s-4);
+  }
+  .kontakt-card a {
+    font-weight: 800;
+    word-break: break-word;
+  }
+  .kontakt-muted {
+    color: var(--c-ink-soft);
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+</style>

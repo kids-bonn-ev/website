@@ -1,0 +1,193 @@
+---
+import Button from "./Button.astro";
+
+// Hauptlernpfad für Eltern - drei Anker auf der Startseite.
+// Header is `transition:persist`-ed, so we always use absolute anchors to keep
+// links working regardless of which page the header was first rendered on.
+const parentLinks = [
+  { href: "/#leitbild", label: "Leitbild" },
+  { href: "/#alltag", label: "Alltag" },
+  { href: "/#haus", label: "Unser Haus" },
+];
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="brand" aria-label="KIDS e.V. Startseite">
+      <img src="/logos/schriftzug.svg" alt="KIDS e.V." />
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Navigation umschalten" />
+
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul class="site-nav__list">
+        {parentLinks.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+        <li class="site-nav__sep" aria-hidden="true"></li>
+        <li><a href="/jobs" class="site-nav__jobs">Jobs</a></li>
+        <li><a href="/spenden" class="site-nav__spenden">Spenden</a></li>
+      </ul>
+    </nav>
+
+    <Button href="/kennenlernen" size="sm" class="site-cta">Kennenlernen</Button>
+
+    <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--c-bg);
+    border-bottom: 1px solid var(--c-bg-sand);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    padding-block: var(--s-3);
+  }
+
+  .brand {
+    margin-right: auto; /* pushes everything else to the right */
+  }
+  .brand img {
+    height: 30px;
+    width: auto;
+  }
+
+  /* --- Nav (parent links + Jobs) --- */
+  .site-nav__list {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav a {
+    font-weight: 700;
+    color: var(--c-ink);
+    text-decoration: none;
+    padding: var(--s-2) var(--s-3);
+    border-radius: var(--r-pill);
+    transition: background 140ms ease, color 140ms ease;
+  }
+
+  .site-nav a:hover {
+    background: var(--c-accent-soft);
+    color: var(--c-link);
+  }
+
+  /* thin divider between parent-lernpfad and Jobs */
+  .site-nav__sep {
+    width: 1px;
+    align-self: stretch;
+    background: var(--c-bg-sand);
+    margin-inline: var(--s-2);
+  }
+
+  /* Jobs + Spenden: small coloured dot for audience cue */
+  .site-nav__jobs::before,
+  .site-nav__spenden::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+  .site-nav__jobs::before { background: var(--c-gruen); }
+  .site-nav__spenden::before { background: var(--c-gelb); }
+
+  /* The CTA uses the global Button component (size="sm"). No extra styling needed. */
+
+  /* --- Burger toggle (mobile only) --- */
+  .nav-toggle { display: none; }
+  .nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: var(--s-2);
+  }
+  .nav-toggle-label span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--c-ink);
+    transition: transform 200ms ease;
+  }
+
+  /* --- Mobile --- */
+  @media (max-width: 900px) {
+    .site-header__inner {
+      gap: var(--s-3);
+    }
+
+    .site-nav {
+      order: 99; /* push the anchor nav below into an absolute panel */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--c-bg);
+      border-bottom: 1px solid var(--c-bg-sand);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 250ms ease;
+    }
+    .site-nav__list {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: var(--s-3) var(--s-5) var(--s-5);
+    }
+    .site-nav a {
+      display: block;
+      padding-block: var(--s-3);
+    }
+    .site-nav__sep { display: none; }
+
+    .nav-toggle-label { display: flex; }
+    .nav-toggle:checked ~ .site-nav {
+      max-height: 500px;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+
+</style>
+
+{/* Close the mobile burger menu automatically — both after ClientRouter
+    navigations and after same-page anchor clicks (which don't trigger
+    a navigation event but should still collapse the menu). */}
+<script>
+  const closeBurger = () => {
+    const t = document.getElementById("nav-toggle");
+    if (t instanceof HTMLInputElement) t.checked = false;
+  };
+  document.addEventListener("astro:after-swap", closeBurger);
+  document
+    .querySelector(".site-nav")
+    ?.addEventListener("click", (e) => {
+      if ((e.target as Element | null)?.closest("a")) closeBurger();
+    });
+</script>
