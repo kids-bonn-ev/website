@@ -8,15 +8,57 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  /** Set true on pages that should not appear in search engines (e.g. /danke). */
+  noindex?: boolean;
 }
 
 const {
   title,
-  description = "KIDS e.V. - Elterninitiative Kindergarten in Bonn. Kleine Gruppen, Freispiel, echte Mitgestaltung.",
+  description = "Elternhand statt Fremdträger: drei feste Gruppen, 50 Kinder, ein großer Garten. Raum zum Wachsen, Staunen und Freunde finden.",
   ogImage = "/logos/schriftzug-regenwurm.png",
+  noindex = false,
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://kids-bonn.de");
+const siteUrl = Astro.site ?? new URL("https://kids-bonn.de");
+const canonical = new URL(Astro.url.pathname, siteUrl);
+const ogImageAbs = new URL(ogImage, siteUrl);
+
+// Organization / Preschool structured data — rendered site-wide in <head>.
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Preschool",
+  name: "KIDS e.V.",
+  alternateName: "KIDS e.V. – Elterninitiative Kita",
+  description:
+    "Elterninitiative-Kita mit drei festen Gruppen, 50 Kindern und 1.700 m² Garten mitten in Bonn-Beuel.",
+  url: siteUrl.origin,
+  telephone: "+49-228-478795",
+  email: "kita@kids-bonn.de",
+  logo: new URL("/logos/rund.png", siteUrl).toString(),
+  image: new URL("/logos/schriftzug-regenwurm.png", siteUrl).toString(),
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Limpericher Str. 122b",
+    postalCode: "53225",
+    addressLocality: "Bonn",
+    addressRegion: "NRW",
+    addressCountry: "DE",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      opens: "07:30",
+      closes: "15:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "07:30",
+      closes: "13:00",
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -25,6 +67,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://kids-bonn.d
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+    <meta name="theme-color" content="#c3651d" />
     <link rel="canonical" href={canonical.toString()} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -46,17 +90,31 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://kids-bonn.d
       crossorigin="anonymous"
     />
 
+    {/* Open Graph */}
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KIDS e.V." />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={ogImageAbs.toString()} />
+    <meta property="og:url" content={canonical.toString()} />
     <meta property="og:locale" content="de_DE" />
 
+    {/* Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbs.toString()} />
 
     <title>{title}</title>
 
     <meta name="generator" content={Astro.generator} />
+
+    {/* Structured data (Schema.org) — lets Google render rich snippets with address, phone and opening hours. */}
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(orgJsonLd)}
+    />
 
     {/* View Transitions + persistent Header/Footer. Auto-prefetches linked pages on hover. */}
     <ClientRouter />
