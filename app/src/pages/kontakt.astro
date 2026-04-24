@@ -13,7 +13,7 @@ import Button from "../components/Button.astro";
     <Deko name="welle" size={130} top="20%" right="8%" opacity={0.7} class="deko--hide-mobile" />
     <Deko name="blume02" size={80} bottom="15%" left="12%" rotate={-10} class="deko--hide-mobile" />
 
-    <div class="container">
+    <div class="container kontakt-hero__inner">
       <p class="eyebrow">Kontakt</p>
       <h1>Schreibt uns. Ruft an. Besucht uns.</h1>
       <p class="lede">
@@ -70,6 +70,9 @@ import Button from "../components/Button.astro";
     overflow: hidden;
     padding-block: clamp(3rem, 8vw, 6rem);
     background: var(--c-bg-cream);
+  }
+  .kontakt-hero__inner {
+    position: relative;
   }
 
   .kontakt-grid {

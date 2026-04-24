@@ -19,7 +19,7 @@ const spendenArten = [
     <Deko name="kreis" size={120} top="20%" right="8%" class="deko--hide-mobile" />
     <Deko name="blume01" size={90} bottom="12%" left="10%" rotate={-10} class="deko--hide-mobile" />
 
-    <div class="container">
+    <div class="container spenden-hero__inner">
       <p class="eyebrow">Unterstützen</p>
       <h1>Spenden.</h1>
       <p class="lede">
@@ -180,11 +180,6 @@ const spendenArten = [
         <div class="spenden-form__actions">
           <button type="submit" class="btn btn--primary">Anfrage absenden</button>
         </div>
-
-        <p class="spenden-form__fineprint">
-          <strong>Hinweis:</strong> Dieses Formular öffnet aktuell ein Mailprogramm.
-          Vor dem Live-Gang wird ein echtes Formular-Backend angebunden (TBD).
-        </p>
       </form>
     </div>
   </section>
@@ -198,6 +193,9 @@ const spendenArten = [
     background: var(--c-bg-cream);
     padding-block: clamp(3rem, 7vw, 5rem);
     text-align: center;
+  }
+  .spenden-hero__inner {
+    position: relative;
   }
   .spenden-hero h1 { margin-block: var(--s-3) var(--s-5); }
   .spenden-hero .lede { max-width: 44rem; margin-inline: auto; }
@@ -376,12 +374,4 @@ const spendenArten = [
     margin-top: var(--s-3);
   }
 
-  .spenden-form__fineprint {
-    margin-top: var(--s-4);
-    padding: var(--s-4);
-    background: color-mix(in srgb, var(--c-gelb) 25%, #fff);
-    border-radius: var(--r-md);
-    font-size: 0.9rem;
-    color: var(--c-ink-soft);
-  }
 </style>
