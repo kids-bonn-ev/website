@@ -1210,16 +1210,16 @@ const sponsorLogos = Object.entries(
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: var(--s-5) var(--s-6);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+    gap: var(--s-5) var(--s-6);
     max-width: 64rem;
     margin-inline: auto;
   }
   .sponsoren-grid__item {
-    width: 100%;
+    flex: 0 0 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1239,10 +1239,8 @@ const sponsorLogos = Object.entries(
     mix-blend-mode: multiply;
   }
   @media (max-width: 520px) {
-    .sponsoren-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--s-4);
-    }
+    .sponsoren-grid { gap: var(--s-4); }
+    .sponsoren-grid__item { flex: 0 0 40%; }
     .sponsoren-grid__item :global(img) { max-height: 80px; }
   }
 
