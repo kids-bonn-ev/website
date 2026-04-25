@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import schriftzugSchwarz from "../assets/schriftzug-schwarz.png";
+
 const WIKI_URL = "https://docs.kids-bonn.de/docs/f5f02dd9-0071-4b55-8301-8d6ee5411431/";
 const year = new Date().getFullYear();
 ---
@@ -6,9 +9,14 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="container site-footer__top">
     <div class="site-footer__brand">
-      <img
-        src="/logos/schriftzug-schwarz.png"
+      <Image
+        src={schriftzugSchwarz}
         alt="KIDS e.V."
+        widths={[160, 240, 320]}
+        sizes="160px"
+        formats={["webp"]}
+        loading="lazy"
+        decoding="async"
         class="site-footer__logo"
       />
       <p class="site-footer__tag">Elterninitiative Kita</p>
