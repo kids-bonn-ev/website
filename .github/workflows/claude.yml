@@ -31,13 +31,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24.x
-          cache: 'yarn'
-          cache-dependency-path: 'components/profiler/yarn.lock'
-
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
