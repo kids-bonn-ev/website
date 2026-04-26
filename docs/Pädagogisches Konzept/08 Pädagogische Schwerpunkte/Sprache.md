@@ -1,0 +1,16 @@
+# Sprache
+
+Die Sprache ist die wichtigste Voraussetzung für die Kommunikation mit anderen Menschen. Durch die Sprache werden Gedanken, Gefühle, Wünsche und Bedürfnisse zum Ausdruck gebracht, Erlebnisse verarbeitet und Erfahrungen ausgetauscht. Sie ist eine sehr wichtige Grundlage, um am Leben in Gemeinschaft teilzuhaben. Dem Spracherwerb (statt Sprachvermittlung) messen wir eine große Bedeutung bei und sehen uns als Fachkräfte in einer Vorbildfunktion. Je besser ein Kind Sprache aktiv und kreativ einsetzen und erleben kann, desto mehr lernt es sich selbst und andere kennen. Daher spielt die Spracherziehung in allen Alters- und Entwicklungsstufen in der KiTa eine große Rolle. Durch vielfältige sprachliche Anregungen, wie Gesprächskreise, Projektbesprechungen, Bilderbuchbetrachtungen, Lieder, Gedichte, Märchen und Fingerspiele sowie Kreis- und Singspiele wird die Freude an der Sprache geweckt. Der Wortschatz wird erweitert und das phonologische Bewusstsein angelegt und gefördert. Im Rollen- und Theaterspiel, wie auch im Kaufladen, im Puppenhaus oder an anderen Handlungsorten wird sowohl die verbale, wie auch die nonverbale Kommunikation geübt, gefestigt und der spielerische Umgang mit Sprache gepflegt. Im Freispiel sowie in geführten und angeleiteten Situationen sind die Kinder gefordert, ihre eigenen Ideen, Vorstellungen und Wünsche wahrzunehmen und zu kommunizieren, gleichgültig über welchen Entwicklungsstand die einzelnen Kinder verfügen. Gestik und Mimik werden als unterstützendes Mittel der Verständigung einbezogen und erweitern so Sprachverständnis und Kommunikationsfähigkeit.
+
+Dazu gehört auch zu lernen, Mimik, Gestik und Tonlage situationsgerecht einzusetzen, zu bewerten und einzuordnen. Damit wächst die Differenzierungsfähigkeit der Kinder und auch der Umgang mit Konflikten wird erleichtert. In Einzelangeboten und in inklusiven Kleingruppen kann auch besonderes Sprachfördermaterial individuell und entwicklungsbezogen eingesetzt werden. Dies motiviert zusätzlich zum allgemeinen Sprachgebrauch und regt an, mit Sprache zu experimentieren. Beim Philosophieren mit Kindern, in Gesprächskreisen und Werkstätten und im gemeinsamen Spiel, kann Sprachverständnis erprobt, erweitert und verglichen werden. Die Qualität des deutschen Sprachverständnisses hat eine Schlüsselposition bei den Bildungschancen für jedes Kind.
+
+## Wir unterstützen die Kinder im alltäglichen Miteinander in ihrer Sprachentwicklung durch:
+
+- den Sitzkreis mit der ganzen Gruppe, in dem gesungen, gespielt, gesprochen oder vorgelesen wird
+- den Erzählkreis, in dem Erlebnisse und Erfahrungen ausgetauscht werden
+- Gespräche beim Frühstücken oder beim Mittagessen, bei denen die Kinder sich gegenseitig Erlebtes erzählen
+- gezieltes Sprachtraining
+- Anregungen in den verschiedenen Spiele- und Funktionsräumen, wo die Kinder zum Sprechen angeregt werden, indem sie z.B. benennen müssen, was sie gerade zusätzlich benötigen.
+- bestimmte Materialien wie Sprachspiele oder Sprechübungen beim Singen, die gleichzeitig auch der Sprachförderung dienen
+
+Durch die Dokumentation der Sprachentwicklung erkennen wir, ob ein besonderer Förderbedarf vorliegt oder sich die Sprache altersgemäß entwickelt. In einem Elterngespräch machen wir die Eltern darauf aufmerksam und beraten sie zu den Fördermöglichkeiten bzw. entwickeln einen Förderplan.

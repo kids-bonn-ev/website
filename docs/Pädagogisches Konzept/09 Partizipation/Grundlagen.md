@@ -1,0 +1,15 @@
+# Grundlagen
+
+Nach dem Kinderbildungsgesetz haben alle Kinder in Kindertagesstätten ein verbindliches Recht, sich bei allen Entscheidungen, die sie und die Gemeinschaft betreffen, einzubringen.
+
+## Was ist Partizipation?
+
+> „Partizipation heißt: Entscheidungen, die das eigene Leben und das Leben der Gemeinschaft betreffen, zu teilen und gemeinsame Lösungen für Probleme zu finden" (Richard Schröder)
+
+Die Partizipation beschreibt das Einbeziehen und das Teilhaben-Lassen der Kinder bei Entscheidungsprozessen. Partizipation meint nicht, dass nur die Themen der Kinder aufgegriffen werden, sondern dass wir das Interesse für neue Themen bei den Kindern wecken und sie dazu angeregt werden, ihre Wünsche, Bedürfnisse und Ideen wahrzunehmen und zum Ausdruck zu bringen. Die Kinder sollen bei uns die Erfahrung machen, dass sie ernst genommen werden und ihre Meinung gefragt ist. Sie lernen, ihre Interessen selbst zu vertreten und die Meinung der anderen zu respektieren. Damit Partizipation gelingt, brauchen die Kinder soziale Kompetenzen. Sie sollten Kooperationsbereitschaft zeigen und konflikt- und empathiefähig sein. Das Erlernen dieser Kompetenzen ist ein großer Schwerpunkt unserer Arbeit und wird im täglichen Miteinander bei Kindern und Fachkräften eingeübt.
+
+## Haltung der Mitarbeiter
+
+Die Mitarbeiter beteiligen die Kinder in alltäglichen Situationen altersgerecht an sie betreffenden Themen und Entscheidungen, soweit möglich und mit ihrer Verantwortung für das Wohl der Kinder vereinbar. Sie unterstützen die Kinder, ihre Beteiligungsrechte nach ihren individuellen Fähigkeiten auszuüben und Erfahrungen zu sammeln. Dabei wird Partizipation als Dialog und gemeinsame Entscheidungsfindung der Kinder untereinander und mit den Mitarbeitern verstanden. Die Kinder lernen zunächst, ihre eigenen Interessen zu vertreten, aber auch andere Meinungen zu hören, Unterschiedlichkeit zu respektieren und selber nach Lösungen zu suchen. Das stärkt sie in ihrer Persönlichkeit, in ihrem Selbstwert und macht sie stark für die Aufgaben, die in ihrem weiteren Leben noch vor ihnen liegen. Bewährte Verfahren der Beteiligung und Möglichkeiten der Beschwerde werden unter Berücksichtigung der gegebenen sowie der erforderlichen Rahmenbedingungen kontinuierlich weiterentwickelt. Partizipation erfordert verlässliche Beteiligungsstrukturen und den individuellen Kompetenzen angepasste Verantwortungsbereiche. Gleichzeitig müssen die Kinder aber auch lernen, dass nicht alles frei wählbar ist, sondern dass es auch Regeln und Vereinbarungen geben muss, damit gemeinschaftliches Leben gelingt. Kinder gewinnen durch klare Regeln und Strukturen Sicherheit und Orientierung für den Tag, für ihr Leben. Regeln und Strukturen sind allerdings kein Selbstzweck, sondern müssen durch die Mitarbeiter erklärt und erläutert werden.
+
+Regeln und Strukturen sowie alltägliche Abläufe werden auf unterschiedliche Weise transparent vermittelt und dargestellt. Regeln, die den Kita Alltag betreffen, z. B. die Nutzung von Räumlichkeiten oder Spielgeräten, beim Umgang mit Konflikten, werden mit den Kindern gemeinsam erarbeitet und beschlossen.

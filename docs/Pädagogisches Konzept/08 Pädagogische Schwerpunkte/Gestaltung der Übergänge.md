@@ -1,0 +1,5 @@
+# Gestaltung der Übergänge
+
+Die Bewältigung von Übergängen ist kennzeichnend für die Lebensgeschichte jedes Menschen. Sie bedeuten sowohl Aufbruch oder Umbruch, wie auch Vorfreude auf neue Aufgaben, Abschiednehmen von Gewohntem und damit auch Verunsicherung.
+
+Diesem Umstand wird auch bei den KIDS Rechnung getragen, indem bewusst mit Übergängen umgegangen wird. Die Eingewöhnung von der Familie bei den KIDS, wie auch das Gleiten von der Krippe oder der Übergang von den KIDS in die Schule gehören dazu. Sie werden durch entsprechend ritualisierte Abläufe in den Jahresablauf eingebunden und sind fester Bestandteil der pädagogischen Arbeit. Bei Besuchen in der nahe gelegenen Grundschule werden die Kinder mit der neuen Umgebung bekannt gemacht und Unsicherheiten können abgebaut werden. Übergänge sollen als selbstverständliche Vorgänge und normale Prozesse empfunden werden und Flexibilität, Anpassungsfähigkeit, Widerstandfähigkeit fördern, zur Stressbewältigung beitragen und Irritationen vorbeugen.

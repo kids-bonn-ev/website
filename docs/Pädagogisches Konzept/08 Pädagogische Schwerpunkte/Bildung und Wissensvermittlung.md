@@ -1,0 +1,9 @@
+# Bildung und Wissensvermittlung
+
+**Bildung und Wissensvermittlung nehmen im Alltag der KiTa einen breiten Raum ein. Sie finden in den verschiedensten Bereichen statt, stehen aber zumeist in engem Zusammenhang zu den Aktivitäten im Jahreskreislauf.**
+
+**Alle Themen werden im Rahmen von möglichst ganzheitlichen Projekten kindgemäß erarbeitet**. Durch eine vielfältige und anregende Raumgestaltung und den Einsatz von unterschiedlichen Materialien haben die Kinder altersgemäß und ihrer Lebenswelt entsprechend Zugang zu den Themen. Ziel ist es, die Motivation so zu erhöhen, dass die Kinder von sich aus Schlüsse aus dem Erprobten ziehen und ihr Wissen selbständig erweitern. Im Laufe eines Projekts ergeben sich viele Gelegenheiten, selbständig das erworbene Wissen anzuwenden und lebenspraktisch umzusetzen.
+
+In vielfältigen Spiel- und Handlungsräumen, wie auch bei Exkursionen kann die individuelle Erfahrung erweitert und neues Wissen hinzugewonnen, bzw. vorhandenes Wissen vertieft und erweitert werden. Im Mittelpunkt der Bildungs- und Wissensvermittlung steht das forschende und dabei lernende Kind. Eine große Rolle hierbei spielen Sachbücher, Bildkarteien und weitere vielfältige Materialien zu den jeweiligen Themen, die aus Impulsen der Kinder entstehen
+
+Für Kinder im letzten Kindergartenjahr werden die aktuellen Themen mit geeigneten Arbeitsmaterialien altersentsprechend weiter differenziert. Schwerpunkte der altershomogenen Kleingruppen, die sich täglich gruppenübergreifend treffen, liegen vor allem im sozial- und emotionalen Bereich. Schlüsselkompetenzen wie Freude am Lernen, Lernmotivation, Ausdauer und unterschiedliche Lernstrategien werden in einer ansprechenden Lernumgebung erfahrbar und fördern die gemeinsame Auseinandersetzung mit dem Thema des Übergangs in die Schule. In verstärktem Maße werden die Kinder befähigt, Verantwortung und Sorgfalt für ihre eigenen Arbeitsmaterialien zu übernehmen.

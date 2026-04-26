@@ -1,0 +1,5 @@
+# Mathematische Bildung
+
+In vielen alltäglichen Situationen erleben die Kinder ganz selbstverständlich mathematische Grundlagen. Beim Tischdecken, Aufräumen oder im Morgenkreis setzen sie sich mit Zahlen, Mengen, Reihenfolgen und Strukturen auseinander, ohne dass dies bewusst als „Lernen" wahrgenommen wird. Diese alltagspraktischen Handlungen bieten wertvolle Gelegenheiten, mathematisches Denken spielerisch zu entwickeln und zu festigen.
+
+Auch musikalische und rhythmische Angebote sowie die Bewegungserziehung tragen dazu bei, mathematische Lernprozesse ganzheitlich zu erfahren. Durch Klatschen, Singen, Tanzen oder gezielte Bewegungsabläufe erleben die Kinder Rhythmen, Muster, Zeit und Raum mit allen Sinnen. Ergänzend dazu steht den Kindern eine große Auswahl an Materialien zur Verfügung, die sie dazu einlädt, selbstständig mit Ziffern und Zahlen, Mengen und Größen sowie mit Formen und Körpern zu experimentieren. So können sie eigene Erfahrungen sammeln, Zusammenhänge erkennen und ihre mathematischen Fähigkeiten auf spielerische Weise weiterentwickeln.

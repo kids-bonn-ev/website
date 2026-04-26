@@ -1,0 +1,7 @@
+# Wertschätzung
+
+Ein respektvoller und achtsamer Umgang miteinander ist für uns selbstverständlich. Wir begegnen jedem Kind und jeder Familie mit Offenheit und Akzeptanz – unabhängig von Herkunft, Religion oder familiärem Hintergrund. In unserer pädagogischen Arbeit achten wir auf eine wertschätzende Sprache, stärken das Selbstwertgefühl der Kinder und fördern ein positives Miteinander.
+
+Im Zentrum der teiloffenen Arbeit steht das Kind, mit seinen Bedürfnissen, Interessen und Recht auf individuelle Entwicklung und Förderung. Das wichtigste Ziel der Erziehung ist die am Kind orientierte, liebevolle, behutsame und wertschätzende Anregung der Entwicklung zu einer eigenverantwortlichen und gemeinschaftsfähigen Persönlichkeit. Durch die teiloffene Konzeption schaffen wir Freiräume für selbstgewählte Aktivitäten in verschiedenen Funktionsräumen. Dabei finden sie eine Vielfalt an Spielpartner\*innen, woraus sich Freundschaften entwickeln und festigen, ebenso haben sie die Möglichkeit, Beziehungen zu verschiedenen Erzieher\*innen aufzubauen und zu pflegen. Da die teiloffene Kita sich nicht als Lebensraum grenzenloser Freiheit versteht, schaffen wir Erzieher\*innen –zum Teil gemeinsam mit Kindern- klare Strukturen.
+
+Es geht uns darum, die teiloffene Arbeit nicht als ein Programm zu sehen, sondern vielmehr als eine pädagogische Haltung im Umgang mit Kindern in Richtung Autonomie und Selbstorganisation.

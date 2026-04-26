@@ -1,0 +1,3 @@
+# Sozial-emotionale Kompetenzen
+
+**Voraussetzung für eine persönlichkeitsbildende Entwicklung ist die gesicherte Bindungsbeziehung. Durch Verlässlichkeit und Einfühlsamkeit wird das Autonomiebestreben der Kinder unterstützt und ihrem Drang zum** selbstmotivierten Forschen entgegengekommen. Außerdem wird auf diesem Wege ihre Widerstandsfähigkeit gestärkt und die Fähigkeit zum Lösen von Konflikten gefördert. Die Fähigkeit zum Perspektivenwechsel, die Entwicklung von gegenseitigem Verständnis, Einfühlungsvermögen, Erfahren von Selbstwirksamkeit und Rücksichtnahme werden als Voraussetzungen des sozialen Miteinanders verstanden.
