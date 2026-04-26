@@ -1,31 +1,7 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Deko from "../components/Deko.astro";
-
-const sponsorMeta: Record<string, { name: string; href: string }> = {
-  "anne-servos": { name: "Anne Servos", href: "https://anne-servos.de/" },
-  "beueler-buchladen": { name: "Beueler Buchladen", href: "https://beuelerbuchladen.de/" },
-  "bindungsaspekte": { name: "Bindungsaspekte", href: "https://bindungsaspekte.de/" },
-  "buggyfit": { name: "buggyFit", href: "https://www.buggyfit.de/" },
-  "koerperzimmer": { name: "Körperzimmer", href: "https://koerperzimmer.de/" },
-  "limas": { name: "LiMa's Fairpackte Welt", href: "https://limasfairpacktewelt.de/" },
-  "miss-minz": { name: "Miss Minz", href: "https://www.instagram.com/miss.minz/" },
-  "musikschule-metronom": { name: "Musikschule Metronom", href: "https://musikschule-beuel.de/" },
-  "zartmint": { name: "zartmint", href: "https://www.zartmint.de/" },
-};
-
-const sponsorLogos = Object.entries(
-  import.meta.glob<{ default: ImageMetadata }>(
-    "../assets/sponsoren/*.{jpg,jpeg,png,svg}",
-    { eager: true }
-  )
-).map(([path, mod]) => {
-  const slug = path.split("/").pop()?.replace(/\.[^.]+$/, "") ?? "";
-  const meta = sponsorMeta[slug] ?? { name: slug, href: "#" };
-  return { src: mod.default, alt: `Logo ${meta.name}`, href: meta.href };
-});
+import Sponsoren from "../components/Sponsoren.astro";
 
 const spendenArten = [
   "Einmalige Spende",
@@ -77,41 +53,7 @@ const spendenArten = [
     </div>
   </section>
 
-  <section class="section sponsoren-section" id="sponsoren">
-    <div class="container">
-      <div class="section__head sponsoren__head">
-        <p class="eyebrow">Danke!</p>
-        <h2>Unsere Sponsoren.</h2>
-        <p class="sponsoren__lead">
-          Ohne die Unterstützung lokaler Betriebe und Initiativen wäre vieles
-          bei uns nicht möglich. Schaut gerne bei ihnen vorbei.
-        </p>
-      </div>
-
-      <ul class="sponsoren-grid">
-        {sponsorLogos.map((logo) => (
-          <li class="sponsoren-grid__item">
-            <a
-              href={logo.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={logo.alt}
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                widths={[160, 240, 320]}
-                sizes="(max-width: 600px) 40vw, 180px"
-                formats={["webp"]}
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
+  <Sponsoren />
 
   <section class="section section--cream">
     <div class="container">
@@ -267,57 +209,6 @@ const spendenArten = [
   }
   .spenden-intro p {
     max-width: none;
-  }
-
-  /* Sponsoren */
-  .sponsoren-section {
-    background: var(--c-bg);
-  }
-  .sponsoren__head {
-    text-align: center;
-    margin-bottom: var(--s-7);
-  }
-  .sponsoren__lead {
-    max-width: 38rem;
-    margin: var(--s-3) auto 0;
-    color: var(--c-ink-soft);
-  }
-  .sponsoren-grid {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: var(--s-5) var(--s-6);
-    max-width: 64rem;
-    margin-inline: auto;
-  }
-  .sponsoren-grid__item {
-    flex: 0 0 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .sponsoren-grid__item a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .sponsoren-grid__item :global(img) {
-    max-width: 100%;
-    height: auto;
-    max-height: 110px;
-    width: auto;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-  }
-  @media (max-width: 520px) {
-    .sponsoren-grid { gap: var(--s-4); }
-    .sponsoren-grid__item { flex: 0 0 40%; }
-    .sponsoren-grid__item :global(img) { max-height: 80px; }
   }
 
   /* Bank card */
