@@ -1,0 +1,236 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+export interface GallerySlide {
+  src: ImageMetadata;
+  alt: string;
+}
+
+interface Props {
+  slides: GallerySlide[];
+}
+
+const { slides } = Astro.props;
+---
+
+<div class="haus-gallery" data-haus-gallery>
+  <div class="haus-gallery__viewport" data-haus-gallery-viewport>
+    <div class="haus-gallery__container">
+      {
+        slides.map((photo, i) => (
+          <figure class="haus-gallery__slide">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              widths={[480, 768, 1024, 1400]}
+              sizes="(max-width: 800px) 92vw, 44vw"
+              formats={["webp"]}
+              loading={i === 0 ? "eager" : "lazy"}
+              decoding="async"
+            />
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="haus-gallery__arrow haus-gallery__arrow--prev"
+    aria-label="Vorheriges Foto"
+    data-haus-gallery-prev
+  >
+    ←
+  </button>
+  <button
+    type="button"
+    class="haus-gallery__arrow haus-gallery__arrow--next"
+    aria-label="Nächstes Foto"
+    data-haus-gallery-next
+  >
+    →
+  </button>
+
+  <div class="haus-gallery__dots" role="tablist" aria-label="Foto auswählen">
+    {
+      slides.map((_, i) => (
+        <button
+          type="button"
+          class="haus-gallery__dot"
+          role="tab"
+          aria-label={`Foto ${i + 1} von ${slides.length}`}
+          data-haus-gallery-dot={i}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .haus-gallery {
+    position: relative;
+  }
+
+  /* Embla viewport: clips overflow, the container is the flex track */
+  .haus-gallery__viewport {
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-md);
+    background: var(--c-bg-sand);
+  }
+  .haus-gallery__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    backface-visibility: hidden;
+  }
+
+  .haus-gallery__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    overflow: hidden;
+    background: var(--c-bg-sand);
+  }
+  .haus-gallery__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .haus-gallery__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--c-ink);
+    font-size: 1.1rem;
+    font-weight: 800;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: transform 140ms ease, background 140ms ease, opacity 140ms ease;
+  }
+  .haus-gallery__arrow:hover {
+    background: #fff;
+    transform: translateY(-50%) scale(1.06);
+  }
+  .haus-gallery__arrow--prev { left: var(--s-4); }
+  .haus-gallery__arrow--next { right: var(--s-4); }
+  .haus-gallery__arrow[disabled] {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: translateY(-50%);
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .haus-gallery__arrow { display: none; }
+  }
+
+  .haus-gallery__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: var(--s-4);
+  }
+  .haus-gallery__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: color-mix(in srgb, var(--c-sand) 40%, transparent);
+    padding: 0;
+    cursor: pointer;
+    transition: background 140ms ease, transform 140ms ease;
+  }
+  .haus-gallery__dot:hover {
+    background: var(--c-sand);
+  }
+  .haus-gallery__dot[aria-current="true"] {
+    background: var(--c-orange);
+    transform: scale(1.2);
+  }
+</style>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import type { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
+  import ClassNames from "embla-carousel-class-names";
+  import WheelGesturesPlugin from "embla-carousel-wheel-gestures";
+  import Autoplay from "embla-carousel-autoplay";
+
+  const setupGallery = (root: HTMLElement) => {
+    const viewport = root.querySelector<HTMLElement>(
+      "[data-haus-gallery-viewport]"
+    );
+    if (!viewport) return;
+
+    const prevBtn = root.querySelector<HTMLButtonElement>(
+      "[data-haus-gallery-prev]"
+    );
+    const nextBtn = root.querySelector<HTMLButtonElement>(
+      "[data-haus-gallery-next]"
+    );
+    const dots = Array.from(
+      root.querySelectorAll<HTMLButtonElement>("[data-haus-gallery-dot]")
+    );
+
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    const options: EmblaOptionsType = {
+      loop: true,
+      align: "center",
+      skipSnaps: false,
+      duration: 28,
+    };
+
+    const plugins = [
+      ClassNames({ selected: "is-selected" }),
+      WheelGesturesPlugin(),
+      ...(prefersReduced
+        ? []
+        : [
+            Autoplay({
+              delay: 5500,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]),
+    ];
+
+    const embla: EmblaCarouselType = EmblaCarousel(viewport, options, plugins);
+
+    const updateUi = () => {
+      const idx = embla.selectedScrollSnap();
+      dots.forEach((d, i) => {
+        if (i === idx) d.setAttribute("aria-current", "true");
+        else d.removeAttribute("aria-current");
+      });
+      // With loop:true canScrollPrev/Next stay true — keep buttons enabled.
+    };
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => embla.scrollTo(i));
+    });
+    prevBtn?.addEventListener("click", () => embla.scrollPrev());
+    nextBtn?.addEventListener("click", () => embla.scrollNext());
+
+    embla.on("select", updateUi);
+    embla.on("reInit", updateUi);
+    updateUi();
+  };
+
+  document
+    .querySelectorAll<HTMLElement>("[data-haus-gallery]")
+    .forEach(setupGallery);
+</script>

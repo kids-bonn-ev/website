@@ -15,6 +15,10 @@
     "@astrojs/sitemap": "^3.7.2",
     "@astrojs/vercel": "^10.0.5",
     "astro": "^6.1.9",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-class-names": "^8.6.0",
+    "embla-carousel-wheel-gestures": "^8.1.0",
     "resend": "^6.12.2",
     "sharp": "^0.34.5"
   },
