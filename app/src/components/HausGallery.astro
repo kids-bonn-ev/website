@@ -167,7 +167,14 @@ const { slides } = Astro.props;
   import WheelGesturesPlugin from "embla-carousel-wheel-gestures";
   import Autoplay from "embla-carousel-autoplay";
 
-  const setupGallery = (root: HTMLElement) => {
+  const INSTANCE_KEY = "__emblaInstance";
+
+  type GalleryRoot = HTMLElement & { [INSTANCE_KEY]?: EmblaCarouselType };
+
+  const setupGallery = (root: GalleryRoot) => {
+    // Tear down any prior instance bound to this node (View Transitions, HMR).
+    root[INSTANCE_KEY]?.destroy();
+
     const viewport = root.querySelector<HTMLElement>(
       "[data-haus-gallery-viewport]"
     );
@@ -195,7 +202,7 @@ const { slides } = Astro.props;
     };
 
     const plugins = [
-      ClassNames({ selected: "is-selected" }),
+      ClassNames(),
       WheelGesturesPlugin(),
       ...(prefersReduced
         ? []
@@ -209,6 +216,7 @@ const { slides } = Astro.props;
     ];
 
     const embla: EmblaCarouselType = EmblaCarousel(viewport, options, plugins);
+    root[INSTANCE_KEY] = embla;
 
     const updateUi = () => {
       const idx = embla.selectedScrollSnap();
@@ -216,7 +224,6 @@ const { slides } = Astro.props;
         if (i === idx) d.setAttribute("aria-current", "true");
         else d.removeAttribute("aria-current");
       });
-      // With loop:true canScrollPrev/Next stay true — keep buttons enabled.
     };
 
     dots.forEach((dot, i) => {
@@ -228,9 +235,24 @@ const { slides } = Astro.props;
     embla.on("select", updateUi);
     embla.on("reInit", updateUi);
     updateUi();
+
+    // Re-measure once each image settles — guards against the initial
+    // measurement happening before slides have their final width/height.
+    const images = root.querySelectorAll<HTMLImageElement>("img");
+    images.forEach((img) => {
+      if (img.complete) return;
+      img.addEventListener("load", () => embla.reInit(), { once: true });
+      img.addEventListener("error", () => embla.reInit(), { once: true });
+    });
   };
 
-  document
-    .querySelectorAll<HTMLElement>("[data-haus-gallery]")
-    .forEach(setupGallery);
+  const init = () => {
+    document
+      .querySelectorAll<GalleryRoot>("[data-haus-gallery]")
+      .forEach(setupGallery);
+  };
+
+  init();
+  // Astro View Transitions: re-run after each navigation.
+  document.addEventListener("astro:page-load", init);
 </script>
