@@ -30,11 +30,6 @@ const hausGallery = [
     <Deko name="halbkreis" size={140} bottom="6%" right="10%" rotate={-20} opacity={0.9} class="deko--hide-mobile" />
 
     <div class="container hero__inner">
-      <a href="/kennenlernen" class="announce">
-        <img src="/deco/blume02.svg" alt="" class="announce__icon" aria-hidden="true" />
-        <span class="announce__text">Noch U3 Plätze frei! Jetzt kennenlernen</span>
-      </a>
-
       <h1>
         Ein Ort zum <span class="hero__hl hero__hl--gruen">Wachsen</span>,<br />
         <span class="hero__hl hero__hl--orange">Staunen</span> &amp;
@@ -57,6 +52,64 @@ const hausGallery = [
         >
           Wie funktioniert der KIDS
         </Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight freie-section">
+    <div class="container">
+      <div class="freie">
+        <Deko name="wolke"     size={150} top="-50px"   right="-30px" rotate={-8} opacity={0.6} class="deko--hide-mobile" />
+        <Deko name="blume02"   size={90}  bottom="-30px" left="-25px" rotate={18} opacity={0.75} />
+        <Deko name="kreis"     size={70}  top="18%"     left="2%"     opacity={0.45} class="deko--hide-mobile" />
+        <Deko name="halbkreis" size={80}  bottom="22%"  right="4%"    rotate={-15} opacity={0.55} class="deko--hide-mobile" />
+        <Deko name="strich"    size={120} top="8%"      right="20%"   rotate={12} opacity={0.4} class="deko--hide-mobile" />
+
+        <div class="freie__inner">
+          <div class="freie__lead">
+            <p class="eyebrow">Anmeldung läuft</p>
+            <h2>
+              <span class="freie__hl">Noch U3-Plätze frei.</span><br />
+              Für den Herbst.
+            </h2>
+
+            <div class="freie__prose">
+              <p>
+                Im Sommer ziehen unsere Großen Richtung Schule... und in unserer
+                Zwergen-Gruppe wird wieder Platz für die Kleinen frei.
+              </p>
+              <p>
+                Wir suchen Familien, die Lust auf eine kleine, geborgene Gruppe
+                haben, auf Eltern, die anpacken, und einen Alltag, der nicht hetzt.
+              </p>
+            </div>
+          </div>
+
+          <aside class="freie__dates" aria-label="Geburtsdaten der gesuchten Kinder">
+            <p class="freie__dates-eyebrow">Passt das Alter?</p>
+            <p class="freie__dates-sub">Geboren zwischen...</p>
+
+            <div class="freie__dates-row">
+              <article class="date-tile">
+                <span class="date-tile__label">Älteste</span>
+                <span class="date-tile__date">01.10.2022</span>
+                <span class="date-tile__hint">beim Start fast 4 Jahre</span>
+              </article>
+
+              <span class="date-tile__sep" aria-hidden="true">-›</span>
+
+              <article class="date-tile">
+                <span class="date-tile__label">Jüngste</span>
+                <span class="date-tile__date">31.07.2025</span>
+                <span class="date-tile__hint">beim Start gerade 1 Jahr</span>
+              </article>
+            </div>
+
+            <div class="freie__dates-ctas">
+              <Button href="/kennenlernen">Jetzt kennenlernen</Button>
+            </div>
+          </aside>
+        </div>
       </div>
     </div>
   </section>
@@ -421,39 +474,126 @@ const hausGallery = [
     }
   }
 
-  /* Anmelde-Pille / Störer */
-  .announce {
-    display: inline-flex;
+  /* "Noch U3-Plätze frei" - rotated peach Störer-Card direkt unter dem Hero */
+  .freie-section {
+    background: var(--c-bg);
+  }
+  .freie {
+    position: relative;
+    background: var(--c-pfirsich);
+    border-radius: 2.5rem;
+    padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+    transform: rotate(-1deg);
+    box-shadow: 0 12px 0 rgba(58, 52, 44, 0.08);
+    overflow: hidden;
+  }
+  .freie__inner {
+    position: relative;
+    transform: rotate(1deg); /* counter-rotate content so text reads straight */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-7);
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.3rem 0.85rem 0.3rem 0.5rem;
-    background: #fff;
+  }
+  @media (max-width: 800px) {
+    .freie { transform: rotate(-0.5deg); border-radius: 2rem; }
+    .freie__inner { transform: rotate(0.5deg); grid-template-columns: 1fr; gap: var(--s-6); }
+  }
+
+  .freie__lead h2 {
+    margin: 0 0 var(--s-4);
+  }
+  .freie__hl {
+    color: var(--c-orange);
+  }
+  .freie__prose p {
+    margin: 0 0 var(--s-3);
+    max-width: 32rem;
     color: var(--c-ink);
-    border-radius: var(--r-pill);
+  }
+  .freie__prose p:last-child { margin-bottom: 0; }
+
+  .freie__dates {
+    background: #fff;
+    border-radius: var(--r-lg);
+    padding: var(--s-6) var(--s-5);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+  .freie__dates-eyebrow {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--c-ink);
+    margin: 0;
+  }
+  .freie__dates-sub {
+    font-size: 0.95rem;
+    color: var(--c-ink-soft);
+    margin: calc(var(--s-3) * -1) 0 0; /* tighten gap to eyebrow */
+    line-height: 1.4;
+  }
+  .freie__dates-ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-4);
+    margin-top: var(--s-2);
+  }
+  .freie__dates-ctas :global(.btn) {
+    width: 100%;
+    justify-content: center;
+  }
+  .freie__dates-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: var(--s-3);
+    flex-wrap: nowrap;
+  }
+  .date-tile {
+    flex: 1 1 0;
+    background: var(--c-bg-cream);
+    border-radius: var(--r-lg);
+    padding: var(--s-4) var(--s-3);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+  .date-tile__label {
     font-family: var(--font-body);
     font-weight: 800;
-    font-size: 0.8rem;
-    text-decoration: none;
-    box-shadow: var(--shadow-md);
-    transition: transform 180ms ease, box-shadow 180ms ease;
-    margin-bottom: var(--s-6);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-ink-soft);
   }
-  .announce:hover {
-    transform: translateY(-2px) rotate(-0.5deg);
-    box-shadow: var(--shadow-lg);
+  .date-tile__date {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    line-height: 1.05;
     color: var(--c-ink);
   }
-  .announce__icon {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
+  .date-tile__hint {
+    font-size: 0.78rem;
+    color: var(--c-ink-soft);
+    line-height: 1.3;
   }
-  .announce__text {
-    white-space: nowrap;
+  .date-tile__sep {
+    align-self: center;
+    font-family: var(--font-hand);
+    font-size: 5rem;
+    line-height: 12px;
+    color: var(--c-orange);
+    flex: 0 0 auto;
   }
-  @media (max-width: 520px) {
-    .announce { font-size: 0.85rem; padding: 0.4rem 0.8rem 0.4rem 0.45rem; }
-    .announce__text { white-space: normal; }
+  @media (max-width: 420px) {
+    .freie__dates-row { flex-wrap: wrap; }
+    .date-tile__sep { display: none; }
   }
 
   .hero__hl {
