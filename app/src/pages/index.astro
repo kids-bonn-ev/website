@@ -69,45 +69,38 @@ const hausGallery = [
           <div class="freie__lead">
             <p class="eyebrow">Anmeldung läuft</p>
             <h2>
-              <span class="freie__hl">Noch U3-Plätze frei.</span><br />
+              <span class="freie__hl">Noch Plätze frei.</span><br />
               Für den Herbst.
             </h2>
 
             <div class="freie__prose">
               <p>
-                Im Sommer ziehen unsere Großen Richtung Schule... und in unserer
-                Zwergen-Gruppe wird wieder Platz für die Kleinen frei.
+                Im Sommer ziehen unsere Großen Richtung Schule — und in unseren
+                drei Gruppen wird wieder Platz frei. Sowohl für die Kleinen als
+                auch für die Größeren.
               </p>
               <p>
-                Wir suchen Familien, die Lust auf eine kleine, geborgene Gruppe
-                haben, auf Eltern, die anpacken, und einen Alltag, der nicht hetzt.
+                Wir suchen Familien, die Lust auf kleine, feste Gruppen haben,
+                auf Eltern, die anpacken, und einen Alltag, der nicht hetzt.
               </p>
             </div>
           </div>
 
-          <aside class="freie__dates" aria-label="Geburtsdaten der gesuchten Kinder">
-            <p class="freie__dates-eyebrow">Passt das Alter?</p>
-            <p class="freie__dates-sub">Geboren zwischen...</p>
-
-            <div class="freie__dates-row">
-              <article class="date-tile">
-                <span class="date-tile__label">Älteste</span>
-                <span class="date-tile__date">01.10.2022</span>
-                <span class="date-tile__hint">beim Start fast 4 Jahre</span>
-              </article>
-
-              <span class="date-tile__sep" aria-hidden="true">-›</span>
-
-              <article class="date-tile">
-                <span class="date-tile__label">Jüngste</span>
-                <span class="date-tile__date">31.07.2025</span>
-                <span class="date-tile__hint">beim Start gerade 1 Jahr</span>
-              </article>
-            </div>
+          <aside class="freie__dates" aria-label="Kennenlernen vereinbaren">
+            <p class="freie__dates-eyebrow">Klingt gut?</p>
+            <p class="freie__dates-sub">
+              Lernt uns bei einem Termin oder Tag der offenen Türe kennen!
+            </p>
 
             <div class="freie__dates-ctas">
-              <Button href="/kennenlernen">Jetzt kennenlernen</Button>
+              <Button href="/kennenlernen">Jetzt Kennenlernen vereinbaren</Button>
             </div>
+
+            <p class="freie__dates-foot">
+              Für unsere <strong>U3-Gruppe (Zwergen)</strong> suchen wir Kinder,
+              die zwischen <strong>01.10.2022</strong> und <strong>31.07.2025</strong>
+              geboren sind.
+            </p>
           </aside>
         </div>
       </div>
@@ -480,7 +473,7 @@ const hausGallery = [
   }
   .freie {
     position: relative;
-    background: var(--c-pfirsich);
+    background: var(--c-bg-cream);
     border-radius: 2.5rem;
     padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
     transform: rotate(-1deg);
@@ -547,53 +540,17 @@ const hausGallery = [
     width: 100%;
     justify-content: center;
   }
-  .freie__dates-row {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: var(--s-3);
-    flex-wrap: nowrap;
-  }
-  .date-tile {
-    flex: 1 1 0;
-    background: var(--c-bg-cream);
-    border-radius: var(--r-lg);
-    padding: var(--s-4) var(--s-3);
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    min-width: 0;
-  }
-  .date-tile__label {
-    font-family: var(--font-body);
-    font-weight: 800;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  .freie__dates-foot {
+    margin: var(--s-2) 0 0;
+    padding-top: var(--s-3);
+    border-top: 1px solid color-mix(in srgb, var(--c-ink) 12%, transparent);
+    font-size: 0.85rem;
     color: var(--c-ink-soft);
+    line-height: 1.45;
   }
-  .date-tile__date {
-    font-family: var(--font-display);
-    font-size: clamp(1.3rem, 3vw, 1.7rem);
-    line-height: 1.05;
+  .freie__dates-foot strong {
     color: var(--c-ink);
-  }
-  .date-tile__hint {
-    font-size: 0.78rem;
-    color: var(--c-ink-soft);
-    line-height: 1.3;
-  }
-  .date-tile__sep {
-    align-self: center;
-    font-family: var(--font-hand);
-    font-size: 5rem;
-    line-height: 12px;
-    color: var(--c-orange);
-    flex: 0 0 auto;
-  }
-  @media (max-width: 420px) {
-    .freie__dates-row { flex-wrap: wrap; }
-    .date-tile__sep { display: none; }
+    font-weight: 800;
   }
 
   .hero__hl {
