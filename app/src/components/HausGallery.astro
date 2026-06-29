@@ -236,7 +236,7 @@ const { slides } = Astro.props;
     embla.on("reInit", updateUi);
     updateUi();
 
-    // Re-measure once each image settles — guards against the initial
+    // Re-measure once each image settles - guards against the initial
     // measurement happening before slides have their final width/height.
     const images = root.querySelectorAll<HTMLImageElement>("img");
     images.forEach((img) => {

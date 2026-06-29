@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-// "Gewünschter Eintritt" — Ab sofort plus "Nächster [Monat]" für alle 12 Monate.
+// "Gewünschter Eintritt" - Ab sofort plus "Nächster [Monat]" für alle 12 Monate.
 const eintrittOptionen = [
   "Ab sofort",
   "Nächster Januar", "Nächster Februar", "Nächster März",
@@ -23,7 +23,7 @@ const alterOptionen = [
 
 <BaseLayout
   title="Kennenlernen & Platz anfragen – KIDS e.V."
-  description="Kommt vorbei, schaut euch um und fühlt, ob wir passen. Tag der offenen Tür oder persönliches Gespräch — die Anmeldephase 2026/27 ist offen."
+  description="Kommt vorbei, schaut euch um und fühlt, ob wir passen. Tag der offenen Tür oder persönliches Gespräch - die Anmeldephase 2026/27 ist offen."
 >
 
   <section class="anm-hero">
@@ -137,7 +137,7 @@ const alterOptionen = [
       {/* ---- Formular ---- */}
       <form class="anm-form" method="post" action="/api/submit">
         <input type="hidden" name="_form" value="kennenlernen" />
-        {/* Honeypot — a real field but hidden from real users; bots fill it. */}
+        {/* Honeypot - a real field but hidden from real users; bots fill it. */}
         <div class="honeypot" aria-hidden="true">
           <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
         </div>
@@ -238,7 +238,7 @@ const alterOptionen = [
   .anm-hero h1 { margin-block: var(--s-3) var(--s-5); }
   .anm-hero .lede { max-width: 42rem; margin-inline: auto; }
 
-  /* "So läuft die Anmeldung" — 5 numbered steps */
+  /* "So läuft die Anmeldung" - 5 numbered steps */
   .anm-steps__head {
     max-width: 44rem;
     margin: 0 auto var(--s-7);
@@ -355,7 +355,7 @@ const alterOptionen = [
     margin-bottom: var(--s-2);
   }
 
-  /* Honeypot — hidden from sighted users and assistive tech, bots find it. */
+  /* Honeypot - hidden from sighted users and assistive tech, bots find it. */
   .honeypot {
     position: absolute;
     left: -10000px;

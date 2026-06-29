@@ -23,7 +23,7 @@ const siteUrl = Astro.site ?? new URL("https://kids-bonn.de");
 const canonical = new URL(Astro.url.pathname, siteUrl);
 const ogImageAbs = new URL(ogImage, siteUrl);
 
-// Organization / Preschool structured data — rendered site-wide in <head>.
+// Organization / Preschool structured data - rendered site-wide in <head>.
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Preschool",
@@ -109,7 +109,7 @@ const orgJsonLd = {
 
     <meta name="generator" content={Astro.generator} />
 
-    {/* Structured data (Schema.org) — lets Google render rich snippets with address, phone and opening hours. */}
+    {/* Structured data (Schema.org) - lets Google render rich snippets with address, phone and opening hours. */}
     <script
       type="application/ld+json"
       is:inline
