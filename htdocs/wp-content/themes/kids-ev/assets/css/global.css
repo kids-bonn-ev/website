@@ -585,3 +585,140 @@ ul.is-style-kids-bullets strong {
 .wp-block-template-part {
   display: contents;
 }
+
+/* ---------- Stellenanzeige (Pattern "Stellenanzeige") ----------
+   Komposition aus kids/card + Core-Blöcken, Port von .stelle-card__* */
+.stelle-grid {
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-bg-sand);
+}
+.stelle-grid h4 {
+  font-size: 1.25rem;
+  margin: 0 0 var(--s-4);
+}
+.stelle-cta {
+  margin-top: var(--s-6);
+  text-align: center;
+}
+.stelle-hint {
+  margin: var(--s-3) auto 0;
+  font-size: 0.95rem;
+  color: var(--c-ink-soft);
+  text-align: center;
+  max-width: none;
+}
+
+/* ---------- Formulare (kids/form-kennenlernen, kids/form-spenden) ----------
+   Gemeinsames Feld-System, Port aus kennenlernen.astro / spenden.astro. */
+
+/* Honeypot - für Sehende und Screenreader versteckt, Bots füllen es aus. */
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.kids-form {
+  background: #fff;
+  border-radius: var(--r-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.kids-form h2 {
+  margin-bottom: var(--s-2);
+}
+.kids-form__note {
+  color: var(--c-ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: var(--s-2);
+}
+.kids-form__actions {
+  margin-top: var(--s-3);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.field label,
+.field legend {
+  font-weight: 700;
+  color: var(--c-ink);
+  font-size: 0.95rem;
+}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="number"],
+.field input[type="tel"],
+.field select,
+.field textarea {
+  font: inherit;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid var(--c-bg-sand);
+  border-radius: var(--r-md);
+  background: var(--c-bg);
+  color: var(--c-ink);
+  transition: border-color 140ms ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 5.5rem;
+  line-height: 1.5;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--c-orange);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4);
+}
+.field-row--plz {
+  grid-template-columns: 1fr 2fr;
+}
+@media (max-width: 600px) {
+  .field-row,
+  .field-row--plz {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field--group {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.field--group legend {
+  margin-bottom: var(--s-2);
+}
+.radio-row {
+  display: flex;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+}
+.radio-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--c-ink);
+  cursor: pointer;
+}
+.radio-row input[type="radio"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--c-orange);
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/form-kennenlernen",
+    "title": "KIDS: Formular Kennenlernen",
+    "description": "Kontaktformular der Kennenlernen-Seite — sendet über den kids-core-Handler (Resend)",
+    "category": "formatting",
+    "keywords": ["Formular", "Kennenlernen", "Anmeldung"],
+    "supports": {
+        "customClassName": true
+    },
+    "blockstudio": {
+        "attributes": []
+    }
+}

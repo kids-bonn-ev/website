@@ -21,6 +21,8 @@ htdocs/wp-content/plugins/*
 !htdocs/wp-content/plugins/.gitkeep
 htdocs/wp-content/mu-plugins/*
 !htdocs/wp-content/mu-plugins/.gitkeep
+!htdocs/wp-content/mu-plugins/kids-core.php
+!htdocs/wp-content/mu-plugins/kids-core/
 htdocs/wp-content/languages/*
 !htdocs/wp-content/languages/.gitkeep
 

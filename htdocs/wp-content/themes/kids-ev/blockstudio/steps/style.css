@@ -1,0 +1,112 @@
+/* Schritte — Port von .anm-steps (kennenlernen.astro) und .apply__steps (jobs.astro).
+   Die Nummer wird per CSS-Counter automatisch gezählt. */
+
+.kids-steps {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	counter-reset: step;
+}
+
+/* --- Variante: große Ziffer (01, 02, …) --- */
+.kids-steps--big-number {
+	margin-inline: auto;
+	max-width: 52rem;
+	display: flex;
+	flex-direction: column;
+	gap: var(--s-3);
+}
+
+.kids-steps--big-number .kids-step {
+	display: grid;
+	grid-template-columns: 5rem 1fr;
+	gap: var(--s-5);
+	align-items: start;
+	padding: var(--s-5) var(--s-6);
+	background: #fff;
+	border-radius: var(--r-lg);
+	box-shadow: var(--shadow-md);
+}
+
+.kids-steps--big-number .kids-step::before {
+	counter-increment: step;
+	content: counter(step, decimal-leading-zero);
+	font-family: var(--font-display-black);
+	font-size: clamp(2.2rem, 4vw, 3rem);
+	line-height: 1;
+	color: var(--c-orange);
+}
+
+.kids-steps--big-number .kids-step h3 {
+	margin: 0 0 var(--s-2);
+	font-size: 1.4rem;
+}
+
+.kids-steps--big-number .kids-step p {
+	margin: 0 0 var(--s-2);
+	color: var(--c-ink-soft);
+	max-width: 34rem;
+}
+.kids-steps--big-number .kids-step p:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+	.kids-steps--big-number .kids-step {
+		grid-template-columns: 1fr;
+		gap: var(--s-2);
+		padding: var(--s-4) var(--s-5);
+	}
+	.kids-steps--big-number .kids-step::before {
+		font-size: 2rem;
+	}
+}
+
+/* --- Variante: Kreis-Badge --- */
+.kids-steps--circle-badge {
+	display: grid;
+	gap: var(--s-4);
+}
+
+.kids-steps--circle-badge .kids-step {
+	background: #fff;
+	padding: var(--s-5) var(--s-5) var(--s-5) calc(var(--s-5) + 3rem);
+	border-radius: var(--r-md);
+	box-shadow: var(--shadow-md);
+	position: relative;
+}
+
+.kids-steps--circle-badge .kids-step::before {
+	counter-increment: step;
+	content: counter(step);
+	position: absolute;
+	top: 50%;
+	left: var(--s-4);
+	transform: translateY(-50%);
+	width: 2rem;
+	height: 2rem;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background: var(--c-orange);
+	color: #fff;
+	font-family: var(--font-display-black);
+}
+
+.kids-steps--circle-badge .kids-step h3 {
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: 1.05rem;
+	margin: 0 0 var(--s-1);
+}
+
+.kids-steps--circle-badge .kids-step p {
+	margin: 0;
+	max-width: none;
+}
+
+/* Optionaler Button unter dem Schritt-Text (z. B. KITA-NET-Link) */
+.kids-step .btn,
+.kids-step .button-row {
+	margin-top: var(--s-3);
+}

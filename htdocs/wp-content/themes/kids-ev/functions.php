@@ -5,6 +5,8 @@ add_action('after_setup_theme', function () {
 });
 
 add_action('init', function () {
+    register_block_pattern_category('kids', ['label' => 'KIDS']);
+
     register_block_style('core/paragraph', ['name' => 'eyebrow', 'label' => 'Eyebrow']);
     register_block_style('core/paragraph', ['name' => 'lede', 'label' => 'Lede']);
     register_block_style('core/paragraph', ['name' => 'hand', 'label' => 'Handschrift']);
