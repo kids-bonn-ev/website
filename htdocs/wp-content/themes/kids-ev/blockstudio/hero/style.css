@@ -57,3 +57,13 @@
 		font-size: 1.1rem;
 	}
 }
+
+/* Mobil: die Boden-Wiese im Startseiten-Hero verkleinern, damit sie die
+   CTAs nicht verschluckt (Port von .deko--hero-ground). */
+@media (max-width: 700px) {
+	.kids-hero--home .deko[src*="wiese01"] {
+		width: 150px !important;
+		left: -30px !important;
+		bottom: -10px !important;
+	}
+}

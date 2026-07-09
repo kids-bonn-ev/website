@@ -722,3 +722,97 @@ ul.is-style-kids-bullets strong {
   accent-color: var(--c-orange);
   margin: 0;
 }
+
+/* ---------- Seiten-Kompositionen (Patterns) ----------
+   Kleine Layout-Klassen für Block-Kompositionen, Ports der
+   seitenspezifischen Astro-Styles. */
+
+/* Startseite: Verein-Prosa unter den Handschrift-Zeilen */
+.ei-verein {
+  margin: var(--s-6) auto 0;
+  max-width: 44rem;
+  text-align: center;
+}
+.ei-verein p {
+  margin: 0 auto var(--s-4);
+  max-width: none;
+}
+.ei-verein p:last-child {
+  margin-bottom: 0;
+}
+
+/* Kontakt: gedämpfte Zusatzzeile (Öffnungszeiten am Telefon) */
+.kontakt-muted {
+  color: var(--c-ink-soft);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Spenden: Intro-Prosa und Bank-Karte */
+.spenden-intro {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+.spenden-intro p {
+  max-width: none;
+}
+.bank-card {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+/* Formulare mit begrenzter Breite (Spendenquittung) */
+.form-narrow {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+/* Jobs: Benefits-Grid aus kids/card (accent-top) */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: var(--s-5);
+}
+.benefits .kids-card h3 {
+  margin: 0 0 var(--s-3);
+  font-size: 1.3rem;
+}
+.benefits .kids-card p {
+  margin: 0;
+  color: var(--c-ink-soft);
+}
+
+/* Jobs: Liste der Stellen-Karten */
+.stellen-list {
+  display: grid;
+  gap: var(--s-6);
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+/* Jobs: Ansprechpersonen-Karte (Bewerbung) */
+.apply-name {
+  margin: 0 0 var(--s-3);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--c-ink);
+}
+.apply-contacts {
+  margin: 0;
+  line-height: 1.7;
+}
+.apply-contacts a {
+  font-weight: 700;
+  color: var(--c-ink);
+  text-decoration: none;
+  word-break: break-word;
+}
+.apply-contacts a:hover {
+  color: var(--c-link);
+}
+.apply-hand {
+  font-size: 1.3rem;
+  color: var(--c-orange);
+  margin-top: var(--s-4);
+  margin-bottom: 0;
+}

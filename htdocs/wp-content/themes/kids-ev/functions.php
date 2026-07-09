@@ -24,6 +24,23 @@ add_action('enqueue_block_editor_assets', function () {
 });
 
 /**
+ * Attachment-ID zu einem Mediathek-Slug (post_name), z. B. 'haus-1'.
+ * Wird von den Patterns genutzt; die Medien legt scripts/seed-pages.php an.
+ */
+function kids_attachment_id(string $slug): int
+{
+    $ids = get_posts([
+        'post_type' => 'attachment',
+        'name' => $slug,
+        'posts_per_page' => 1,
+        'post_status' => 'inherit',
+        'fields' => 'ids',
+    ]);
+
+    return $ids[0] ?? 0;
+}
+
+/**
  * Bild-URL für ein Deko-Motiv (Port von Deko.astro).
  */
 function kids_deko_src(string $name): string
