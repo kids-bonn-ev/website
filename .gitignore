@@ -1,1 +1,58 @@
 .DS_Store
+.idea
+tideways.com/
+
+# WordPress core is installed by Composer
+htdocs/wordpress
+htdocs/.htaccess
+
+# Composer / Node dependencies
+vendor/
+node_modules/
+
+# Environment variables — copy .env.example to .env and fill it in
+.env
+.env.*
+!.env.example
+
+# WordPress content directories populated by Composer or at runtime.
+# If you add a custom plugin/mu-plugin, force add it or add an exception below.
+htdocs/wp-content/plugins/*
+!htdocs/wp-content/plugins/.gitkeep
+htdocs/wp-content/mu-plugins/*
+!htdocs/wp-content/mu-plugins/.gitkeep
+htdocs/wp-content/languages/*
+!htdocs/wp-content/languages/.gitkeep
+
+# User-uploaded media, not tracked in git
+htdocs/wp-content/uploads/*
+!htdocs/wp-content/uploads/.gitkeep
+
+# WordPress generated/cache directories
+htdocs/wp-content/upgrade
+htdocs/wp-content/cache
+htdocs/wp-content/*cache
+
+# DDEV-generated files (keep only .ddev/config.yaml)
+.ddev/.dbimageBuild
+.ddev/.ddev-docker-compose-base.yaml
+.ddev/.ddev-docker-compose-full.yaml
+.ddev/.ddev-docker-compose-full.yml
+.ddev/.dbimageExtra
+.ddev/.webimageBuild
+.ddev/.webimageExtra
+.ddev/.gitignore
+.ddev/.homeadditions
+.ddev/apache
+.ddev/commands
+.ddev/db-build
+.ddev/homeadditions
+.ddev/mutagen
+.ddev/mysql
+.ddev/nginx_full
+.ddev/php
+.ddev/providers
+.ddev/traefik
+.ddev/web-build
+.ddev/web-entrypoint.d
+.ddev/xhprof

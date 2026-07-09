@@ -1,0 +1,8 @@
+[09-Jul-2026 19:30:15 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/html/htdocs/wordpress/wp-includes/class-wpdb.php on line 1994
+[09-Jul-2026 19:30:33 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/html/htdocs/wordpress/wp-includes/class-wpdb.php on line 1994
+[09-Jul-2026 19:30:37 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/html/htdocs/wordpress/wp-includes/class-wpdb.php on line 1994
+[09-Jul-2026 19:38:41 UTC] PHP Warning:  mysqli_real_connect(): php_network_getaddresses: getaddrinfo for ddev-kids-ev-website-db failed: Name or service not known in /Users/be/tideways/workspace/kids-ev/website/htdocs/wordpress/wp-includes/class-wpdb.php on line 1994
+[09-Jul-2026 19:38:41 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo for ddev-kids-ev-website-db failed: Name or service not known in /Users/be/tideways/workspace/kids-ev/website/htdocs/wordpress/wp-includes/class-wpdb.php on line 1994
+[09-Jul-2026 19:39:09 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/htdocs/wordpress/wp-includes/widgets.php on line 1652
+[09-Jul-2026 19:39:09 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/htdocs/wordpress/wp-includes/widgets.php on line 1652
+[09-Jul-2026 19:39:09 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/htdocs/wordpress/wp-includes/widgets.php on line 1652

@@ -1,0 +1,52 @@
+{
+  "name": "kids-bonn-ev/website",
+  "type": "project",
+  "license": "MIT",
+  "description": "Kids Bonn e.V. WordPress site",
+  "config": {
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "johnpbloch/wordpress-core-installer": true,
+      "koodimonni/composer-dropin-installer": true,
+      "composer/installers": true
+    }
+  },
+  "autoload": {
+    "psr-0": {"WordPress\\Installer": "scripts"}
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "WordPress\\Installer::symlinkWPContent"
+    ],
+    "post-update-cmd": [
+      "WordPress\\Installer::symlinkWPContent"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "johnpbloch/wordpress-core-installer": "^2.0",
+    "johnpbloch/wordpress-core": "^7.0",
+    "composer/installers": "^2.0",
+    "koodimonni/composer-dropin-installer": "^1.3",
+    "vlucas/phpdotenv": "^2.6.7"
+  },
+  "extra": {
+    "installer-paths": {
+      "htdocs/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "htdocs/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "htdocs/wp-content/themes/{$name}": ["type:wordpress-theme"]
+    },
+    "dropin-paths": {
+      "htdocs/wp-content/languages/": ["vendor:koodimonni-language"],
+      "htdocs/wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "htdocs/wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
+    },
+    "wordpress-install-dir": "htdocs/wordpress"
+  }
+}
