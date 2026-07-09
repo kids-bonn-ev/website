@@ -1,0 +1,52 @@
+/* Feature-Grid — Port von .besonders (index.astro) */
+
+.feature-grid {
+	display: grid;
+	grid-template-columns: 0.9fr 1.3fr;
+	gap: var(--s-8);
+	align-items: start;
+}
+
+.feature-grid__head {
+	position: sticky;
+	top: calc(72px + var(--s-5));
+}
+.feature-grid__head h2 {
+	margin: 0 0 var(--s-4);
+}
+.feature-grid__lead {
+	margin: 0;
+	color: var(--c-ink-soft);
+	font-size: 1.05rem;
+	line-height: 1.55;
+	max-width: 34rem;
+}
+
+.feature-grid__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--s-5);
+}
+
+@media (max-width: 900px) {
+	.feature-grid {
+		grid-template-columns: 1fr;
+		gap: var(--s-6);
+	}
+	.feature-grid__head {
+		position: static;
+		text-align: center;
+	}
+}
+
+@media (max-width: 560px) {
+	.feature-grid__grid {
+		grid-template-columns: 1fr;
+	}
+	.feature-grid__head h2 {
+		font-size: 1.9rem;
+	}
+	.feature-grid__lead {
+		font-size: 0.9rem;
+	}
+}

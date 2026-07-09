@@ -579,3 +579,9 @@ ul.is-style-kids-bullets strong {
   height: 0.9rem;
   background-image: url("../deco/blume02.svg");
 }
+
+/* Template-Part-Wrapper erzeugen keine eigene Box, damit der sticky Header
+   direkt im Seitenfluss sitzt (wie in der Astro-Version direkt unter <body>). */
+.wp-block-template-part {
+  display: contents;
+}

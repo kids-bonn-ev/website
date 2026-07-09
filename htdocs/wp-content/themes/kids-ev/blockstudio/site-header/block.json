@@ -1,0 +1,50 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/site-header",
+    "title": "KIDS: Site-Header",
+    "description": "Sticky Header mit Logo, Navigation, CTA und CSS-Burger (Port von Header.astro)",
+    "category": "formatting",
+    "keywords": ["Header", "Navigation"],
+    "supports": {
+        "customClassName": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "logo",
+                "type": "files",
+                "label": "Logo (Standard: Schriftzug aus dem Theme)"
+            },
+            {
+                "id": "links",
+                "type": "repeater",
+                "label": "Navigation",
+                "attributes": [
+                    { "id": "label", "type": "text", "label": "Beschriftung" },
+                    { "id": "url", "type": "text", "label": "Link (URL)" },
+                    {
+                        "id": "dot",
+                        "type": "select",
+                        "label": "Farbpunkt",
+                        "default": "none",
+                        "options": [
+                            { "value": "none", "label": "Keiner" },
+                            { "value": "gruen", "label": "Grün (Jobs)" },
+                            { "value": "gelb", "label": "Gelb (Spenden)" }
+                        ]
+                    },
+                    { "id": "sep", "type": "toggle", "label": "Trennlinie davor", "default": false }
+                ]
+            },
+            {
+                "id": "cta",
+                "type": "group",
+                "label": "CTA-Button",
+                "attributes": [
+                    { "id": "label", "type": "text", "label": "Beschriftung" },
+                    { "id": "url", "type": "text", "label": "Link (URL)" }
+                ]
+            }
+        ]
+    }
+}

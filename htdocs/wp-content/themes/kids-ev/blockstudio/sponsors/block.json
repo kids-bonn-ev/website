@@ -1,0 +1,30 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/sponsors",
+    "title": "KIDS: Sponsoren",
+    "description": "Sektion mit zentriertem Kopf und Logo-Grid (Port von Sponsoren.astro)",
+    "category": "formatting",
+    "keywords": ["Sponsoren", "Logos", "Danke"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            { "id": "eyebrow", "type": "text", "label": "Eyebrow", "default": "Danke!" },
+            { "id": "heading", "type": "text", "label": "Überschrift", "default": "Unsere Sponsoren." },
+            { "id": "lead", "type": "richtext", "label": "Lead-Text" },
+            {
+                "id": "sponsors",
+                "type": "repeater",
+                "label": "Sponsoren",
+                "attributes": [
+                    { "id": "logo", "type": "files", "label": "Logo" },
+                    { "id": "name", "type": "text", "label": "Name" },
+                    { "id": "url", "type": "text", "label": "Website (URL)" }
+                ]
+            }
+        ]
+    }
+}

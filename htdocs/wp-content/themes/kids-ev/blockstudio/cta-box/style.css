@@ -1,0 +1,39 @@
+/* CTA-Box — Port von .kommvorbei (index.astro) */
+
+.cta-box {
+	position: relative;
+	overflow: hidden;
+	background: var(--c-orange);
+	color: #fff;
+	border-radius: 2.5rem;
+	padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.cta-box__inner {
+	position: relative;
+	max-width: 40rem;
+}
+
+.cta-box .eyebrow,
+.cta-box .is-style-eyebrow {
+	color: var(--c-gelb);
+	margin-bottom: var(--s-3);
+}
+
+.cta-box h2 {
+	color: #fff;
+	margin: 0 0 var(--s-4);
+}
+
+.cta-box p:not(.is-style-eyebrow) {
+	color: rgba(255, 255, 255, 0.92);
+	font-size: 1.15rem;
+	line-height: 1.55;
+	max-width: 34rem;
+	margin: 0 0 var(--s-6);
+}
+
+.cta-box .button-row p,
+.cta-box .button-row {
+	margin: 0;
+}

@@ -1,0 +1,59 @@
+/* Hero — Port von .hero (index.astro) + .kontakt-/.jobs-/.anm-/.spenden-hero */
+
+.kids-hero {
+	position: relative;
+	overflow: hidden;
+	background: var(--c-bg-cream);
+}
+
+.kids-hero--home {
+	padding-block: clamp(3.5rem, 10vw, 8rem) clamp(5rem, 12vw, 10rem);
+}
+
+.kids-hero--page {
+	padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.kids-hero__inner {
+	position: relative;
+	text-align: center;
+}
+.kids-hero--left .kids-hero__inner {
+	text-align: left;
+}
+
+.kids-hero h1 {
+	margin-block: 0 var(--s-5);
+	text-wrap: balance;
+}
+
+.kids-hero .lede,
+.kids-hero .is-style-lede {
+	max-width: 42rem;
+	margin-inline: auto;
+	text-wrap: pretty;
+}
+.kids-hero--left .lede,
+.kids-hero--left .is-style-lede {
+	margin-inline: 0;
+}
+
+.kids-hero .button-row {
+	margin-top: var(--s-6);
+}
+
+/* Outline-Button bekommt den Sektions-Hintergrund, damit Deko dahinter
+   auf Mobilgeräten nicht durchscheint. */
+.kids-hero .btn--outline {
+	background: var(--c-bg-cream);
+}
+
+@media (max-width: 520px) {
+	.kids-hero h1 {
+		font-size: clamp(2rem, 8vw, 2.6rem);
+	}
+	.kids-hero .lede,
+	.kids-hero .is-style-lede {
+		font-size: 1.1rem;
+	}
+}

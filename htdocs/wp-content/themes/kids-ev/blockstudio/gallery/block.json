@@ -1,0 +1,25 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/gallery",
+    "title": "KIDS: Galerie",
+    "description": "Foto-Karussell mit Loop, Autoplay, Pfeilen und Punkten (Port von HausGallery.astro, Embla)",
+    "category": "formatting",
+    "keywords": ["Galerie", "Fotos", "Karussell", "Slider"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "slides",
+                "type": "repeater",
+                "label": "Fotos",
+                "attributes": [
+                    { "id": "image", "type": "files", "label": "Bild" },
+                    { "id": "alt", "type": "text", "label": "Alt-Text (überschreibt Mediathek)" }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+/* Sponsoren — Port von Sponsoren.astro */
+
+.sponsors-section {
+	background: var(--c-bg);
+}
+
+.sponsors__head {
+	text-align: center;
+	margin-bottom: var(--s-7);
+}
+.sponsors__lead {
+	max-width: 38rem;
+	margin: var(--s-3) auto 0;
+	color: var(--c-ink-soft);
+}
+
+.sponsors-grid {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: var(--s-5) var(--s-6);
+	max-width: 64rem;
+	margin: 0 auto;
+}
+
+.sponsors-grid__item {
+	flex: 0 0 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sponsors-grid__item a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.sponsors-grid__item img {
+	max-width: 100%;
+	height: auto;
+	max-height: 110px;
+	width: auto;
+	object-fit: contain;
+	mix-blend-mode: multiply;
+}
+
+@media (max-width: 520px) {
+	.sponsors-grid {
+		gap: var(--s-4);
+	}
+	.sponsors-grid__item {
+		flex: 0 0 40%;
+	}
+	.sponsors-grid__item img {
+		max-height: 80px;
+	}
+}
