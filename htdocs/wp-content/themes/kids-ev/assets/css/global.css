@@ -187,7 +187,8 @@ strong, b {
   font-weight: 800;
 }
 
-.hand {
+.hand,
+.is-style-hand {
   font-family: var(--font-hand);
   font-weight: 400;
 }
@@ -205,7 +206,8 @@ strong, b {
   padding-inline: var(--s-5);
 }
 
-.eyebrow {
+.eyebrow,
+.is-style-eyebrow {
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 800;
@@ -220,7 +222,8 @@ strong, b {
   max-width: var(--prose-max);
 }
 
-.lede {
+.lede,
+.is-style-lede {
   font-size: 1.25rem;
   line-height: 1.55;
   color: var(--c-ink);
@@ -455,4 +458,124 @@ a[data-external]::after {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ---------- WordPress: Block-Styles & Rich-Text-Formate ----------
+   Regeln mit Asset-URLs (bullet.svg, blume02.svg) liegen bewusst hier,
+   damit die relativen Pfade eindeutig gegen assets/css/ aufgelöst werden. */
+
+/* core/list Style "kids-bullets" - Port von .leitbild-list / .stelle-list */
+ul.is-style-kids-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+ul.is-style-kids-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  line-height: 1.5;
+}
+ul.is-style-kids-bullets li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url("../deco/bullet.svg") center / contain no-repeat;
+  /* 0.75em = Mitte der ersten Zeile; um die halbe Bullet-Höhe versetzt */
+  margin-top: calc(0.75em - 0.3rem);
+}
+ul.is-style-kids-bullets strong {
+  font-weight: 800;
+  color: var(--c-ink);
+}
+
+/* Rich-Text-Format kids/highlight - Port von .hero__hl--* (index.astro) */
+.hero__hl--gruen,
+.hero__hl--orange,
+.hero__hl--blau {
+  display: inline-block;
+  font-family: var(--font-display-black);
+  position: relative;
+}
+.hero__hl--gruen::after,
+.hero__hl--orange::after,
+.hero__hl--blau::after {
+  content: "";
+  position: absolute;
+  inset: auto -0.15em -0.05em -0.15em;
+  height: 0.35em;
+  z-index: -1;
+  border-radius: var(--r-pill);
+}
+.hero__hl--gruen  { color: var(--c-gruen); }
+.hero__hl--gruen::after  { background: var(--c-gelb); }
+
+.hero__hl--orange { color: var(--c-orange); }
+.hero__hl--orange::after { background: var(--c-lila); }
+
+.hero__hl--blau   { color: var(--c-blau); }
+.hero__hl--blau::after   { background: var(--c-pfirsich); }
+
+/* kids/pill-list - Port von .haus-features / .ei-chips / .jobs-teaser__points */
+.pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.pill-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: var(--r-pill);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--c-ink);
+}
+.pill-list li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url("../deco/bullet.svg") center / contain no-repeat;
+}
+
+.pill-list--light li {
+  background: #fff;
+  padding: 0.55rem 1rem;
+  box-shadow: 0 2px 0 rgba(58, 52, 44, 0.08);
+}
+
+.pill-list--soft {
+  gap: var(--s-2);
+}
+.pill-list--soft li {
+  background: var(--c-bg);
+  padding: 0.5rem 0.95rem;
+  white-space: nowrap;
+}
+
+.pill-list--dark {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.pill-list--dark li {
+  gap: 0.55rem;
+  padding: 0.55rem 1.1rem;
+  background: color-mix(in srgb, var(--c-ink) 70%, var(--c-sand));
+  color: var(--c-bg);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.pill-list--dark li::before {
+  width: 0.9rem;
+  height: 0.9rem;
+  background-image: url("../deco/blume02.svg");
 }

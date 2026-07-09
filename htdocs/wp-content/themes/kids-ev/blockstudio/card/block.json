@@ -1,0 +1,38 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/card",
+    "title": "KIDS: Karte",
+    "description": "Weiße Karte mit Schatten — deckt Kontakt-, Bank-, Bewerbungs- und Stellen-Karten ab",
+    "category": "formatting",
+    "keywords": ["Karte", "Card", "Box"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "variant",
+                "type": "radio",
+                "label": "Variante",
+                "default": "plain",
+                "options": [
+                    { "value": "plain", "label": "Standard (weiß)" },
+                    { "value": "accent-top", "label": "Oranger Balken oben" },
+                    { "value": "centered", "label": "Zentriert, schmal" },
+                    { "value": "cream", "label": "Cream (ohne Schatten)" }
+                ]
+            },
+            {
+                "id": "sticky",
+                "type": "toggle",
+                "label": "Beim Scrollen mitlaufen (sticky)",
+                "default": false
+            },
+            {
+                "type": "custom/deko-layer"
+            }
+        ]
+    }
+}

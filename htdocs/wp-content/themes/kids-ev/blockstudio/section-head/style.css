@@ -1,0 +1,48 @@
+/* Zweispaltiger Sektions-Kopf — Port von .tag-head / .ei-head (index.astro) */
+
+.section-head--split {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	gap: var(--s-6) var(--s-8);
+	margin-bottom: var(--s-7);
+}
+
+.section-head__left {
+	flex: 1 1 22rem;
+}
+.section-head__left h2 {
+	margin: 0;
+	max-width: 38rem;
+}
+.section-head__left .eyebrow {
+	margin-top: 0;
+}
+
+.section-head__right {
+	flex: 0 1 28rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--s-3);
+	/* Rechte Spalte leicht absenken, damit die Baseline mit der H2 sitzt */
+	padding-bottom: 0.35rem;
+}
+
+.section-head__lead {
+	max-width: none;
+	color: var(--c-ink-soft);
+	margin: 0;
+}
+
+.section-head__link,
+.section-head__link p {
+	margin: 0;
+}
+
+@media (max-width: 700px) {
+	.section-head__right {
+		padding-bottom: 0;
+	}
+}

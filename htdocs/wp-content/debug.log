@@ -6,3 +6,114 @@
 [09-Jul-2026 19:39:09 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/htdocs/wordpress/wp-includes/widgets.php on line 1652
 [09-Jul-2026 19:39:09 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/htdocs/wordpress/wp-includes/widgets.php on line 1652
 [09-Jul-2026 19:39:09 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/htdocs/wordpress/wp-includes/widgets.php on line 1652
+[09-Jul-2026 20:06:17 UTC] PHP Fatal error:  Uncaught TypeError: kids_render_deko(): Argument #1 ($items) must be of type ?array, false given, called in /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/card/index.php on line 12 and defined in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php:57
+Stack trace:
+#0 /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/card/index.php(12): kids_render_deko()
+#1 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/block.php(1519): include('...')
+#2 /var/www/html/htdocs/wordpress/wp-includes/class-wp-block.php(596): Blockstudio\Block::render()
+#3 /var/www/html/htdocs/wordpress/wp-includes/blocks.php(2438): WP_Block->render()
+#4 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/rest.php(627): render_block()
+#5 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1287): Blockstudio\Rest->gutenberg_block_render_all()
+#6 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1120): WP_REST_Server->respond_to_request()
+#7 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(435): WP_REST_Server->dispatch()
+#8 /var/www/html/htdocs/wordpress/wp-includes/rest-api.php(471): WP_REST_Server->serve_request()
+#9 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(341): rest_api_loaded()
+#10 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters()
+#11 /var/www/html/htdocs/wordpress/wp-includes/plugin.php(570): WP_Hook->do_action()
+#12 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(418): do_action_ref_array()
+#13 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(821): WP->parse_request()
+#14 /var/www/html/htdocs/wordpress/wp-includes/functions.php(1343): WP->main()
+#15 /var/www/html/htdocs/wordpress/wp-blog-header.php(16): wp()
+#16 /var/www/html/htdocs/index.php(5): require('...')
+#17 {main}
+  thrown in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php on line 57
+[09-Jul-2026 20:06:36 UTC] PHP Fatal error:  Uncaught TypeError: kids_render_deko(): Argument #1 ($items) must be of type ?array, false given, called in /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php on line 12 and defined in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php:57
+Stack trace:
+#0 /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php(12): kids_render_deko()
+#1 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/block.php(1519): include('...')
+#2 /var/www/html/htdocs/wordpress/wp-includes/class-wp-block.php(596): Blockstudio\Block::render()
+#3 /var/www/html/htdocs/wordpress/wp-includes/blocks.php(2438): WP_Block->render()
+#4 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/rest.php(627): render_block()
+#5 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1287): Blockstudio\Rest->gutenberg_block_render_all()
+#6 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1120): WP_REST_Server->respond_to_request()
+#7 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(435): WP_REST_Server->dispatch()
+#8 /var/www/html/htdocs/wordpress/wp-includes/rest-api.php(471): WP_REST_Server->serve_request()
+#9 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(341): rest_api_loaded()
+#10 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters()
+#11 /var/www/html/htdocs/wordpress/wp-includes/plugin.php(570): WP_Hook->do_action()
+#12 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(418): do_action_ref_array()
+#13 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(821): WP->parse_request()
+#14 /var/www/html/htdocs/wordpress/wp-includes/functions.php(1343): WP->main()
+#15 /var/www/html/htdocs/wordpress/wp-blog-header.php(16): wp()
+#16 /var/www/html/htdocs/index.php(5): require('...')
+#17 {main}
+  thrown in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php on line 57
+[09-Jul-2026 20:07:05 UTC] PHP Fatal error:  Uncaught TypeError: kids_render_deko(): Argument #1 ($items) must be of type ?array, false given, called in /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php on line 12 and defined in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php:57
+Stack trace:
+#0 /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php(12): kids_render_deko()
+#1 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/block.php(1519): include('...')
+#2 /var/www/html/htdocs/wordpress/wp-includes/class-wp-block.php(596): Blockstudio\Block::render()
+#3 /var/www/html/htdocs/wordpress/wp-includes/blocks.php(2438): WP_Block->render()
+#4 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/rest.php(627): render_block()
+#5 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1287): Blockstudio\Rest->gutenberg_block_render_all()
+#6 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1120): WP_REST_Server->respond_to_request()
+#7 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(435): WP_REST_Server->dispatch()
+#8 /var/www/html/htdocs/wordpress/wp-includes/rest-api.php(471): WP_REST_Server->serve_request()
+#9 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(341): rest_api_loaded()
+#10 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters()
+#11 /var/www/html/htdocs/wordpress/wp-includes/plugin.php(570): WP_Hook->do_action()
+#12 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(418): do_action_ref_array()
+#13 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(821): WP->parse_request()
+#14 /var/www/html/htdocs/wordpress/wp-includes/functions.php(1343): WP->main()
+#15 /var/www/html/htdocs/wordpress/wp-blog-header.php(16): wp()
+#16 /var/www/html/htdocs/index.php(5): require('...')
+#17 {main}
+  thrown in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php on line 57
+[09-Jul-2026 20:07:58 UTC] PHP Fatal error:  Uncaught TypeError: kids_render_deko(): Argument #1 ($items) must be of type ?array, false given, called in /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php on line 12 and defined in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php:57
+Stack trace:
+#0 /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php(12): kids_render_deko()
+#1 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/block.php(1519): include('...')
+#2 /var/www/html/htdocs/wordpress/wp-includes/class-wp-block.php(596): Blockstudio\Block::render()
+#3 /var/www/html/htdocs/wordpress/wp-includes/blocks.php(2438): WP_Block->render()
+#4 /var/www/html/htdocs/wordpress/wp-includes/blocks.php(2521): render_block()
+#5 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(341): do_blocks()
+#6 /var/www/html/htdocs/wordpress/wp-includes/plugin.php(205): WP_Hook->apply_filters()
+#7 /var/www/html/htdocs/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php(683): apply_filters()
+#8 /var/www/html/htdocs/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php(472): WP_REST_Revisions_Controller->prepare_item_for_response()
+#9 /var/www/html/htdocs/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php(265): WP_REST_Autosaves_Controller->prepare_item_for_response()
+#10 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1287): WP_REST_Autosaves_Controller->create_item()
+#11 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1120): WP_REST_Server->respond_to_request()
+#12 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(435): WP_REST_Server->dispatch()
+#13 /var/www/html/htdocs/wordpress/wp-includes/rest-api.php(471): WP_REST_Server->serve_request()
+#14 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(341): rest_api_loaded()
+#15 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters()
+#16 /var/www/html/htdocs/wordpress/wp-includes/plugin.php(570): WP_Hook->do_action()
+#17 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(418): do_action_ref_array()
+#18 /var/www/html/htdocs/wordpress/wp-includes/class-wp.php(821): WP->parse_request()
+#19 /var/www/html/htdocs/wordpress/wp-includes/functions.php(1343): WP->main()
+#20 /var/www/html/htdocs/wordpress/wp-blog-header.php(16): wp()
+#21 /var/www/html/htdocs/index.php(5): require('...')
+#22 {main}
+  thrown in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php on line 57
+[09-Jul-2026 20:12:51 UTC] PHP Fatal error:  Uncaught TypeError: kids_render_deko(): Argument #1 ($items) must be of type ?array, false given, called in /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php on line 12 and defined in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php:57
+Stack trace:
+#0 /var/www/html/htdocs/wp-content/themes/kids-ev/blockstudio/section/index.php(12): kids_render_deko()
+#1 /var/www/html/htdocs/wp-content/plugins/blockstudio/includes/classes/block.php(1519): include('...')
+#2 /var/www/html/htdocs/wordpress/wp-includes/class-wp-block.php(596): Blockstudio\Block::render()
+#3 /var/www/html/htdocs/wordpress/wp-includes/blocks.php(2438): WP_Block->render()
+#4 /var/www/html/htdocs/wordpress/wp-includes/blocks.php(2521): render_block()
+#5 /var/www/html/htdocs/wordpress/wp-includes/class-wp-hook.php(341): do_blocks()
+#6 /var/www/html/htdocs/wordpress/wp-includes/plugin.php(205): WP_Hook->apply_filters()
+#7 /var/www/html/htdocs/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php(683): apply_filters()
+#8 /var/www/html/htdocs/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php(472): WP_REST_Revisions_Controller->prepare_item_for_response()
+#9 /var/www/html/htdocs/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php(330): WP_REST_Autosaves_Controller->prepare_item_for_response()
+#10 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1287): WP_REST_Autosaves_Controller->get_items()
+#11 /var/www/html/htdocs/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1120): WP_REST_Server->respond_to_request()
+#12 /var/www/html/htdocs/wordpress/wp-includes/rest-api.php(598): WP_REST_Server->dispatch()
+#13 /var/www/html/htdocs/wordpress/wp-includes/rest-api.php(2985): rest_do_request()
+#14 [internal function]: rest_preload_api_request()
+#15 /var/www/html/htdocs/wordpress/wp-includes/block-editor.php(738): array_reduce()
+#16 /var/www/html/htdocs/wordpress/wp-admin/edit-form-blocks.php(120): block_editor_rest_api_preload()
+#17 /var/www/html/htdocs/wordpress/wp-admin/post.php(187): require('...')
+#18 {main}
+  thrown in /var/www/html/htdocs/wp-content/themes/kids-ev/functions.php on line 57
