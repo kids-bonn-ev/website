@@ -1,6 +1,5 @@
 .DS_Store
 .idea
-tideways.com/
 
 # WordPress core is installed by Composer
 htdocs/wordpress

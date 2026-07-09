@@ -3,7 +3,7 @@
 Plan für die Migration der KIDS e.V. Website (`app/`, Astro) nach WordPress.
 Ziel: Alle Seiten werden im Gutenberg-Editor aus Blöcken zusammengesetzt.
 Custom-Blöcke werden mit dem **Blockstudio-Plugin** (v7.x) gebaut — nach denselben
-Konventionen wie im `tideways2026`-Theme (Branch `Blockstudio` in `tideways.com/`).
+Konventionen wie im `reference2026`-Theme (Branch `Blockstudio` in `reference.com/`).
 
 ---
 
@@ -43,7 +43,7 @@ htdocs/wp-content/themes/kids-ev/
         └── script.js          # optional (z. B. Galerie)
 ```
 
-### Blockstudio-Konventionen (wie tideways2026)
+### Blockstudio-Konventionen (wie reference2026)
 
 - Ein Block = ein Ordner `blockstudio/<name>/` mit `block.json`
   (`"$schema": "https://blockstudio.dev/schema/block"`) und `index.php`.
@@ -53,9 +53,9 @@ htdocs/wp-content/themes/kids-ev/
   `allowedBlocks` in `block.json`; Wrapper-Element bekommt `useBlockProps`.
 - Wiederkehrende Feld-Sets als Extension in `blockstudio/fields/<name>/field.json`,
   eingebunden per `{ "type": "custom/<name>" }` (Vorbild: `custom/margin-bottom`
-  in tideways2026).
-- Parent/Child-Muster für Repeater-Layouts (Vorbild: `tideways/cols-4` →
-  `tideways/cols-4-item`): Container-Block erlaubt nur seinen Item-Block.
+  in reference2026).
+- Parent/Child-Muster für Repeater-Layouts (Vorbild: `reference/cols-4` →
+  `reference/cols-4-item`): Container-Block erlaubt nur seinen Item-Block.
 - Erlaubte Blöcke im Editor per `allowed_block_types_all`-Filter einschränken
   (Vorbild: `inc/gutenberg.php`), damit Redakteure nur Core-Basics + `kids/*` sehen.
 
@@ -213,7 +213,7 @@ später erweitert werden können:
    `robots.txt`, Favicon (SVG), Theme-Color `#c3651d`.
 3. **Fonts**: Maybug-woff2 preloaden (Decorative + Black), `@font-face` in global.css.
 4. **View Transitions** (Astro `ClientRouter`-Ersatz): das
-   `view-transitions`-Plugin wie bei tideways.com einsetzen (progressive
+   `view-transitions`-Plugin wie bei reference.com einsetzen (progressive
    enhancement — Browser ohne Support bekommen normale Seitenwechsel).
 5. **`allowed_block_types_all`-Filter**: Core-Basics + alle `kids/*` freischalten,
    Rest ausblenden.
@@ -241,7 +241,7 @@ später erweitert werden können:
 
 ## 8. Getroffene Entscheidungen
 
-- **Blockstudio-Bezug**: privates Composer-Repository (wie tideways.com),
+- **Blockstudio-Bezug**: privates Composer-Repository (wie reference.com),
   siehe Abschnitt 1.
 - **Mail-Versand**: Resend-API weiterverwenden, API-Key als Umgebungsvariable,
   siehe Abschnitt 6.1.
