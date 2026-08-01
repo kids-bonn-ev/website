@@ -4,6 +4,7 @@
 # WordPress core is installed by Composer
 htdocs/wordpress
 htdocs/.htaccess
+htdocs/wp-content/debug.log
 
 # Composer / Node dependencies
 vendor/

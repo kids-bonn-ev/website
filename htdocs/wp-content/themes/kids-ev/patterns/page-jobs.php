@@ -8,7 +8,7 @@
  * Inserter: yes
  */
 ?>
-<!-- wp:kids/hero {"deko":[{"name":"kreis","size":70,"top":"20%","right":"10%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"blume01","size":90,"bottom":"10%","left":"8%","rotate":-10,"opacity":1,"hide_mobile":true},{"name":"welle","size":130,"top":"12%","left":"12%","rotate":0,"opacity":0.7,"hide_mobile":true}]} -->
+<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"deko":[{"name":"kreis","size":70,"top":"20%","right":"10%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"blume01","size":90,"bottom":"10%","left":"8%","rotate":-10,"opacity":1,"hide_mobile":true},{"name":"welle","size":130,"top":"12%","left":"12%","rotate":0,"opacity":0.7,"hide_mobile":true}]}}} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Jobs @ KIDS</p>
 <!-- /wp:paragraph -->
@@ -21,16 +21,16 @@
 <p class="is-style-lede">Arbeiten in einer Bonner Elterninitiative: kleine Gruppen, starke Eltern-Community, und der Raum, wirklich pädagogisch zu arbeiten.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:kids/button-row {"align_row":"center"} -->
-<!-- wp:kids/button {"label":"Zu den Stellen","href":"#stellen"} /-->
+<!-- wp:kids/button-row {"blockstudio":{"name":"kids/button-row","attributes":{"align_row":"center"}}} -->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Zu den Stellen","href":"#stellen"}}} /-->
 <!-- /wp:kids/button-row -->
 <!-- /wp:kids/hero -->
 
 <!-- wp:kids/section -->
-<!-- wp:kids/section-head {"eyebrow":"Warum KIDS?","heading":"Was bei uns konkret anders ist."} /-->
+<!-- wp:kids/section-head {"blockstudio":{"name":"kids/section-head","attributes":{"eyebrow":"Warum KIDS?","heading":"Was bei uns konkret anders ist."}}} /-->
 
 <!-- wp:group {"className":"benefits","layout":{"type":"default"}} -->
-<div class="wp-block-group benefits"><!-- wp:kids/card {"variant":"accent-top"} -->
+<div class="wp-block-group benefits"><!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"accent-top"}}} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Mitgestalten, nicht abarbeiten.</h3>
 <!-- /wp:heading -->
@@ -40,7 +40,7 @@
 <!-- /wp:paragraph -->
 <!-- /wp:kids/card -->
 
-<!-- wp:kids/card {"variant":"accent-top"} -->
+<!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"accent-top"}}} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Pädagogik bleibt Pädagogik.</h3>
 <!-- /wp:heading -->
@@ -50,7 +50,7 @@
 <!-- /wp:paragraph -->
 <!-- /wp:kids/card -->
 
-<!-- wp:kids/card {"variant":"accent-top"} -->
+<!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"accent-top"}}} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">TvöD und Weihnachtsgeld.</h3>
 <!-- /wp:heading -->
@@ -60,7 +60,7 @@
 <!-- /wp:paragraph -->
 <!-- /wp:kids/card -->
 
-<!-- wp:kids/card {"variant":"accent-top"} -->
+<!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"accent-top"}}} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Wachsen gehört zur Arbeit.</h3>
 <!-- /wp:heading -->
@@ -70,7 +70,7 @@
 <!-- /wp:paragraph -->
 <!-- /wp:kids/card -->
 
-<!-- wp:kids/card {"variant":"accent-top"} -->
+<!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"accent-top"}}} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Neubau mit 1.700 m² Garten.</h3>
 <!-- /wp:heading -->
@@ -80,7 +80,7 @@
 <!-- /wp:paragraph -->
 <!-- /wp:kids/card -->
 
-<!-- wp:kids/card {"variant":"accent-top"} -->
+<!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"accent-top"}}} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Eltern auf Augenhöhe.</h3>
 <!-- /wp:heading -->
@@ -92,7 +92,7 @@
 <!-- /wp:group -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"background":"cream"} -->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"cream"}}} -->
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
@@ -116,16 +116,16 @@
 <!-- /wp:columns -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"anchor":"stellen"} -->
-<!-- wp:kids/section-head {"eyebrow":"Offene Stellen","heading":"Komm ins Team."} /-->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{}},"anchor":"stellen"} -->
+<!-- wp:kids/section-head {"blockstudio":{"name":"kids/section-head","attributes":{"eyebrow":"Offene Stellen","heading":"Komm ins Team."}}} /-->
 
 <!-- wp:group {"className":"stellen-list","layout":{"type":"default"}} -->
-<div class="wp-block-group stellen-list"><!-- wp:kids/card {"anchor":"paedagogik"} -->
+<div class="wp-block-group stellen-list"><!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{}},"anchor":"paedagogik"} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Pädagogische Mitarbeiter:innen (m/w/d)</h3>
 <!-- /wp:heading -->
 
-<!-- wp:kids/job-meta {"items":[{"text":"Eintritt: <strong>ab sofort</strong>"},{"text":"Laufend offen"},{"text":"Teil- oder Vollzeit"}]} /-->
+<!-- wp:kids/job-meta {"blockstudio":{"name":"kids/job-meta","attributes":{"items":[{"text":"Eintritt: \u003cstrong\u003eab sofort\u003c/strong\u003e"},{"text":"Laufend offen"},{"text":"Teil- oder Vollzeit"}]}}} /-->
 
 <!-- wp:paragraph -->
 <p>Wir suchen <strong>laufend</strong> pädagogische Fachkräfte für unsere drei Gruppen Mond, Sonne und Zwerge. Die Stelle ist evergreen. Auch wenn du externe Ausschreibungen mit abgelaufenen Fristen findest, nehmen wir Bewerbungen jederzeit entgegen.</p>
@@ -198,16 +198,16 @@
 <!-- /wp:columns -->
 
 <!-- wp:group {"className":"stelle-cta","layout":{"type":"default"}} -->
-<div class="wp-block-group stelle-cta"><!-- wp:kids/button {"label":"Jetzt bewerben","href":"mailto:kita@kids-bonn.de"} /--></div>
+<div class="wp-block-group stelle-cta"><!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Jetzt bewerben","href":"mailto:kita@kids-bonn.de"}}} /--></div>
 <!-- /wp:group -->
 <!-- /wp:kids/card -->
 
-<!-- wp:kids/card {"anchor":"kueche"} -->
+<!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{}},"anchor":"kueche"} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Köchin / Koch (m/w/d)</h3>
 <!-- /wp:heading -->
 
-<!-- wp:kids/job-meta {"items":[{"text":"Eintritt: <strong>ab sofort</strong>"},{"text":"Elternzeitvertretung"},{"text":"30–40&nbsp;Std./Woche"}]} /-->
+<!-- wp:kids/job-meta {"blockstudio":{"name":"kids/job-meta","attributes":{"items":[{"text":"Eintritt: \u003cstrong\u003eab sofort\u003c/strong\u003e"},{"text":"Elternzeitvertretung"},{"text":"30–40\u0026nbsp;Std./Woche"}]}}} /-->
 
 <!-- wp:paragraph -->
 <p>Für die Elternzeitvertretung suchen wir eine Köchin / einen Koch, die unsere rund 55 Kinder und das Team täglich frisch versorgt - vegetarisch und in Bio-Qualität.</p>
@@ -322,7 +322,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:group {"className":"stelle-cta","layout":{"type":"default"}} -->
-<div class="wp-block-group stelle-cta"><!-- wp:kids/button {"label":"Jetzt bewerben","href":"mailto:vorstand@kids-bonn.de"} /-->
+<div class="wp-block-group stelle-cta"><!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Jetzt bewerben","href":"mailto:vorstand@kids-bonn.de"}}} /-->
 
 <!-- wp:paragraph {"className":"stelle-hint"} -->
 <p class="stelle-hint">Gerne mit beispielhaftem Wochen-Essensplan.</p>
@@ -332,31 +332,31 @@
 <!-- /wp:group -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"background":"sand"} -->
-<!-- wp:kids/section-head {"eyebrow":"Bewerbung","heading":"Kein Ritual. Kein Papierberg."} /-->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"sand"}}} -->
+<!-- wp:kids/section-head {"blockstudio":{"name":"kids/section-head","attributes":{"eyebrow":"Bewerbung","heading":"Kein Ritual. Kein Papierberg."}}} /-->
 
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"55%"} -->
-<div class="wp-block-column" style="flex-basis:55%"><!-- wp:kids/steps {"style":"circle-badge"} -->
-<!-- wp:kids/step {"title":"Schreib uns eine Mail."} -->
+<div class="wp-block-column" style="flex-basis:55%"><!-- wp:kids/steps {"blockstudio":{"name":"kids/steps","attributes":{"style":"circle-badge"}}} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Schreib uns eine Mail."}}} -->
 <!-- wp:paragraph -->
 <p>Ein kurzer Lebenslauf reicht. Wir brauchen keine Mappe.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:kids/step -->
 
-<!-- wp:kids/step {"title":"Wir melden uns innerhalb weniger Tage."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Wir melden uns innerhalb weniger Tage."}}} -->
 <!-- wp:paragraph -->
 <p>Telefonisch oder per Mail.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:kids/step -->
 
-<!-- wp:kids/step {"title":"Wir lernen uns kennen."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Wir lernen uns kennen."}}} -->
 <!-- wp:paragraph -->
 <p>Erst im Gespräch, dann bei einem Hospitationstag im Haus.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:kids/step -->
 
-<!-- wp:kids/step {"title":"Entscheidung."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Entscheidung."}}} -->
 <!-- wp:paragraph -->
 <p>Für beide Seiten, in Ruhe.</p>
 <!-- /wp:paragraph -->

@@ -7,7 +7,7 @@
  * Viewport Width: 1200
  */
 ?>
-<!-- wp:kids/section {"background":"cream","deko":[{"name":"strich","size":140,"top":"8%","right":"-30px","rotate":25,"opacity":0.6}]} -->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"cream","deko":[{"name":"strich","size":140,"top":"8%","right":"-30px","rotate":25,"opacity":0.6}]}}} -->
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
@@ -34,7 +34,7 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:kids/wiki-link {"label":"Unser Leitbild im Wortlaut","href":"https://docs.kids-bonn.de/docs/ab36eedf-a7d8-4185-8066-c8ce44e42fb2/"} /--></div>
+<!-- wp:kids/wiki-link {"blockstudio":{"name":"kids/wiki-link","attributes":{"label":"Unser Leitbild im Wortlaut","href":"https://docs.kids-bonn.de/docs/ab36eedf-a7d8-4185-8066-c8ce44e42fb2/"}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 <!-- /wp:kids/section -->

@@ -12,7 +12,7 @@
 <h3 class="wp-block-heading">Stellentitel (m/w/d)</h3>
 <!-- /wp:heading -->
 
-<!-- wp:kids/job-meta {"items":[{"text":"Eintritt: <strong>ab sofort</strong>"},{"text":"Laufend offen"},{"text":"Teil- oder Vollzeit"}]} /-->
+<!-- wp:kids/job-meta {"blockstudio":{"name":"kids/job-meta","attributes":{"items":[{"text":"Eintritt: \u003cstrong\u003eab sofort\u003c/strong\u003e"},{"text":"Laufend offen"},{"text":"Teil- oder Vollzeit"}]}}} /-->
 
 <!-- wp:paragraph -->
 <p>Kurzes Intro zur Stelle: Wen sucht ihr, wofür, was ist das Besondere?</p>
@@ -53,7 +53,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:group {"className":"stelle-cta","layout":{"type":"default"}} -->
-<div class="wp-block-group stelle-cta"><!-- wp:kids/button {"label":"Jetzt bewerben","href":"mailto:kita@kids-bonn.de"} /-->
+<div class="wp-block-group stelle-cta"><!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Jetzt bewerben","href":"mailto:kita@kids-bonn.de"}}} /-->
 
 <!-- wp:paragraph {"className":"stelle-hint"} -->
 <p class="stelle-hint">Optionaler Hinweis unter dem Button.</p>

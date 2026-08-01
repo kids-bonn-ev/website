@@ -22,37 +22,37 @@
 <!-- /wp:paragraph -->
 <!-- /wp:kids/hero -->
 
-<!-- wp:kids/section {"background":"cream"} -->
-<!-- wp:kids/section-head {"heading":"So kommt ihr zu uns.","lead":"Vom ersten Interesse bis zur Eingewöhnung. In fünf Schritten."} /-->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"cream"}}} -->
+<!-- wp:kids/section-head {"blockstudio":{"name":"kids/section-head","attributes":{"heading":"So kommt ihr zu uns.","lead":"Vom ersten Interesse bis zur Eingewöhnung. In fünf Schritten."}}} /-->
 
 <!-- wp:kids/steps -->
-<!-- wp:kids/step {"title":"Interesse signalisieren."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Interesse signalisieren."}}} -->
 <!-- wp:paragraph -->
 <p>Ruft uns an, schreibt eine Mail oder füllt das Formular unten aus. Wir melden uns persönlich zurück.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:kids/step -->
 
-<!-- wp:kids/step {"title":"Tag der offenen Tür."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Tag der offenen Tür."}}} -->
 <!-- wp:paragraph -->
 <p>Zweimal pro Jahr öffnen wir unsere Türen. Kinder können spielen, Eltern können fragen, alle dürfen bleiben, so lange sie mögen. Wir benachrichtigen euch, sobald der nächste Termin feststeht.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:kids/step -->
 
-<!-- wp:kids/step {"title":"Persönliches Gespräch."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Persönliches Gespräch."}}} -->
 <!-- wp:paragraph -->
 <p>Ihr könnt jederzeit ein 1:1-Gespräch mit uns vereinbaren. Ganz in Ruhe, ohne Zeitdruck. Alle Fragen sind willkommen.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:kids/step -->
 
-<!-- wp:kids/step {"title":"Anmeldung im KITA-NET Bonn."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Anmeldung im KITA-NET Bonn."}}} -->
 <!-- wp:paragraph -->
 <p>In Bonn läuft die offizielle Vormerkung zentral über das städtische Portal. Das gehört dazu. Wir zeigen euch, wie es geht.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:kids/button {"label":"Zum KITA-NET&nbsp;Bonn","href":"https://kita-planer.kdo.de/bonn-elternportal/elternportal/de/","variant":"outline","size":"sm","external":true} /-->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Zum KITA-NET\u0026nbsp;Bonn","href":"https://kita-planer.kdo.de/bonn-elternportal/elternportal/de/","variant":"outline","size":"sm","external":true}}} /-->
 <!-- /wp:kids/step -->
 
-<!-- wp:kids/step {"title":"Platzzusage und Eingewöhnung."} -->
+<!-- wp:kids/step {"blockstudio":{"name":"kids/step","attributes":{"title":"Platzzusage und Eingewöhnung."}}} -->
 <!-- wp:paragraph -->
 <p>Das Aufnahmegremium entscheidet gemeinsam über neue Familien. Bei Zusage starten wir die Eingewöhnung nach dem Berliner Modell. Drei bis sechs Wochen, ganz im Tempo eures Kindes.</p>
 <!-- /wp:paragraph -->
@@ -63,7 +63,7 @@
 <!-- wp:kids/section -->
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"45%"} -->
-<div class="wp-block-column" style="flex-basis:45%"><!-- wp:kids/card {"variant":"cream","sticky":true} -->
+<div class="wp-block-column" style="flex-basis:45%"><!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"cream","sticky":true}}} -->
 <!-- wp:heading {"level":2} -->
 <h2 class="wp-block-heading">Lieber direkt?</h2>
 <!-- /wp:heading -->

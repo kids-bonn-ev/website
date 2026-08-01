@@ -8,7 +8,7 @@
  * Inserter: yes
  */
 ?>
-<!-- wp:kids/hero {"align_hero":"left","deko":[{"name":"welle","size":130,"top":"20%","right":"8%","rotate":0,"opacity":0.7,"hide_mobile":true},{"name":"blume02","size":80,"bottom":"15%","left":"12%","rotate":-10,"opacity":1,"hide_mobile":true}]} -->
+<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"align_hero":"left","deko":[{"name":"welle","size":130,"top":"20%","right":"8%","rotate":0,"opacity":0.7,"hide_mobile":true},{"name":"blume02","size":80,"bottom":"15%","left":"12%","rotate":-10,"opacity":1,"hide_mobile":true}]}}} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Kontakt</p>
 <!-- /wp:paragraph -->
@@ -54,7 +54,7 @@
 <p>KIDS&nbsp;e.V.<br>Limpericher&nbsp;Str.&nbsp;122b<br>53225&nbsp;Bonn-Beuel</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:kids/button {"label":"In Google Maps öffnen","href":"https://www.google.com/maps/search/?api=1&query=Limpericher+Str.+122b+53225+Bonn","variant":"outline","external":true} /-->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"In Google Maps öffnen","href":"https://www.google.com/maps/search/?api=1\u0026query=Limpericher+Str.+122b+53225+Bonn","variant":"outline","external":true}}} /-->
 <!-- /wp:kids/card --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

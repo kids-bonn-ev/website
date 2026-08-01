@@ -8,7 +8,7 @@
  * Inserter: yes
  */
 ?>
-<!-- wp:kids/hero {"variant":"home","deko":[{"name":"wolke","size":170,"top":"10%","left":"6%","rotate":-6,"opacity":0.85,"hide_mobile":true},{"name":"blume01","size":110,"top":"16%","right":"12%","rotate":12,"opacity":1,"hide_mobile":true},{"name":"kreis","size":95,"top":"56%","right":"6%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"wiese01","size":260,"bottom":"-20px","left":"-40px","rotate":0,"opacity":1},{"name":"halbkreis","size":140,"bottom":"6%","right":"10%","rotate":-20,"opacity":0.9,"hide_mobile":true}]} -->
+<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"variant":"home","deko":[{"name":"wolke","size":170,"top":"10%","left":"6%","rotate":-6,"opacity":0.85,"hide_mobile":true},{"name":"blume01","size":110,"top":"16%","right":"12%","rotate":12,"opacity":1,"hide_mobile":true},{"name":"kreis","size":95,"top":"56%","right":"6%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"wiese01","size":260,"bottom":"-20px","left":"-40px","rotate":0,"opacity":1},{"name":"halbkreis","size":140,"bottom":"6%","right":"10%","rotate":-20,"opacity":0.9,"hide_mobile":true}]}}} -->
 <!-- wp:heading {"level":1} -->
 <h1 class="wp-block-heading">Ein Ort zum <span class="hero__hl--gruen">Wachsen</span>,<br><span class="hero__hl--orange">Staunen</span> &amp; <span class="hero__hl--blau">Freunde</span>&nbsp;finden.</h1>
 <!-- /wp:heading -->
@@ -17,15 +17,15 @@
 <p class="is-style-lede">Wir sind der KIDS&nbsp;e.V. - eine Elterninitiative mit <strong>55&nbsp;Kindern</strong>, <strong>11&nbsp;Erzieher:innen</strong> und einem großen Garten mitten in Beuel. Hier darf jedes Kind sein.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:kids/button-row {"align_row":"center"} -->
-<!-- wp:kids/button {"label":"Kennenlernen","href":"/kennenlernen"} /-->
+<!-- wp:kids/button-row {"blockstudio":{"name":"kids/button-row","attributes":{"align_row":"center"}}} -->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Kennenlernen","href":"/kennenlernen"}}} /-->
 
-<!-- wp:kids/button {"label":"Wie funktioniert der KIDS","href":"https://docs.kids-bonn.de/docs/f5f02dd9-0071-4b55-8301-8d6ee5411431/","variant":"outline","external":true} /-->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Wie funktioniert der KIDS","href":"https://docs.kids-bonn.de/docs/f5f02dd9-0071-4b55-8301-8d6ee5411431/","variant":"outline","external":true}}} /-->
 <!-- /wp:kids/button-row -->
 <!-- /wp:kids/hero -->
 
-<!-- wp:kids/section {"spacing":"tight"} -->
-<!-- wp:kids/announcement {"panel_eyebrow":"Klingt gut?","panel_text":"Lernt uns bei einem Termin oder Tag der offenen Tür kennen!","panel_button_label":"Jetzt Kennenlernen vereinbaren","panel_button_url":"/kennenlernen","panel_foot":"Für unsere <strong>U3-Gruppe (Zwerge)</strong> suchen wir Kinder, die zwischen <strong>01.10.2022</strong> und <strong>31.07.2025</strong> geboren sind.","deko":[{"name":"wolke","size":150,"top":"-50px","right":"-30px","rotate":-8,"opacity":0.6,"hide_mobile":true},{"name":"blume02","size":90,"bottom":"-30px","left":"-25px","rotate":18,"opacity":0.75},{"name":"kreis","size":70,"top":"18%","left":"2%","rotate":0,"opacity":0.45,"hide_mobile":true},{"name":"halbkreis","size":80,"bottom":"22%","right":"4%","rotate":-15,"opacity":0.55,"hide_mobile":true},{"name":"strich","size":120,"top":"8%","right":"20%","rotate":12,"opacity":0.4,"hide_mobile":true}]} -->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"spacing":"tight"}}} -->
+<!-- wp:kids/announcement {"blockstudio":{"name":"kids/announcement","attributes":{"panel_eyebrow":"Klingt gut?","panel_text":"Lernt uns bei einem Termin oder Tag der offenen Tür kennen!","panel_button_label":"Jetzt Kennenlernen vereinbaren","panel_button_url":"/kennenlernen","panel_foot":"Für unsere \u003cstrong\u003eU3-Gruppe (Zwerge)\u003c/strong\u003e suchen wir Kinder, die zwischen \u003cstrong\u003e01.10.2022\u003c/strong\u003e und \u003cstrong\u003e31.07.2025\u003c/strong\u003e geboren sind.","deko":[{"name":"wolke","size":150,"top":"-50px","right":"-30px","rotate":-8,"opacity":0.6,"hide_mobile":true},{"name":"blume02","size":90,"bottom":"-30px","left":"-25px","rotate":18,"opacity":0.75},{"name":"kreis","size":70,"top":"18%","left":"2%","rotate":0,"opacity":0.45,"hide_mobile":true},{"name":"halbkreis","size":80,"bottom":"22%","right":"4%","rotate":-15,"opacity":0.55,"hide_mobile":true},{"name":"strich","size":120,"top":"8%","right":"20%","rotate":12,"opacity":0.4,"hide_mobile":true}]}}} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Anmeldung läuft</p>
 <!-- /wp:paragraph -->
@@ -45,18 +45,18 @@
 <!-- /wp:kids/section -->
 
 <!-- wp:kids/section -->
-<!-- wp:kids/feature-grid {"eyebrow":"Gemeinschaftlich, herzlich, voller Spiel.","heading":"Was uns besonders macht.","lead":"Bei uns bestimmen die Kinder den Rhythmus. Wir folgen ihrer Neugier, nehmen ihre Fragen ernst und geben ihnen die Zeit, die Großwerden braucht."} -->
-<!-- wp:kids/feature-card {"icon":"kreis","title":"Drei teiloffene Gruppen","text":"<strong>Mond</strong>, <strong>Sonne</strong> und <strong>Zwerge</strong>. Gemischtes Alter von 1&nbsp;bis&nbsp;6&nbsp;Jahren. Teiloffenes Konzept – Kinder bewegen sich auch gruppenübergreifend."} /-->
+<!-- wp:kids/feature-grid {"blockstudio":{"name":"kids/feature-grid","attributes":{"eyebrow":"Gemeinschaftlich, herzlich, voller Spiel.","heading":"Was uns besonders macht.","lead":"Bei uns bestimmen die Kinder den Rhythmus. Wir folgen ihrer Neugier, nehmen ihre Fragen ernst und geben ihnen die Zeit, die Großwerden braucht."}}} -->
+<!-- wp:kids/feature-card {"blockstudio":{"name":"kids/feature-card","attributes":{"icon":"kreis","title":"Drei teiloffene Gruppen","text":"\u003cstrong\u003eMond\u003c/strong\u003e, \u003cstrong\u003eSonne\u003c/strong\u003e und \u003cstrong\u003eZwerge\u003c/strong\u003e. Gemischtes Alter von 1\u0026nbsp;bis\u0026nbsp;6\u0026nbsp;Jahren. Teiloffenes Konzept – Kinder bewegen sich auch gruppenübergreifend."}}} /-->
 
-<!-- wp:kids/feature-card {"icon":"blume01","title":"Frisch gekocht","text":"Unser Küchenteam zaubert (beinahe) täglich eine warme Mahlzeit - bio, saisonal, kindgerecht."} /-->
+<!-- wp:kids/feature-card {"blockstudio":{"name":"kids/feature-card","attributes":{"icon":"blume01","title":"Frisch gekocht","text":"Unser Küchenteam zaubert (beinahe) täglich eine warme Mahlzeit - bio, saisonal, kindgerecht."}}} /-->
 
-<!-- wp:kids/feature-card {"icon":"welle","title":"Eltern, die anpacken","text":"Das pädagogische Team begleitet die Kinder beim Lernen, Spielen und Wachsen. Die Eltern kümmern sich um alles, was es drumherum braucht: bauen, reparieren, einkaufen, organisieren."} /-->
+<!-- wp:kids/feature-card {"blockstudio":{"name":"kids/feature-card","attributes":{"icon":"welle","title":"Eltern, die anpacken","text":"Das pädagogische Team begleitet die Kinder beim Lernen, Spielen und Wachsen. Die Eltern kümmern sich um alles, was es drumherum braucht: bauen, reparieren, einkaufen, organisieren."}}} /-->
 
-<!-- wp:kids/feature-card {"icon":"wiese02","title":"Neubau &amp; Garten mit 1700&nbsp;m²","text":"Hochbeete, Sandkiste, Matschecke und ein alter Birnbaum - unser liebster Klassenraum."} /-->
+<!-- wp:kids/feature-card {"blockstudio":{"name":"kids/feature-card","attributes":{"icon":"wiese02","title":"Neubau \u0026amp; Garten mit 1700\u0026nbsp;m²","text":"Hochbeete, Sandkiste, Matschecke und ein alter Birnbaum - unser liebster Klassenraum."}}} /-->
 <!-- /wp:kids/feature-grid -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"background":"cream","anchor":"leitbild","deko":[{"name":"strich","size":140,"top":"8%","right":"-30px","rotate":25,"opacity":0.6}]} -->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"cream","deko":[{"name":"strich","size":140,"top":"8%","right":"-30px","rotate":25,"opacity":0.6}]}},"anchor":"leitbild"} -->
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
@@ -99,47 +99,47 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
-<!-- wp:kids/wiki-link {"label":"Unser Leitbild im Wortlaut","href":"https://docs.kids-bonn.de/docs/ab36eedf-a7d8-4185-8066-c8ce44e42fb2/"} /--></div>
+<!-- wp:kids/wiki-link {"blockstudio":{"name":"kids/wiki-link","attributes":{"label":"Unser Leitbild im Wortlaut","href":"https://docs.kids-bonn.de/docs/ab36eedf-a7d8-4185-8066-c8ce44e42fb2/"}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"anchor":"alltag"} -->
-<!-- wp:kids/section-head {"variant":"split","eyebrow":"Ein Tag im KIDS","heading":"Genug Zeit.<br>Für alles, was zählt.","lead":"Unser Tag hat einen festen Rhythmus - und viel Luft dazwischen. Denn Kinder brauchen beides: Struktur und das Gefühl, nicht gehetzt zu werden."} -->
-<!-- wp:kids/wiki-link {"label":"Mehr zu Tagesablauf, Essen, Ausflügen, Ferien","href":"https://docs.kids-bonn.de/docs/8ab81424-039b-42b8-95b4-6e2525c6c4f7/"} /-->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{}},"anchor":"alltag"} -->
+<!-- wp:kids/section-head {"blockstudio":{"name":"kids/section-head","attributes":{"variant":"split","eyebrow":"Ein Tag im KIDS","heading":"Genug Zeit.\u003cbr\u003eFür alles, was zählt.","lead":"Unser Tag hat einen festen Rhythmus - und viel Luft dazwischen. Denn Kinder brauchen beides: Struktur und das Gefühl, nicht gehetzt zu werden."}}} -->
+<!-- wp:kids/wiki-link {"blockstudio":{"name":"kids/wiki-link","attributes":{"label":"Mehr zu Tagesablauf, Essen, Ausflügen, Ferien","href":"https://docs.kids-bonn.de/docs/8ab81424-039b-42b8-95b4-6e2525c6c4f7/"}}} /-->
 <!-- /wp:kids/section-head -->
 
 <!-- wp:kids/day-grid -->
-<!-- wp:kids/day-tile {"time":"Ab 7:30","title":"Ankommen","text":"Tür auf, Schuhe aus, erste Freunde begrüßen.","color":"pfirsich"} /-->
+<!-- wp:kids/day-tile {"blockstudio":{"name":"kids/day-tile","attributes":{"time":"Ab 7:30","title":"Ankommen","text":"Tür auf, Schuhe aus, erste Freunde begrüßen.","color":"pfirsich"}}} /-->
 
-<!-- wp:kids/day-tile {"time":"09:00","title":"Morgenkreis","text":"Lieder, Wetter, was heute wichtig ist.","color":"gelb"} /-->
+<!-- wp:kids/day-tile {"blockstudio":{"name":"kids/day-tile","attributes":{"time":"09:00","title":"Morgenkreis","text":"Lieder, Wetter, was heute wichtig ist.","color":"gelb"}}} /-->
 
-<!-- wp:kids/day-tile {"time":"Ab 9:30","title":"Freies Spielen","text":"Drinnen, draußen, matschig, laut.","color":"gruen"} /-->
+<!-- wp:kids/day-tile {"blockstudio":{"name":"kids/day-tile","attributes":{"time":"Ab 9:30","title":"Freies Spielen","text":"Drinnen, draußen, matschig, laut.","color":"gruen"}}} /-->
 
-<!-- wp:kids/day-tile {"time":"12:00","title":"Mittagessen","text":"Frisch vor Ort gekocht, gemeinsam gegessen.","color":"orange","dark":true} /-->
+<!-- wp:kids/day-tile {"blockstudio":{"name":"kids/day-tile","attributes":{"time":"12:00","title":"Mittagessen","text":"Frisch vor Ort gekocht, gemeinsam gegessen.","color":"orange","dark":true}}} /-->
 
-<!-- wp:kids/day-tile {"time":"Ab 13:00","title":"Ruhe &amp; Projekte","text":"Erst Schlaf oder Geschichten, dann Atelier und Bewegung.","color":"lila"} /-->
+<!-- wp:kids/day-tile {"blockstudio":{"name":"kids/day-tile","attributes":{"time":"Ab 13:00","title":"Ruhe \u0026amp; Projekte","text":"Erst Schlaf oder Geschichten, dann Atelier und Bewegung.","color":"lila"}}} /-->
 
-<!-- wp:kids/day-tile {"time":"15:00","title":"Abholzeit","text":"Taschen schnappen, winken, bis morgen.","color":"blau"} /-->
+<!-- wp:kids/day-tile {"blockstudio":{"name":"kids/day-tile","attributes":{"time":"15:00","title":"Abholzeit","text":"Taschen schnappen, winken, bis morgen.","color":"blau"}}} /-->
 <!-- /wp:kids/day-grid -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"background":"sand"} -->
-<!-- wp:kids/section-head {"variant":"split","eyebrow":"Elterninitiative","heading":"Unsere Kita.<br>Im wahrsten Sinn.","lead":"Als Elterninitiative gestalten wir unsere Kita selbst. Jede Familie bringt sich ein: in Arbeitsgruppen, in administrativen Gremien, bei Festen und im täglichen Miteinander."} -->
-<!-- wp:kids/wiki-link {"label":"Elterngruppen im Detail","href":"https://docs.kids-bonn.de/docs/68fc95e6-91aa-4c8e-bf67-e60393ef0540/"} /-->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"sand"}}} -->
+<!-- wp:kids/section-head {"blockstudio":{"name":"kids/section-head","attributes":{"variant":"split","eyebrow":"Elterninitiative","heading":"Unsere Kita.\u003cbr\u003eIm wahrsten Sinn.","lead":"Als Elterninitiative gestalten wir unsere Kita selbst. Jede Familie bringt sich ein: in Arbeitsgruppen, in administrativen Gremien, bei Festen und im täglichen Miteinander."}}} -->
+<!-- wp:kids/wiki-link {"blockstudio":{"name":"kids/wiki-link","attributes":{"label":"Elterngruppen im Detail","href":"https://docs.kids-bonn.de/docs/68fc95e6-91aa-4c8e-bf67-e60393ef0540/"}}} /-->
 <!-- /wp:kids/section-head -->
 
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"40%"} -->
-<div class="wp-block-column" style="flex-basis:40%"><!-- wp:kids/chip-card {"title":"Gremien","subtitle":"Gewählt auf der Mitgliederversammlung. Sie tragen Verantwortung für Mitarbeitende, Verein und Haus.","chips":[{"text":"Vorstand"},{"text":"Elternrat"}]} /--></div>
+<div class="wp-block-column" style="flex-basis:40%"><!-- wp:kids/chip-card {"blockstudio":{"name":"kids/chip-card","attributes":{"title":"Gremien","subtitle":"Gewählt auf der Mitgliederversammlung. Sie tragen Verantwortung für Mitarbeitende, Verein und Haus.","chips":[{"text":"Vorstand"},{"text":"Elternrat"}]}}} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"60%"} -->
-<div class="wp-block-column" style="flex-basis:60%"><!-- wp:kids/chip-card {"title":"Arbeitsgruppen","subtitle":"Fluide und bedarfsorientiert. Jedes Jahr stimmen wir neu ab, was gerade ansteht und packen es an.","chips":[{"text":"Feste"},{"text":"Hausmeisterschaft &amp; Garten"},{"text":"IT"},{"text":"Mitgliedermanagement"},{"text":"Einkauf"},{"text":"Nachhaltigkeit &amp; Fundraising"},{"text":"Kids-PR"},{"text":"Kids-Post"},{"text":"Schutzkonzept"}]} /--></div>
+<div class="wp-block-column" style="flex-basis:60%"><!-- wp:kids/chip-card {"blockstudio":{"name":"kids/chip-card","attributes":{"title":"Arbeitsgruppen","subtitle":"Fluide und bedarfsorientiert. Jedes Jahr stimmen wir neu ab, was gerade ansteht und packen es an.","chips":[{"text":"Feste"},{"text":"Hausmeisterschaft \u0026amp; Garten"},{"text":"IT"},{"text":"Mitgliedermanagement"},{"text":"Einkauf"},{"text":"Nachhaltigkeit \u0026amp; Fundraising"},{"text":"Kids-PR"},{"text":"Kids-Post"},{"text":"Schutzkonzept"}]}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:kids/hand-lines {"question":"Du willst mehr als nur bringen und abholen?","answer":"Dann seid ihr bei uns richtig."} /-->
+<!-- wp:kids/hand-lines {"blockstudio":{"name":"kids/hand-lines","attributes":{"question":"Du willst mehr als nur bringen und abholen?","answer":"Dann seid ihr bei uns richtig."}}} /-->
 
 <!-- wp:group {"className":"ei-verein","layout":{"type":"default"}} -->
 <div class="wp-block-group ei-verein"><!-- wp:paragraph -->
@@ -152,10 +152,10 @@
 <!-- /wp:group -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"background":"cream","anchor":"haus"} -->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"cream"}},"anchor":"haus"} -->
 <!-- wp:columns {"verticalAlignment":"center"} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:kids/gallery {"slides":[{"image":<?php echo kids_attachment_id('haus-1'); ?>,"alt":"Außenansicht unseres Neubaus in Bonn-Beuel"},{"image":<?php echo kids_attachment_id('haus-2'); ?>,"alt":"Blick in den Garten mit Spielbereich"},{"image":<?php echo kids_attachment_id('haus-3'); ?>,"alt":"Innenansicht mit Gruppenraum und Spielmaterialien"}]} /--></div>
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:kids/gallery {"blockstudio":{"name":"kids/gallery","attributes":{"slides":[{"image":<?php echo kids_attachment_id('haus-1'); ?>,"alt":"Außenansicht unseres Neubaus in Bonn-Beuel"},{"image":<?php echo kids_attachment_id('haus-2'); ?>,"alt":"Blick in den Garten mit Spielbereich"},{"image":<?php echo kids_attachment_id('haus-3'); ?>,"alt":"Innenansicht mit Gruppenraum und Spielmaterialien"}]}}} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center"} -->
@@ -171,13 +171,13 @@
 <p>Jeder Raum hat seine Aufgabe: die Turnhalle mit Kletterwand fürs laute Tun, die Werkstatt zum Bauen, das Atelier zum Matschen. Alles so eingerichtet, dass die Kinder selbstständig handeln können.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:kids/pill-list {"variant":"light","items":[{"text":"1.700&nbsp;m² Garten"},{"text":"3 Gruppenräume"},{"text":"Turnhalle mit Kletterwand"},{"text":"Eigene Küche"},{"text":"Werkstatt"},{"text":"Atelier"},{"text":"Ruheräume"}]} /--></div>
+<!-- wp:kids/pill-list {"blockstudio":{"name":"kids/pill-list","attributes":{"variant":"light","items":[{"text":"1.700\u0026nbsp;m² Garten"},{"text":"3 Gruppenräume"},{"text":"Turnhalle mit Kletterwand"},{"text":"Eigene Küche"},{"text":"Werkstatt"},{"text":"Atelier"},{"text":"Ruheräume"}]}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"anchor":"mitmachen"} -->
-<!-- wp:kids/cta-box {"deko":[{"name":"kreis","size":260,"top":"-60px","right":"-60px","rotate":0,"opacity":0.55},{"name":"welle","size":180,"bottom":"-30px","right":"14%","rotate":-20,"opacity":0.35},{"name":"blume02","size":120,"bottom":"-10px","left":"6%","rotate":15,"opacity":0.5}]} -->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{}},"anchor":"mitmachen"} -->
+<!-- wp:kids/cta-box {"blockstudio":{"name":"kids/cta-box","attributes":{"deko":[{"name":"kreis","size":260,"top":"-60px","right":"-60px","rotate":0,"opacity":0.55},{"name":"welle","size":180,"bottom":"-30px","right":"14%","rotate":-20,"opacity":0.35},{"name":"blume02","size":120,"bottom":"-10px","left":"6%","rotate":15,"opacity":0.5}]}}} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Noch Plätze frei</p>
 <!-- /wp:paragraph -->
@@ -191,14 +191,14 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:kids/button-row -->
-<!-- wp:kids/button {"label":"Zum Kennenlernen →","href":"/kennenlernen","variant":"primary-inverse"} /-->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Zum Kennenlernen →","href":"/kennenlernen","variant":"primary-inverse"}}} /-->
 
-<!-- wp:kids/button {"label":"Fragen stellen","href":"/kontakt","variant":"outline-inverse"} /-->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Fragen stellen","href":"/kontakt","variant":"outline-inverse"}}} /-->
 <!-- /wp:kids/button-row -->
 <!-- /wp:kids/cta-box -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/section {"background":"sand-deep","anchor":"jobs","deko":[{"name":"blume02","size":560,"top":"-120px","right":"-140px","rotate":18,"opacity":0.15,"hide_mobile":true}]} -->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"sand-deep","deko":[{"name":"blume02","size":560,"top":"-120px","right":"-140px","rotate":18,"opacity":0.15,"hide_mobile":true}]}},"anchor":"jobs"} -->
 <!-- wp:columns {"verticalAlignment":"center"} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"60%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
@@ -213,21 +213,21 @@
 <p class="is-style-lede">Kleine Gruppen. Rückendeckung durch Eltern im Alltag. Raum, wirklich pädagogisch zu arbeiten - statt Verwaltung zu machen. Und: wir suchen gerade Verstärkung.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:kids/button {"label":"Offene Stellen ansehen","href":"/jobs"} /--></div>
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Offene Stellen ansehen","href":"/jobs"}}} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"40%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"><!-- wp:kids/pill-list {"variant":"dark","items":[{"text":"Kleines Team, viel Rückendeckung"},{"text":"Mitgestalten, nicht abarbeiten"},{"text":"Kurze Wege, schnelle Entscheidungen"},{"text":"Zeit für echte pädagogische Arbeit"}]} /--></div>
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"><!-- wp:kids/pill-list {"blockstudio":{"name":"kids/pill-list","attributes":{"variant":"dark","items":[{"text":"Kleines Team, viel Rückendeckung"},{"text":"Mitgestalten, nicht abarbeiten"},{"text":"Kurze Wege, schnelle Entscheidungen"},{"text":"Zeit für echte pädagogische Arbeit"}]}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 <!-- /wp:kids/section -->
 
-<!-- wp:kids/sponsors {"eyebrow":"Danke!","heading":"Unsere Sponsoren.","lead":"Ohne die Unterstützung lokaler Betriebe und Initiativen wäre vieles bei uns nicht möglich. Schaut gerne bei ihnen vorbei.","sponsors":[{"logo":<?php echo kids_attachment_id('anne-servos'); ?>,"name":"Anne Servos","url":"https://anne-servos.de/"},{"logo":<?php echo kids_attachment_id('beueler-buchladen'); ?>,"name":"Beueler Buchladen","url":"https://beuelerbuchladen.de/"},{"logo":<?php echo kids_attachment_id('bindungsaspekte'); ?>,"name":"Bindungsaspekte","url":"https://bindungsaspekte.de/"},{"logo":<?php echo kids_attachment_id('buggyfit'); ?>,"name":"buggyFit","url":"https://www.buggyfit.de/"},{"logo":<?php echo kids_attachment_id('koerperzimmer'); ?>,"name":"Körperzimmer","url":"https://koerperzimmer.de/"},{"logo":<?php echo kids_attachment_id('limas'); ?>,"name":"LiMa's Fairpackte Welt","url":"https://limasfairpacktewelt.de/"},{"logo":<?php echo kids_attachment_id('miss-minz'); ?>,"name":"Miss Minz","url":"https://www.instagram.com/miss.minz/"},{"logo":<?php echo kids_attachment_id('musikschule-metronom'); ?>,"name":"Musikschule Metronom","url":"https://musikschule-beuel.de/"},{"logo":<?php echo kids_attachment_id('zartmint'); ?>,"name":"zartmint","url":"https://www.zartmint.de/"}]} /-->
+<!-- wp:kids/sponsors {"blockstudio":{"name":"kids/sponsors","attributes":{"eyebrow":"Danke!","heading":"Unsere Sponsoren.","lead":"Ohne die Unterstützung lokaler Betriebe und Initiativen wäre vieles bei uns nicht möglich. Schaut gerne bei ihnen vorbei.","sponsors":[{"logo":<?php echo kids_attachment_id('anne-servos'); ?>,"name":"Anne Servos","url":"https://anne-servos.de/"},{"logo":<?php echo kids_attachment_id('beueler-buchladen'); ?>,"name":"Beueler Buchladen","url":"https://beuelerbuchladen.de/"},{"logo":<?php echo kids_attachment_id('bindungsaspekte'); ?>,"name":"Bindungsaspekte","url":"https://bindungsaspekte.de/"},{"logo":<?php echo kids_attachment_id('buggyfit'); ?>,"name":"buggyFit","url":"https://www.buggyfit.de/"},{"logo":<?php echo kids_attachment_id('koerperzimmer'); ?>,"name":"Körperzimmer","url":"https://koerperzimmer.de/"},{"logo":<?php echo kids_attachment_id('limas'); ?>,"name":"LiMa's Fairpackte Welt","url":"https://limasfairpacktewelt.de/"},{"logo":<?php echo kids_attachment_id('miss-minz'); ?>,"name":"Miss Minz","url":"https://www.instagram.com/miss.minz/"},{"logo":<?php echo kids_attachment_id('musikschule-metronom'); ?>,"name":"Musikschule Metronom","url":"https://musikschule-beuel.de/"},{"logo":<?php echo kids_attachment_id('zartmint'); ?>,"name":"zartmint","url":"https://www.zartmint.de/"}]}}} /-->
 
-<!-- wp:kids/section {"background":"cream","anchor":"kontakt"} -->
-<!-- wp:kids/section-head {"eyebrow":"Kontakt","heading":"Fragt uns.<br>Wir antworten."} /-->
+<!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"cream"}},"anchor":"kontakt"} -->
+<!-- wp:kids/section-head {"blockstudio":{"name":"kids/section-head","attributes":{"eyebrow":"Kontakt","heading":"Fragt uns.\u003cbr\u003eWir antworten."}}} /-->
 
-<!-- wp:kids/card {"variant":"centered"} -->
+<!-- wp:kids/card {"blockstudio":{"name":"kids/card","attributes":{"variant":"centered"}}} -->
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Direkt erreichbar</h3>
 <!-- /wp:heading -->
@@ -236,6 +236,6 @@
 <p>Telefon: <a href="tel:+492284787950"><strong>0228 478795</strong></a><br>Mail: <a href="mailto:kita@kids-bonn.de"><strong>kita@kids-bonn.de</strong></a></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:kids/button {"label":"Anfahrt &amp; alle Kontakte","href":"/kontakt","variant":"outline"} /-->
+<!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Anfahrt \u0026amp; alle Kontakte","href":"/kontakt","variant":"outline"}}} /-->
 <!-- /wp:kids/card -->
 <!-- /wp:kids/section -->

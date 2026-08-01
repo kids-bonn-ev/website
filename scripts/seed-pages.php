@@ -15,6 +15,13 @@ require_once ABSPATH . 'wp-admin/includes/image.php';
 require_once ABSPATH . 'wp-admin/includes/file.php';
 require_once ABSPATH . 'wp-admin/includes/media.php';
 
+/*
+ * Ohne angemeldeten Benutzer greift KSES (kein `unfiltered_html`) und zerlegt
+ * die Block-Kommentare: `<!-- wp:… -->` wird zu `&lt;!-- wp:… --&gt;`, sobald
+ * die Attribut-JSON HTML enthält. Für einen Import muss KSES deshalb aus.
+ */
+kses_remove_filters();
+
 $assets = dirname(__DIR__) . '/app/src/assets';
 
 $media = [
@@ -94,7 +101,9 @@ foreach ($pages as $slug => $page) {
         'post_status' => 'publish',
         'post_title' => $page['title'],
         'post_name' => $slug,
-        'post_content' => $content,
+        // wp_insert_post() erwartet geslashte Daten und würde sonst die
+        // Backslashes der Unicode-Escapes in den Block-Attributen entfernen.
+        'post_content' => wp_slash($content),
     ];
     if (isset($page['template'])) {
         $postarr['page_template'] = $page['template'];
