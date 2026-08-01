@@ -8,7 +8,7 @@
  * Inserter: yes
  */
 ?>
-<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"deko":[{"name":"kreis","size":70,"top":"20%","right":"10%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"blume01","size":90,"bottom":"10%","left":"8%","rotate":-10,"opacity":1,"hide_mobile":true},{"name":"welle","size":130,"top":"12%","left":"12%","rotate":0,"opacity":0.7,"hide_mobile":true}]}}} -->
+<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"deko":[{"name":"kreis","size":70,"top":"20%","right":"10%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"blume01","size":90,"bottom":"10%","left":"8%","rotate":-10,"opacity":1,"hide_mobile":true},{"name":"welle","size":130,"top":"12%","left":"12%","rotate":0,"opacity":0.7,"hide_mobile":true}]}},"className":"kids-hero--tall"} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Jobs @ KIDS</p>
 <!-- /wp:paragraph -->

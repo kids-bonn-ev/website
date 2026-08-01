@@ -24,10 +24,10 @@ $cta = bs_get_group($a, 'cta');
 					<?php }
                     $dot = !empty($link['dot']) && $link['dot'] !== 'none' ? $link['dot'] : ''; ?>
 				<li>
+					<?php /* Label ohne umgebenden Whitespace: sonst rendert der
+					         Farbpunkt (::before) ein zusätzliches Leerzeichen. */ ?>
 					<a <?php if (empty($isEditor)) { ?>href="<?php echo esc_url($link['url'] ?? ''); ?>"<?php } ?>
-						<?php if ($dot) { ?>class="site-nav__dot site-nav__dot--<?php echo esc_attr($dot); ?>"<?php } ?>>
-						<?php echo $link['label']; ?>
-					</a>
+						<?php if ($dot) { ?>class="site-nav__dot site-nav__dot--<?php echo esc_attr($dot); ?>"<?php } ?>><?php echo $link['label']; ?></a>
 				</li>
 				<?php } ?>
 			</ul>

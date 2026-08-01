@@ -8,7 +8,7 @@
  * Inserter: yes
  */
 ?>
-<!-- wp:kids/hero -->
+<!-- wp:kids/hero {"className":"kids-hero--compact"} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Kommt uns besuchen</p>
 <!-- /wp:paragraph -->

@@ -130,12 +130,12 @@
 <!-- /wp:kids/section-head -->
 
 <!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"width":"40%"} -->
-<div class="wp-block-column" style="flex-basis:40%"><!-- wp:kids/chip-card {"blockstudio":{"name":"kids/chip-card","attributes":{"title":"Gremien","subtitle":"Gewählt auf der Mitgliederversammlung. Sie tragen Verantwortung für Mitarbeitende, Verein und Haus.","chips":[{"text":"Vorstand"},{"text":"Elternrat"}]}}} /--></div>
+<div class="wp-block-columns"><!-- wp:column {"width":"43.48%"} -->
+<div class="wp-block-column" style="flex-basis:43.48%"><!-- wp:kids/chip-card {"blockstudio":{"name":"kids/chip-card","attributes":{"title":"Gremien","subtitle":"Gewählt auf der Mitgliederversammlung. Sie tragen Verantwortung für Mitarbeitende, Verein und Haus.","chips":[{"text":"Vorstand"},{"text":"Elternrat"}]}}} /--></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"60%"} -->
-<div class="wp-block-column" style="flex-basis:60%"><!-- wp:kids/chip-card {"blockstudio":{"name":"kids/chip-card","attributes":{"title":"Arbeitsgruppen","subtitle":"Fluide und bedarfsorientiert. Jedes Jahr stimmen wir neu ab, was gerade ansteht und packen es an.","chips":[{"text":"Feste"},{"text":"Hausmeisterschaft \u0026amp; Garten"},{"text":"IT"},{"text":"Mitgliedermanagement"},{"text":"Einkauf"},{"text":"Nachhaltigkeit \u0026amp; Fundraising"},{"text":"Kids-PR"},{"text":"Kids-Post"},{"text":"Schutzkonzept"}]}}} /--></div>
+<!-- wp:column {"width":"56.52%"} -->
+<div class="wp-block-column" style="flex-basis:56.52%"><!-- wp:kids/chip-card {"blockstudio":{"name":"kids/chip-card","attributes":{"title":"Arbeitsgruppen","subtitle":"Fluide und bedarfsorientiert. Jedes Jahr stimmen wir neu ab, was gerade ansteht und packen es an.","chips":[{"text":"Feste"},{"text":"Hausmeisterschaft \u0026amp; Garten"},{"text":"IT"},{"text":"Mitgliedermanagement"},{"text":"Einkauf"},{"text":"Nachhaltigkeit \u0026amp; Fundraising"},{"text":"Kids-PR"},{"text":"Kids-Post"},{"text":"Schutzkonzept"}]}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
@@ -153,7 +153,7 @@
 <!-- /wp:kids/section -->
 
 <!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"cream"}},"anchor":"haus"} -->
-<!-- wp:columns {"verticalAlignment":"center"} -->
+<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":"var:preset|spacing|s-8"}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:kids/gallery {"blockstudio":{"name":"kids/gallery","attributes":{"slides":[{"image":<?php echo kids_attachment_id('haus-1'); ?>,"alt":"Außenansicht unseres Neubaus in Bonn-Beuel"},{"image":<?php echo kids_attachment_id('haus-2'); ?>,"alt":"Blick in den Garten mit Spielbereich"},{"image":<?php echo kids_attachment_id('haus-3'); ?>,"alt":"Innenansicht mit Gruppenraum und Spielmaterialien"}]}}} /--></div>
 <!-- /wp:column -->
@@ -199,9 +199,9 @@
 <!-- /wp:kids/section -->
 
 <!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"background":"sand-deep","deko":[{"name":"blume02","size":560,"top":"-120px","right":"-140px","rotate":18,"opacity":0.15,"hide_mobile":true}]}},"anchor":"jobs"} -->
-<!-- wp:columns {"verticalAlignment":"center"} -->
-<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"60%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
+<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":"var:preset|spacing|s-7"}}} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"56.52%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:56.52%"><!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Jobs @ KIDS</p>
 <!-- /wp:paragraph -->
 
@@ -216,8 +216,8 @@
 <!-- wp:kids/button {"blockstudio":{"name":"kids/button","attributes":{"label":"Offene Stellen ansehen","href":"/jobs"}}} /--></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"center","width":"40%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"><!-- wp:kids/pill-list {"blockstudio":{"name":"kids/pill-list","attributes":{"variant":"dark","items":[{"text":"Kleines Team, viel Rückendeckung"},{"text":"Mitgestalten, nicht abarbeiten"},{"text":"Kurze Wege, schnelle Entscheidungen"},{"text":"Zeit für echte pädagogische Arbeit"}]}}} /--></div>
+<!-- wp:column {"verticalAlignment":"center","width":"43.48%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:43.48%"><!-- wp:kids/pill-list {"blockstudio":{"name":"kids/pill-list","attributes":{"variant":"dark","items":[{"text":"Kleines Team, viel Rückendeckung"},{"text":"Mitgestalten, nicht abarbeiten"},{"text":"Kurze Wege, schnelle Entscheidungen"},{"text":"Zeit für echte pädagogische Arbeit"}]}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 <!-- /wp:kids/section -->

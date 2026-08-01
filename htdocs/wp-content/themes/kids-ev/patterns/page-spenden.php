@@ -8,7 +8,7 @@
  * Inserter: yes
  */
 ?>
-<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"deko":[{"name":"kreis","size":120,"top":"20%","right":"8%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"blume01","size":90,"bottom":"12%","left":"10%","rotate":-10,"opacity":1,"hide_mobile":true}]}}} -->
+<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"deko":[{"name":"kreis","size":120,"top":"20%","right":"8%","rotate":0,"opacity":1,"hide_mobile":true},{"name":"blume01","size":90,"bottom":"12%","left":"10%","rotate":-10,"opacity":1,"hide_mobile":true}]}},"className":"kids-hero--compact kids-hero--lede-wide"} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
 <p class="is-style-eyebrow">Unterstützen</p>
 <!-- /wp:paragraph -->
@@ -24,7 +24,8 @@
 
 <!-- wp:kids/section -->
 <!-- wp:group {"className":"spenden-intro","layout":{"type":"default"}} -->
-<div class="wp-block-group spenden-intro"><!-- wp:paragraph -->
+<div class="wp-block-group spenden-intro"><!-- wp:group {"className":"prose","layout":{"type":"default"}} -->
+<div class="wp-block-group prose"><!-- wp:paragraph -->
 <p>Bei uns wachsen Kinder in einem liebevollen und geborgenen Umfeld auf - und legen hier die Grundlagen für eine positive Zukunft. Um all das möglich zu machen, sind wir auf Ihre Hilfe angewiesen.</p>
 <!-- /wp:paragraph -->
 
@@ -35,6 +36,7 @@
 <!-- wp:paragraph -->
 <p><strong>Helfen Sie uns, unsere Vision zu verwirklichen.</strong> Jeder Beitrag - egal wie klein - macht einen Unterschied. Vielen Dank für Ihre Unterstützung!</p>
 <!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 <!-- /wp:kids/section -->
 

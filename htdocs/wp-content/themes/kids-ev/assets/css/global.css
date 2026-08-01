@@ -479,6 +479,12 @@ a[data-external]::after {
   margin-block: 1em;
 }
 
+/* core/columns bringt aus der Block-Library `margin-bottom: 1.75em` mit -
+   das Pendant .grid-2 im Original hat keinen Außenabstand. */
+.wp-block-columns {
+  margin-bottom: 0;
+}
+
 /* ---------- WordPress: Block-Styles & Rich-Text-Formate ----------
    Regeln mit Asset-URLs (bullet.svg, blume02.svg) liegen bewusst hier,
    damit die relativen Pfade eindeutig gegen assets/css/ aufgelöst werden. */
