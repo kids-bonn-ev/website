@@ -460,6 +460,25 @@ a[data-external]::after {
   }
 }
 
+/* ---------- WordPress: Layout-Abstände ----------
+   WP setzt in jedem Layout-Container hart
+   `margin-block-start: var(--wp--style--block-gap); margin-block-end: 0`
+   mit der Spezifität (0,1,0) und übersteuert damit die Element-Margins
+   dieses 1:1-Ports (p/h: `margin: 0 0 var(--s-4)`).
+   Deshalb steht blockGap in der theme.json auf 0 - die Sektionen stoßen
+   dann wie in der Astro-Vorlage bündig aneinander - und die Abstände
+   innerhalb der Blöcke kommen wieder von hier. Gleiche Spezifität, aber
+   kids-ev-global-css wird nach global-styles-inline-css ausgegeben. */
+
+:root :where(.is-layout-flow, .is-layout-constrained, .is-layout-flex, .is-layout-grid) > :where(p, h1, h2, h3, h4) {
+  margin-block-end: var(--s-4);
+}
+
+/* Listen ohne eigenen Block-Style folgen wie im Original der UA-Vorgabe. */
+:root :where(.is-layout-flow, .is-layout-constrained) > :where(ul, ol) {
+  margin-block: 1em;
+}
+
 /* ---------- WordPress: Block-Styles & Rich-Text-Formate ----------
    Regeln mit Asset-URLs (bullet.svg, blume02.svg) liegen bewusst hier,
    damit die relativen Pfade eindeutig gegen assets/css/ aufgelöst werden. */
@@ -473,20 +492,23 @@ ul.is-style-kids-bullets {
   flex-direction: column;
   gap: var(--s-3);
 }
+/* Die Astro-Vorlage packte den Inhalt in ein <span>; Gutenberg-Listenpunkte
+   haben das nicht. Bullet daher absolut setzen statt als Flex-Item - sonst
+   werden <strong> und Folgetext zu zwei Flex-Items mit gap dazwischen. */
 ul.is-style-kids-bullets li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--s-3);
+  position: relative;
+  padding-left: calc(0.6rem + var(--s-3));
   line-height: 1.5;
 }
 ul.is-style-kids-bullets li::before {
   content: "";
-  flex: 0 0 auto;
+  position: absolute;
+  left: 0;
+  /* 0.75em = Mitte der ersten Zeile; um die halbe Bullet-Höhe versetzt */
+  top: calc(0.75em - 0.3rem);
   width: 0.6rem;
   height: 0.6rem;
   background: url("../deco/bullet.svg") center / contain no-repeat;
-  /* 0.75em = Mitte der ersten Zeile; um die halbe Bullet-Höhe versetzt */
-  margin-top: calc(0.75em - 0.3rem);
 }
 ul.is-style-kids-bullets strong {
   font-weight: 800;
