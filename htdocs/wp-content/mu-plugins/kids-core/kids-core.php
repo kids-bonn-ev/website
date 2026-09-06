@@ -174,3 +174,6 @@ function kids_core_render_html(array $entries): string
 
     return '<table style="border-collapse:collapse;font-family:sans-serif;font-size:14px;">' . $rows . '</table>';
 }
+
+/* Disable WordPress Admin Bar for all users */
+add_filter( 'show_admin_bar', fn() => false );
