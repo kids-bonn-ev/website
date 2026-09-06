@@ -1,0 +1,41 @@
+{
+    "$schema": "https://blockstudio.dev/schema/field",
+    "name": "deko-layer",
+    "title": "Deko-Ebene",
+    "attributes": [
+        {
+            "id": "deko",
+            "type": "repeater",
+            "label": "Deko-Elemente",
+            "attributes": [
+                {
+                    "id": "name",
+                    "type": "select",
+                    "label": "Motiv",
+                    "options": [
+                        { "value": "blume01", "label": "Blume 1" },
+                        { "value": "blume02", "label": "Blume 2" },
+                        { "value": "bogen", "label": "Bogen" },
+                        { "value": "halbkreis", "label": "Halbkreis" },
+                        { "value": "kreis", "label": "Kreis" },
+                        { "value": "strich", "label": "Strich" },
+                        { "value": "tropfen", "label": "Tropfen" },
+                        { "value": "welle", "label": "Welle" },
+                        { "value": "wiese01", "label": "Wiese 1" },
+                        { "value": "wiese02", "label": "Wiese 2" },
+                        { "value": "wolke", "label": "Wolke" },
+                        { "value": "regenwurm", "label": "Regenwurm" }
+                    ]
+                },
+                { "id": "size", "type": "number", "label": "Größe (px)", "default": 80 },
+                { "id": "top", "type": "text", "label": "Oben (z. B. 10% oder -20px)" },
+                { "id": "right", "type": "text", "label": "Rechts" },
+                { "id": "bottom", "type": "text", "label": "Unten" },
+                { "id": "left", "type": "text", "label": "Links" },
+                { "id": "rotate", "type": "number", "label": "Rotation (Grad)", "default": 0 },
+                { "id": "opacity", "type": "number", "label": "Deckkraft (0–1)", "default": 1 },
+                { "id": "hide_mobile", "type": "toggle", "label": "Auf Mobilgeräten ausblenden", "default": false }
+            ]
+        }
+    ]
+}

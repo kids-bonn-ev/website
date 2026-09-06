@@ -1,0 +1,30 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/steps",
+    "title": "KIDS: Schritte",
+    "description": "Nummerierte Schritt-Liste — große Ziffer (Anmeldung) oder Kreis-Badge (Bewerbung). Nummern zählen automatisch.",
+    "category": "formatting",
+    "keywords": ["Schritte", "Anmeldung", "Bewerbung"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "kids/step"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "style",
+                "type": "radio",
+                "label": "Stil",
+                "default": "big-number",
+                "options": [
+                    { "value": "big-number", "label": "Große Ziffer links (01, 02, …)" },
+                    { "value": "circle-badge", "label": "Kreis-Badge (kompakt)" }
+                ]
+            }
+        ]
+    }
+}

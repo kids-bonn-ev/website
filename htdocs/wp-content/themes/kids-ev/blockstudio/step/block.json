@@ -1,0 +1,24 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/step",
+    "title": "KIDS: Schritt",
+    "description": "Einzelner Schritt — die Nummer wird automatisch gezählt",
+    "category": "formatting",
+    "keywords": ["Schritt"],
+    "supports": {
+        "customClassName": true
+    },
+    "parent": ["kids/steps"],
+    "allowedBlocks": [
+        "core/paragraph",
+        "core/list",
+        "kids/button",
+        "kids/button-row",
+        "kids/wiki-link"
+    ],
+    "blockstudio": {
+        "attributes": [
+            { "id": "title", "type": "text", "label": "Titel" }
+        ]
+    }
+}

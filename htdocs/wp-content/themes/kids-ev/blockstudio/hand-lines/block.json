@@ -1,0 +1,18 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/hand-lines",
+    "title": "KIDS: Handschrift-Zeilen",
+    "description": "Frage/Antwort in Handschrift — Frage orange links, Antwort rechts (Port von .ei-call)",
+    "category": "formatting",
+    "keywords": ["Handschrift", "Frage", "Antwort"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            { "id": "question", "type": "text", "label": "Frage (orange, links)" },
+            { "id": "answer", "type": "text", "label": "Antwort (dunkel, rechts)" }
+        ]
+    }
+}

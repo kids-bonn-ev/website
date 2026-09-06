@@ -1,0 +1,197 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "useRootPaddingAwareAlignments": true,
+        "color": {
+            "defaultPalette": false,
+            "defaultGradients": false,
+            "defaultDuotone": false,
+            "palette": [
+                { "slug": "pfirsich", "color": "#ddab88", "name": "Pfirsich" },
+                { "slug": "orange", "color": "#c3651d", "name": "Orange" },
+                { "slug": "lila", "color": "#c8a9ce", "name": "Lila" },
+                { "slug": "gelb", "color": "#eacb2c", "name": "Gelb" },
+                { "slug": "gruen", "color": "#a1c480", "name": "Grün" },
+                { "slug": "blau", "color": "#93acd1", "name": "Blau" },
+                { "slug": "sand", "color": "#8e8070", "name": "Sand" },
+                { "slug": "ink", "color": "#3a342c", "name": "Ink (Text)" },
+                { "slug": "ink-soft", "color": "#6a6357", "name": "Ink Soft" },
+                { "slug": "bg", "color": "#fbf6ef", "name": "Hintergrund" },
+                { "slug": "bg-cream", "color": "#f4ebdb", "name": "Hintergrund Cream" },
+                { "slug": "bg-sand", "color": "#e7d9bf", "name": "Hintergrund Sand" },
+                { "slug": "accent-soft", "color": "#eadfc8", "name": "Akzent Soft" },
+                { "slug": "orange-deep", "color": "#8a4513", "name": "Orange Dunkel" },
+                { "slug": "link-hover", "color": "#a2531a", "name": "Link Hover" },
+                { "slug": "white", "color": "#ffffff", "name": "Weiß" }
+            ]
+        },
+        "typography": {
+            "defaultFontSizes": false,
+            "fluid": true,
+            "fontFamilies": [
+                {
+                    "slug": "body",
+                    "name": "Nunito (Fließtext)",
+                    "fontFamily": "\"Nunito\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+                },
+                {
+                    "slug": "display",
+                    "name": "Maybug MS Decorative (Überschriften)",
+                    "fontFamily": "\"Maybug MS Decorative\", \"Maybug MS Black\", system-ui, sans-serif"
+                },
+                {
+                    "slug": "display-black",
+                    "name": "Maybug MS Black (H1)",
+                    "fontFamily": "\"Maybug MS Black\", system-ui, sans-serif"
+                },
+                {
+                    "slug": "hand",
+                    "name": "Maybug MS Handwritten",
+                    "fontFamily": "\"Maybug MS Handwritten\", cursive"
+                }
+            ],
+            "fontSizes": [
+                { "slug": "small", "size": "0.9rem", "name": "Klein", "fluid": false },
+                { "slug": "medium", "size": "1.05rem", "name": "Normal", "fluid": false },
+                { "slug": "lede", "size": "1.25rem", "name": "Lede", "fluid": false },
+                { "slug": "large", "size": "1.5rem", "name": "Groß", "fluid": false }
+            ]
+        },
+        "spacing": {
+            "defaultSpacingSizes": false,
+            "blockGap": true,
+            "units": ["px", "rem", "em", "%", "vw", "vh"],
+            "spacingSizes": [
+                { "slug": "s-1", "size": "0.25rem", "name": "1" },
+                { "slug": "s-2", "size": "0.5rem", "name": "2" },
+                { "slug": "s-3", "size": "0.75rem", "name": "3" },
+                { "slug": "s-4", "size": "1rem", "name": "4" },
+                { "slug": "s-5", "size": "1.5rem", "name": "5" },
+                { "slug": "s-6", "size": "2rem", "name": "6" },
+                { "slug": "s-7", "size": "3rem", "name": "7" },
+                { "slug": "s-8", "size": "4rem", "name": "8" },
+                { "slug": "s-9", "size": "6rem", "name": "9" },
+                { "slug": "s-10", "size": "8rem", "name": "10" }
+            ]
+        },
+        "layout": {
+            "contentSize": "72rem",
+            "wideSize": "80rem"
+        },
+        "custom": {
+            "radius": {
+                "sm": "0.5rem",
+                "md": "1rem",
+                "lg": "1.5rem",
+                "pill": "999px"
+            },
+            "shadow": {
+                "md": "0 10px 30px -10px rgba(58, 52, 44, 0.18)",
+                "lg": "0 25px 50px -20px rgba(58, 52, 44, 0.25)"
+            },
+            "proseMax": "40rem"
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--bg)",
+            "text": "var(--wp--preset--color--ink)"
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--body)",
+            "fontSize": "1.05rem",
+            "lineHeight": "1.6"
+        },
+        "spacing": {
+            "blockGap": "0",
+            "padding": {
+                "left": "var(--wp--preset--spacing--s-5)",
+                "right": "var(--wp--preset--spacing--s-5)"
+            }
+        },
+        "elements": {
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--display)",
+                    "fontWeight": "400",
+                    "lineHeight": "1.05"
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--ink)"
+                }
+            },
+            "h1": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--display-black)",
+                    "fontSize": "clamp(2.5rem, 6vw, 4.75rem)",
+                    "letterSpacing": "-0.01em"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontSize": "clamp(2rem, 4.5vw, 3.25rem)"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontSize": "clamp(1.4rem, 2.5vw, 1.9rem)"
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontSize": "1.15rem"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--orange)"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--link-hover)"
+                    }
+                }
+            },
+            "button": {
+                "typography": {
+                    "fontWeight": "800"
+                },
+                "border": {
+                    "radius": "999px"
+                },
+                "color": {
+                    "background": "var(--wp--preset--color--orange)",
+                    "text": "var(--wp--preset--color--white)"
+                }
+            }
+        },
+        "blocks": {
+            "core/columns": {
+                "spacing": {
+                    "blockGap": "var(--wp--preset--spacing--s-6)"
+                }
+            }
+        }
+    },
+    "customTemplates": [
+        {
+            "name": "page-prose",
+            "title": "Schmale Textseite",
+            "postTypes": ["page"]
+        }
+    ],
+    "templateParts": [
+        {
+            "name": "header",
+            "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "title": "Footer",
+            "area": "footer"
+        }
+    ]
+}

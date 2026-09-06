@@ -1,0 +1,46 @@
+/* Feature-Karte — Port von .b-card (index.astro) */
+
+.feature-card {
+	background: #fff;
+	border-radius: var(--r-lg);
+	padding: var(--s-5);
+	box-shadow: var(--shadow-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--s-2);
+}
+
+.feature-card__icon {
+	width: 52px;
+	height: 52px;
+	object-fit: contain;
+	object-position: center;
+	margin: 0 0 var(--s-2);
+}
+
+.feature-card h3 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.feature-card p {
+	margin: 0;
+	color: var(--c-ink-soft);
+}
+
+@media (max-width: 560px) {
+	.feature-card {
+		padding: var(--s-4);
+		gap: var(--s-1);
+	}
+	.feature-card h3 {
+		font-size: 1.15rem;
+	}
+	.feature-card p {
+		font-size: 0.9rem;
+	}
+	.feature-card__icon {
+		width: 36px;
+		height: 36px;
+	}
+}

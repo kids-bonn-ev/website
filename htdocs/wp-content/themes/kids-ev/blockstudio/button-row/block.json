@@ -1,0 +1,29 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/button-row",
+    "title": "KIDS: Button-Reihe",
+    "description": "Flex-Reihe für Buttons (Port von .hero__ctas / .kommvorbei__ctas)",
+    "category": "formatting",
+    "keywords": ["Buttons", "CTA"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "kids/button"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "align_row",
+                "type": "radio",
+                "label": "Ausrichtung",
+                "default": "left",
+                "options": [
+                    { "value": "left", "label": "Links" },
+                    { "value": "center", "label": "Zentriert" }
+                ]
+            }
+        ]
+    }
+}

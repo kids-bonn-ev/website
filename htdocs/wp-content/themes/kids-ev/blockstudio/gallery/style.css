@@ -1,0 +1,87 @@
+/* Galerie — Port von HausGallery.astro */
+
+.kids-gallery {
+	position: relative;
+}
+
+/* Embla-Viewport: schneidet ab, der Container ist der Flex-Track */
+.kids-gallery__viewport {
+	overflow: hidden;
+	border-radius: 2rem;
+	box-shadow: var(--shadow-md);
+	background: var(--c-bg-sand);
+}
+.kids-gallery__container {
+	display: flex;
+	touch-action: pan-y pinch-zoom;
+	backface-visibility: hidden;
+}
+
+.kids-gallery__slide {
+	flex: 0 0 100%;
+	min-width: 0;
+	aspect-ratio: 4 / 3;
+	margin: 0;
+	overflow: hidden;
+	background: var(--c-bg-sand);
+}
+.kids-gallery__slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+.kids-gallery__arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	border: none;
+	background: rgba(255, 255, 255, 0.92);
+	color: var(--c-ink);
+	font-size: 1.1rem;
+	font-weight: 800;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+	box-shadow: var(--shadow-md);
+	transition: transform 140ms ease, background 140ms ease, opacity 140ms ease;
+}
+.kids-gallery__arrow:hover {
+	background: #fff;
+	transform: translateY(-50%) scale(1.06);
+}
+.kids-gallery__arrow--prev { left: var(--s-4); }
+.kids-gallery__arrow--next { right: var(--s-4); }
+
+@media (hover: none) and (pointer: coarse) {
+	.kids-gallery__arrow { display: none; }
+}
+
+.kids-gallery__dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.55rem;
+	margin-top: var(--s-4);
+}
+.kids-gallery__dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	background: color-mix(in srgb, var(--c-sand) 40%, transparent);
+	padding: 0;
+	cursor: pointer;
+	transition: background 140ms ease, transform 140ms ease;
+}
+.kids-gallery__dot:hover {
+	background: var(--c-sand);
+}
+.kids-gallery__dot[aria-current="true"] {
+	background: var(--c-orange);
+	transform: scale(1.2);
+}

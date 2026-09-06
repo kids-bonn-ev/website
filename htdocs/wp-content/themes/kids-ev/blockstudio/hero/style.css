@@ -1,0 +1,97 @@
+/* Hero — Port von .hero (index.astro) + .kontakt-/.jobs-/.anm-/.spenden-hero */
+
+.kids-hero {
+	position: relative;
+	overflow: hidden;
+	background: var(--c-bg-cream);
+}
+
+.kids-hero--home {
+	padding-block: clamp(3.5rem, 10vw, 8rem) clamp(5rem, 12vw, 10rem);
+}
+
+/* Basis = .kontakt-hero im Original. Die übrigen Unterseiten-Heros weichen
+   davon ab und holen sich das über die Modifier weiter unten. */
+.kids-hero--page {
+	padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+/* .anm-hero (kennenlernen) und .spenden-hero */
+.kids-hero--compact {
+	padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+/* .jobs-hero */
+.kids-hero--tall {
+	padding-block: clamp(4rem, 9vw, 7rem);
+}
+
+.kids-hero__inner {
+	position: relative;
+	text-align: center;
+}
+.kids-hero--left .kids-hero__inner {
+	text-align: left;
+}
+
+.kids-hero h1 {
+	margin-block: 0 var(--s-5);
+	text-wrap: balance;
+}
+/* .anm-hero / .spenden-hero / .jobs-hero setzen `margin-block: var(--s-3) …`;
+   .hero (Startseite) und .kontakt-hero nicht. */
+.kids-hero--compact h1,
+.kids-hero--tall h1 {
+	margin-block: var(--s-3) var(--s-5);
+}
+
+.kids-hero .lede,
+.kids-hero .is-style-lede {
+	max-width: 42rem;
+	margin-inline: auto;
+}
+/* .spenden-hero gibt dem Lede-Absatz mehr Breite als die übrigen Heros. */
+.kids-hero--lede-wide .lede,
+.kids-hero--lede-wide .is-style-lede {
+	max-width: 44rem;
+}
+/* `text-wrap: pretty` hat im Original nur der Startseiten-Hero - auf den
+   Unterseiten ändert es den Zeilenumbruch des Lede-Absatzes. */
+.kids-hero--home .lede,
+.kids-hero--home .is-style-lede {
+	text-wrap: pretty;
+}
+.kids-hero--left .lede,
+.kids-hero--left .is-style-lede {
+	margin-inline: 0;
+}
+
+.kids-hero .button-row {
+	margin-top: var(--s-6);
+}
+
+/* Outline-Button bekommt den Sektions-Hintergrund, damit Deko dahinter
+   auf Mobilgeräten nicht durchscheint. */
+.kids-hero .btn--outline {
+	background: var(--c-bg-cream);
+}
+
+@media (max-width: 520px) {
+	.kids-hero h1 {
+		font-size: clamp(2rem, 8vw, 2.6rem);
+	}
+	.kids-hero .lede,
+	.kids-hero .is-style-lede {
+		font-size: 1.1rem;
+	}
+}
+
+/* Mobil: die Boden-Wiese im Startseiten-Hero verkleinern, damit sie die
+   CTAs nicht verschluckt (Port von .deko--hero-ground). */
+@media (max-width: 700px) {
+	.kids-hero--home .deko[src*="wiese01"] {
+		width: 150px !important;
+		left: -30px !important;
+		bottom: -10px !important;
+	}
+}

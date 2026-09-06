@@ -1,0 +1,39 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/day-tile",
+    "title": "KIDS: Tagesablauf-Kachel",
+    "description": "Einzelne farbige Kachel mit Uhrzeit, Titel und Text (Port von .day-block)",
+    "category": "formatting",
+    "keywords": ["Kachel", "Uhrzeit"],
+    "supports": {
+        "customClassName": true
+    },
+    "parent": ["kids/day-grid"],
+    "blockstudio": {
+        "attributes": [
+            { "id": "time", "type": "text", "label": "Uhrzeit (z. B. Ab 7:30)" },
+            { "id": "title", "type": "text", "label": "Titel" },
+            { "id": "text", "type": "text", "label": "Text" },
+            {
+                "id": "color",
+                "type": "select",
+                "label": "Farbe",
+                "default": "pfirsich",
+                "options": [
+                    { "value": "pfirsich", "label": "Pfirsich" },
+                    { "value": "gelb", "label": "Gelb" },
+                    { "value": "gruen", "label": "Grün" },
+                    { "value": "orange", "label": "Orange" },
+                    { "value": "lila", "label": "Lila" },
+                    { "value": "blau", "label": "Blau" }
+                ]
+            },
+            {
+                "id": "dark",
+                "type": "toggle",
+                "label": "Heller Text (für Orange-Kachel)",
+                "default": false
+            }
+        ]
+    }
+}

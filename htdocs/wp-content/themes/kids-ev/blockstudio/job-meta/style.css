@@ -1,0 +1,24 @@
+/* Stellen-Meta — Port von .stelle-card__meta (jobs.astro).
+   Die Trennpunkte entstehen per ::after statt eigener <span>·</span>-Elemente. */
+
+.job-meta {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--s-3);
+	color: var(--c-ink-soft);
+	font-size: 0.95rem;
+	margin: 0 0 var(--s-5);
+}
+
+.job-meta li {
+	display: flex;
+	align-items: center;
+	gap: var(--s-3);
+}
+
+.job-meta li:not(:last-child)::after {
+	content: "·";
+	opacity: 0.5;
+}

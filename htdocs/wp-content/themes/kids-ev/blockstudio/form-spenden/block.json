@@ -1,0 +1,14 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/form-spenden",
+    "title": "KIDS: Formular Spendenquittung",
+    "description": "Formular der Spenden-Seite — sendet über den kids-core-Handler (Resend)",
+    "category": "formatting",
+    "keywords": ["Formular", "Spenden", "Quittung"],
+    "supports": {
+        "customClassName": true
+    },
+    "blockstudio": {
+        "attributes": []
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/day-grid",
+    "title": "KIDS: Tagesablauf-Grid",
+    "description": "Sechs farbige Kacheln für den Tagesablauf (Port von .day-grid)",
+    "category": "formatting",
+    "keywords": ["Tag", "Ablauf", "Kacheln"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "kids/day-tile"
+    ],
+    "blockstudio": {
+        "attributes": []
+    }
+}

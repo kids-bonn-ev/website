@@ -1,0 +1,37 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/feature-card",
+    "title": "KIDS: Feature-Karte",
+    "description": "Weiße Karte mit Deko-Icon, Titel und Text (Port von .b-card)",
+    "category": "formatting",
+    "keywords": ["Feature", "Karte"],
+    "supports": {
+        "customClassName": true
+    },
+    "parent": ["kids/feature-grid"],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "icon",
+                "type": "select",
+                "label": "Icon (Deko-Motiv)",
+                "options": [
+                    { "value": "blume01", "label": "Blume 1" },
+                    { "value": "blume02", "label": "Blume 2" },
+                    { "value": "bogen", "label": "Bogen" },
+                    { "value": "halbkreis", "label": "Halbkreis" },
+                    { "value": "kreis", "label": "Kreis" },
+                    { "value": "strich", "label": "Strich" },
+                    { "value": "tropfen", "label": "Tropfen" },
+                    { "value": "welle", "label": "Welle" },
+                    { "value": "wiese01", "label": "Wiese 1" },
+                    { "value": "wiese02", "label": "Wiese 2" },
+                    { "value": "wolke", "label": "Wolke" },
+                    { "value": "regenwurm", "label": "Regenwurm" }
+                ]
+            },
+            { "id": "title", "type": "text", "label": "Titel" },
+            { "id": "text", "type": "richtext", "label": "Text" }
+        ]
+    }
+}
