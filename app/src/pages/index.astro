@@ -56,50 +56,74 @@ const hausGallery = [
     </div>
   </section>
 
-  <section class="section section--tight freie-section">
+  <section class="section section--tight offen-section">
     <div class="container">
-      <div class="freie">
+      <div class="offen">
         <Deko name="wolke"     size={150} top="-50px"   right="-30px" rotate={-8} opacity={0.6} class="deko--hide-mobile" />
         <Deko name="blume02"   size={90}  bottom="-30px" left="-25px" rotate={18} opacity={0.75} />
         <Deko name="kreis"     size={70}  top="18%"     left="2%"     opacity={0.45} class="deko--hide-mobile" />
         <Deko name="halbkreis" size={80}  bottom="22%"  right="4%"    rotate={-15} opacity={0.55} class="deko--hide-mobile" />
         <Deko name="strich"    size={120} top="8%"      right="20%"   rotate={12} opacity={0.4} class="deko--hide-mobile" />
 
-        <div class="freie__inner">
-          <div class="freie__lead">
-            <p class="eyebrow">Anmeldung läuft</p>
+        <div class="offen__inner">
+          <div class="offen__lead">
+            <p class="eyebrow">Tag der offenen Tür</p>
             <h2>
-              <span class="freie__hl">Noch Plätze frei.</span><br />
-              Für den Herbst.
+              <span class="offen__hl">Tür auf.</span><br />
+              Zweimal im November.
             </h2>
 
-            <div class="freie__prose">
+            <div class="offen__prose">
               <p>
-                Im Sommer ziehen unsere Großen Richtung Schule - und in unseren
-                drei Gruppen wird wieder Platz frei. Sowohl für die Kleinen als
-                auch für die Größeren.
+                Am 13. und 27. November öffnen wir unsere Türen: Schaut in die
+                Gruppenräume, lernt Team und Eltern kennen und stellt alle
+                Fragen, die euch beschäftigen.
               </p>
               <p>
-                Wir suchen Familien, die Lust auf kleine Gruppen haben,
-                auf Eltern, die anpacken, und einen Alltag, der nicht hetzt.
+                Kinder dürfen natürlich mit - Garten, Turnhalle und Werkstatt
+                warten schon.
               </p>
             </div>
           </div>
 
-          <aside class="freie__dates" aria-label="Kennenlernen vereinbaren">
-            <p class="freie__dates-eyebrow">Klingt gut?</p>
-            <p class="freie__dates-sub">
-              Lernt uns bei einem Termin oder Tag der offenen Tür kennen!
-            </p>
+          <aside class="offen__termine" aria-label="Termine für den Tag der offenen Tür">
+            <p class="offen__termine-eyebrow">Die Termine</p>
+            <p class="offen__termine-sub">Kommt einfach vorbei.</p>
 
-            <div class="freie__dates-ctas">
-              <Button href="/kennenlernen">Jetzt Kennenlernen vereinbaren</Button>
+            <ul class="offen__termine-list">
+              <li class="offen__termin">
+                <time datetime="2026-11-13T13:30">
+                  <span class="offen__termin-badge" aria-hidden="true">
+                    <span class="offen__termin-num">13</span>
+                    <span class="offen__termin-mon">Nov</span>
+                  </span>
+                  <span class="offen__termin-text">
+                    <span class="offen__termin-day">Freitag, 13.11.</span>
+                    <span class="offen__termin-time">13:30 – 15:30 Uhr</span>
+                  </span>
+                </time>
+              </li>
+              <li class="offen__termin">
+                <time datetime="2026-11-27T13:30">
+                  <span class="offen__termin-badge" aria-hidden="true">
+                    <span class="offen__termin-num">27</span>
+                    <span class="offen__termin-mon">Nov</span>
+                  </span>
+                  <span class="offen__termin-text">
+                    <span class="offen__termin-day">Freitag, 27.11.</span>
+                    <span class="offen__termin-time">13:30 – 15:30 Uhr</span>
+                  </span>
+                </time>
+              </li>
+            </ul>
+
+            <div class="offen__termine-ctas">
+              <Button href="/kennenlernen">Mehr zum Kennenlernen</Button>
             </div>
 
-            <p class="freie__dates-foot">
-              Für unsere <strong>U3-Gruppe (Zwerge)</strong> suchen wir Kinder,
-              die zwischen <strong>01.10.2022</strong> und <strong>31.07.2025</strong>
-              geboren sind.
+            <p class="offen__termine-foot">
+              <strong>KIDS e.V.</strong>, Limpericher&nbsp;Str.&nbsp;122b,
+              53225&nbsp;Bonn-Beuel
             </p>
           </aside>
         </div>
@@ -467,11 +491,11 @@ const hausGallery = [
     }
   }
 
-  /* "Noch U3-Plätze frei" - rotated peach Störer-Card direkt unter dem Hero */
-  .freie-section {
+  /* "Tag der offenen Tür" - rotated cream Störer-Card direkt unter dem Hero */
+  .offen-section {
     background: var(--c-bg);
   }
-  .freie {
+  .offen {
     position: relative;
     background: var(--c-bg-cream);
     border-radius: 2.5rem;
@@ -480,7 +504,7 @@ const hausGallery = [
     box-shadow: 0 12px 0 rgba(58, 52, 44, 0.08);
     overflow: hidden;
   }
-  .freie__inner {
+  .offen__inner {
     position: relative;
     transform: rotate(1deg); /* counter-rotate content so text reads straight */
     display: grid;
@@ -489,24 +513,24 @@ const hausGallery = [
     align-items: center;
   }
   @media (max-width: 800px) {
-    .freie { transform: rotate(-0.5deg); border-radius: 2rem; }
-    .freie__inner { transform: rotate(0.5deg); grid-template-columns: 1fr; gap: var(--s-6); }
+    .offen { transform: rotate(-0.5deg); border-radius: 2rem; }
+    .offen__inner { transform: rotate(0.5deg); grid-template-columns: 1fr; gap: var(--s-6); }
   }
 
-  .freie__lead h2 {
+  .offen__lead h2 {
     margin: 0 0 var(--s-4);
   }
-  .freie__hl {
+  .offen__hl {
     color: var(--c-orange);
   }
-  .freie__prose p {
+  .offen__prose p {
     margin: 0 0 var(--s-3);
     max-width: 32rem;
     color: var(--c-ink);
   }
-  .freie__prose p:last-child { margin-bottom: 0; }
+  .offen__prose p:last-child { margin-bottom: 0; }
 
-  .freie__dates {
+  .offen__termine {
     background: #fff;
     border-radius: var(--r-lg);
     padding: var(--s-6) var(--s-5);
@@ -516,31 +540,91 @@ const hausGallery = [
     flex-direction: column;
     gap: var(--s-4);
   }
-  .freie__dates-eyebrow {
+  .offen__termine-eyebrow {
     font-family: var(--font-display);
     font-size: 1.6rem;
     line-height: 1;
     color: var(--c-ink);
     margin: 0;
   }
-  .freie__dates-sub {
+  .offen__termine-sub {
     font-size: 0.95rem;
     color: var(--c-ink-soft);
     margin: calc(var(--s-3) * -1) 0 0; /* tighten gap to eyebrow */
     line-height: 1.4;
   }
-  .freie__dates-ctas {
+
+  .offen__termine-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    text-align: left;
+  }
+  .offen__termin time {
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    padding: var(--s-3) var(--s-4);
+    background: var(--c-bg);
+    border-radius: var(--r-md);
+  }
+  .offen__termin-badge {
+    flex: 0 0 auto;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--c-gelb);
+    border-radius: var(--r-md);
+    transform: rotate(-3deg);
+    line-height: 1;
+  }
+  .offen__termin-num {
+    font-family: var(--font-display-black);
+    font-size: 1.6rem;
+    color: var(--c-ink);
+  }
+  .offen__termin-mon {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-ink);
+    margin-top: 0.15rem;
+  }
+  .offen__termin-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .offen__termin-day {
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.2;
+  }
+  .offen__termin-time {
+    font-size: 0.9rem;
+    color: var(--c-ink-soft);
+    line-height: 1.2;
+  }
+
+  .offen__termine-ctas {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--s-4);
     margin-top: var(--s-2);
   }
-  .freie__dates-ctas :global(.btn) {
+  .offen__termine-ctas :global(.btn) {
     width: 100%;
     justify-content: center;
   }
-  .freie__dates-foot {
+  .offen__termine-foot {
     margin: var(--s-2) 0 0;
     padding-top: var(--s-3);
     border-top: 1px solid color-mix(in srgb, var(--c-ink) 12%, transparent);
@@ -548,7 +632,7 @@ const hausGallery = [
     color: var(--c-ink-soft);
     line-height: 1.45;
   }
-  .freie__dates-foot strong {
+  .offen__termine-foot strong {
     color: var(--c-ink);
     font-weight: 800;
   }
