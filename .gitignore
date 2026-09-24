@@ -5,6 +5,7 @@
 htdocs/wordpress
 htdocs/.htaccess
 htdocs/wp-content/debug.log
+htdocs/wp-content/blockstudio/cache
 
 # Composer / Node dependencies
 vendor/

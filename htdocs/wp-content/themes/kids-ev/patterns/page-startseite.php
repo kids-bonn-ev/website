@@ -25,23 +25,23 @@
 <!-- /wp:kids/hero -->
 
 <!-- wp:kids/section {"blockstudio":{"name":"kids/section","attributes":{"spacing":"tight"}}} -->
-<!-- wp:kids/announcement {"blockstudio":{"name":"kids/announcement","attributes":{"panel_eyebrow":"Klingt gut?","panel_text":"Lernt uns bei einem Termin oder Tag der offenen Tür kennen!","panel_button_label":"Jetzt Kennenlernen vereinbaren","panel_button_url":"/kennenlernen","panel_foot":"Für unsere \u003cstrong\u003eU3-Gruppe (Zwerge)\u003c/strong\u003e suchen wir Kinder, die zwischen \u003cstrong\u003e01.10.2022\u003c/strong\u003e und \u003cstrong\u003e31.07.2025\u003c/strong\u003e geboren sind.","deko":[{"name":"wolke","size":150,"top":"-50px","right":"-30px","rotate":-8,"opacity":0.6,"hide_mobile":true},{"name":"blume02","size":90,"bottom":"-30px","left":"-25px","rotate":18,"opacity":0.75},{"name":"kreis","size":70,"top":"18%","left":"2%","rotate":0,"opacity":0.45,"hide_mobile":true},{"name":"halbkreis","size":80,"bottom":"22%","right":"4%","rotate":-15,"opacity":0.55,"hide_mobile":true},{"name":"strich","size":120,"top":"8%","right":"20%","rotate":12,"opacity":0.4,"hide_mobile":true}]}}} -->
+<!-- wp:kids/open-day {"blockstudio":{"name":"kids/open-day","attributes":{"panel_eyebrow":"Die Termine","panel_text":"Kommt einfach vorbei.","termine":[{"date":"2026-11-13","time_from":"13:30","time_to":"15:30"},{"date":"2026-11-27","time_from":"13:30","time_to":"15:30"}],"panel_button_label":"Mehr zum Kennenlernen","panel_button_url":"/kennenlernen","panel_foot":"\u003cstrong\u003eKIDS\u0026nbsp;e.V.\u003c/strong\u003e, Limpericher\u0026nbsp;Str.\u0026nbsp;122b, 53225\u0026nbsp;Bonn-Beuel","deko":[{"name":"wolke","size":150,"top":"-50px","right":"-30px","rotate":-8,"opacity":0.6,"hide_mobile":true},{"name":"blume02","size":90,"bottom":"-30px","left":"-25px","rotate":18,"opacity":0.75},{"name":"kreis","size":70,"top":"18%","left":"2%","rotate":0,"opacity":0.45,"hide_mobile":true},{"name":"halbkreis","size":80,"bottom":"22%","right":"4%","rotate":-15,"opacity":0.55,"hide_mobile":true},{"name":"strich","size":120,"top":"8%","right":"20%","rotate":12,"opacity":0.4,"hide_mobile":true}]}}} -->
 <!-- wp:paragraph {"className":"is-style-eyebrow"} -->
-<p class="is-style-eyebrow">Anmeldung läuft</p>
+<p class="is-style-eyebrow">Tag der offenen Tür</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading"><mark style="background-color:rgba(0,0,0,0)" class="has-inline-color has-orange-color">Noch Plätze frei.</mark><br>Für den Herbst.</h2>
+<h2 class="wp-block-heading"><mark style="background-color:rgba(0,0,0,0)" class="has-inline-color has-orange-color">Tür auf.</mark><br>Zweimal im November.</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Im Sommer ziehen unsere Großen Richtung Schule - und in unseren drei Gruppen wird wieder Platz frei. Sowohl für die Kleinen als auch für die Größeren.</p>
+<p>Am 13. und 27. November öffnen wir unsere Türen: Schaut in die Gruppenräume, lernt Team und Eltern kennen und stellt alle Fragen, die euch beschäftigen.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Wir suchen Familien, die Lust auf kleine Gruppen haben, auf Eltern, die anpacken, und einen Alltag, der nicht hetzt.</p>
+<p>Kinder dürfen natürlich mit - Garten, Turnhalle und Werkstatt warten schon.</p>
 <!-- /wp:paragraph -->
-<!-- /wp:kids/announcement -->
+<!-- /wp:kids/open-day -->
 <!-- /wp:kids/section -->
 
 <!-- wp:kids/section -->
