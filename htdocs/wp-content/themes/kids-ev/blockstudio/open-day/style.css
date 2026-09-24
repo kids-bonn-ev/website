@@ -34,6 +34,21 @@
 .kids-open-day__lead h2 {
 	margin: 0 0 var(--s-4);
 }
+/*
+ * Astro hebt "Tür auf." im Störer mit .offen__hl hervor — nur orange Schrift,
+ * in der Display-Schrift der h2 und ohne Balken. Das Rich-Text-Format
+ * "Highlight …" (.hero__hl--*) ist dagegen der Hero-Stil: Black-Schnitt plus
+ * farbiger Unterstreich-Balken (bei Orange lila). Im Editor ist es der
+ * naheliegende Knopf, gehört hier aber nicht hin — deshalb hier zurückgesetzt.
+ */
+.kids-open-day__lead h2 [class*="hero__hl--"] {
+	display: inline;
+	font-family: inherit;
+}
+.kids-open-day__lead h2 [class*="hero__hl--"]::after {
+	content: none;
+}
+
 .kids-open-day__lead p {
 	margin: 0 0 var(--s-3);
 	max-width: 32rem;
