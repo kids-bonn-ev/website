@@ -1,0 +1,42 @@
+/* Bankverbindung — Port von .bank-details (spenden.astro) */
+
+.bank-details {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--s-4) var(--s-7);
+	margin: 0 0 var(--s-5);
+}
+
+.bank-details > div {
+	flex: 0 0 auto;
+}
+
+.bank-details dt {
+	font-weight: 800;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--c-ink-soft);
+	margin-bottom: var(--s-1);
+}
+
+.bank-details dd {
+	margin: 0;
+	font-size: 1.1rem;
+	white-space: nowrap;
+}
+
+.bank-details code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 1rem;
+	white-space: nowrap;
+}
+
+/* Hinweis unter der Bankverbindung (core/paragraph mit Klasse "bank-note") */
+.bank-note {
+	margin: 0;
+	padding-top: var(--s-4);
+	border-top: 1px solid var(--c-bg-sand);
+	color: var(--c-ink-soft);
+	max-width: none;
+}

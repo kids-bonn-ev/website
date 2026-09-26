@@ -1,0 +1,23 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/job-meta",
+    "title": "KIDS: Stellen-Meta",
+    "description": "Meta-Zeile mit Trennpunkten, z. B. „Eintritt: ab sofort · Laufend offen · Teilzeit“ (Port von .stelle-card__meta)",
+    "category": "formatting",
+    "keywords": ["Stelle", "Meta", "Job"],
+    "supports": {
+        "customClassName": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "items",
+                "type": "repeater",
+                "label": "Einträge",
+                "attributes": [
+                    { "id": "text", "type": "richtext", "label": "Text" }
+                ]
+            }
+        ]
+    }
+}

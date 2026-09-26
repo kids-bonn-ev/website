@@ -1,0 +1,65 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/open-day",
+    "title": "KIDS: Tag der offenen Tür",
+    "description": "Leicht rotierte Störer-Karte mit Text links und weißem Termin-Panel rechts (Port von .offen)",
+    "category": "formatting",
+    "keywords": ["Störer", "Tag der offenen Tür", "Termine"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "core/paragraph",
+        "core/heading"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "panel_eyebrow",
+                "type": "text",
+                "label": "Panel: Aufhänger (Handschrift-Zeile)",
+                "default": "Die Termine"
+            },
+            {
+                "id": "panel_text",
+                "type": "text",
+                "label": "Panel: Untertext",
+                "default": "Kommt einfach vorbei."
+            },
+            {
+                "id": "termine",
+                "type": "repeater",
+                "label": "Termine",
+                "attributes": [
+                    {
+                        "id": "date",
+                        "type": "date",
+                        "label": "Datum",
+                        "help": "Wochentag, Tag und Monat werden daraus automatisch gebildet."
+                    },
+                    { "id": "time_from", "type": "text", "label": "Von (z. B. 13:30)" },
+                    { "id": "time_to", "type": "text", "label": "Bis (z. B. 15:30)" }
+                ]
+            },
+            {
+                "id": "panel_button",
+                "type": "group",
+                "label": "Panel: Button",
+                "attributes": [
+                    { "id": "label", "type": "text", "label": "Beschriftung" },
+                    { "id": "url", "type": "text", "label": "Link (URL)" }
+                ]
+            },
+            {
+                "id": "panel_foot",
+                "type": "richtext",
+                "label": "Panel: Fußnote"
+            },
+            {
+                "type": "custom/deko-layer"
+            }
+        ]
+    }
+}

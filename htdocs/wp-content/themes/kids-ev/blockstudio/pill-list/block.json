@@ -1,0 +1,35 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/pill-list",
+    "title": "KIDS: Pill-Liste",
+    "description": "Aufzählung als Pills mit Bullet-Icon (Port von .haus-features / .ei-chips / .jobs-teaser__points)",
+    "category": "formatting",
+    "keywords": ["Pills", "Chips", "Liste"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "variant",
+                "type": "radio",
+                "label": "Variante",
+                "default": "light",
+                "options": [
+                    { "value": "light", "label": "Hell (weiß mit Schatten)" },
+                    { "value": "soft", "label": "Soft (beige)" },
+                    { "value": "dark", "label": "Dunkel (mit Blumen-Icon, untereinander)" }
+                ]
+            },
+            {
+                "id": "items",
+                "type": "repeater",
+                "label": "Einträge",
+                "attributes": [
+                    { "id": "text", "type": "text", "label": "Text" }
+                ]
+            }
+        ]
+    }
+}

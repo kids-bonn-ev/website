@@ -1,0 +1,82 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/site-footer",
+    "title": "KIDS: Site-Footer",
+    "description": "Footer mit Logo, Kontakt, drei Link-Spalten und Signatur (Port von Footer.astro)",
+    "category": "formatting",
+    "keywords": ["Footer"],
+    "supports": {
+        "customClassName": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "logo",
+                "type": "files",
+                "label": "Logo (Standard: schwarzer Schriftzug aus dem Theme)"
+            },
+            { "id": "phone", "type": "text", "label": "Telefon" },
+            { "id": "email", "type": "text", "label": "E-Mail" },
+            {
+                "id": "col1",
+                "type": "group",
+                "label": "Link-Spalte 1",
+                "attributes": [
+                    { "id": "heading", "type": "text", "label": "Überschrift" },
+                    {
+                        "id": "links",
+                        "type": "repeater",
+                        "label": "Links",
+                        "attributes": [
+                            { "id": "label", "type": "text", "label": "Beschriftung" },
+                            { "id": "url", "type": "text", "label": "Link (URL)" },
+                            { "id": "external", "type": "toggle", "label": "Extern (neuer Tab, ↗)", "default": false }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "col2",
+                "type": "group",
+                "label": "Link-Spalte 2",
+                "attributes": [
+                    { "id": "heading", "type": "text", "label": "Überschrift" },
+                    {
+                        "id": "links",
+                        "type": "repeater",
+                        "label": "Links",
+                        "attributes": [
+                            { "id": "label", "type": "text", "label": "Beschriftung" },
+                            { "id": "url", "type": "text", "label": "Link (URL)" },
+                            { "id": "external", "type": "toggle", "label": "Extern (neuer Tab, ↗)", "default": false }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "col3",
+                "type": "group",
+                "label": "Link-Spalte 3",
+                "attributes": [
+                    { "id": "heading", "type": "text", "label": "Überschrift" },
+                    {
+                        "id": "links",
+                        "type": "repeater",
+                        "label": "Links",
+                        "attributes": [
+                            { "id": "label", "type": "text", "label": "Beschriftung" },
+                            { "id": "url", "type": "text", "label": "Link (URL)" },
+                            { "id": "external", "type": "toggle", "label": "Extern (neuer Tab, ↗)", "default": false }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "signature",
+                "type": "text",
+                "label": "Signatur",
+                "default": "Gemacht mit Elternhand in Bonn."
+            }
+        ]
+    }
+}

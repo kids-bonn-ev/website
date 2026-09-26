@@ -1,0 +1,26 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/chip-card",
+    "title": "KIDS: Chip-Karte",
+    "description": "Weiße Karte mit Titel, Untertitel und Chips (Port von .ei-block — Gremien/Arbeitsgruppen)",
+    "category": "formatting",
+    "keywords": ["Chips", "Gremien", "Gruppen"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            { "id": "title", "type": "text", "label": "Titel" },
+            { "id": "subtitle", "type": "richtext", "label": "Untertitel" },
+            {
+                "id": "chips",
+                "type": "repeater",
+                "label": "Chips",
+                "attributes": [
+                    { "id": "text", "type": "text", "label": "Text" }
+                ]
+            }
+        ]
+    }
+}

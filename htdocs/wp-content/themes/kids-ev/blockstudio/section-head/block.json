@@ -1,0 +1,46 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/section-head",
+    "title": "KIDS: Sektions-Kopf",
+    "description": "Eyebrow, Überschrift und Lead — zentriert oder zweispaltig (split)",
+    "category": "formatting",
+    "keywords": ["Kopf", "Überschrift", "Eyebrow"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "core/paragraph",
+        "kids/wiki-link",
+        "kids/button"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "variant",
+                "type": "radio",
+                "label": "Layout",
+                "default": "centered",
+                "options": [
+                    { "value": "centered", "label": "Zentriert" },
+                    { "value": "split", "label": "Zweispaltig (Titel links, Lead rechts)" }
+                ]
+            },
+            {
+                "id": "eyebrow",
+                "type": "text",
+                "label": "Eyebrow"
+            },
+            {
+                "id": "heading",
+                "type": "richtext",
+                "label": "Überschrift"
+            },
+            {
+                "id": "lead",
+                "type": "richtext",
+                "label": "Lead-Text"
+            }
+        ]
+    }
+}

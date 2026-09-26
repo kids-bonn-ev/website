@@ -1,0 +1,29 @@
+{
+    "$schema": "https://blockstudio.dev/schema/field",
+    "name": "section-style",
+    "title": "Sektions-Stil",
+    "attributes": [
+        {
+            "id": "background",
+            "type": "radio",
+            "label": "Hintergrund",
+            "default": "default",
+            "options": [
+                { "value": "default", "label": "Standard (Off-White)" },
+                { "value": "cream", "label": "Cream" },
+                { "value": "sand", "label": "Sand" },
+                { "value": "sand-deep", "label": "Dunkel (Sand Deep)" }
+            ]
+        },
+        {
+            "id": "spacing",
+            "type": "radio",
+            "label": "Abstand",
+            "default": "default",
+            "options": [
+                { "value": "default", "label": "Standard" },
+                { "value": "tight", "label": "Kompakt" }
+            ]
+        }
+    ]
+}

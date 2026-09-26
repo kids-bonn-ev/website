@@ -1,0 +1,106 @@
+/* Site-Footer — Port von Footer.astro */
+
+.site-footer {
+	background: var(--c-bg-sand);
+	padding-block: var(--s-8) var(--s-5);
+}
+
+/* --- Oben: Marke links, Link-Spalten rechts --- */
+.site-footer__top {
+	display: grid;
+	grid-template-columns: minmax(14rem, 1fr) minmax(0, 2fr);
+	gap: var(--s-8);
+	align-items: start;
+	padding-bottom: var(--s-6);
+}
+
+.site-footer__brand {
+	display: flex;
+	flex-direction: column;
+	gap: var(--s-3);
+}
+.site-footer__logo {
+	height: 40px;
+	width: auto;
+	max-width: 100%;
+	object-fit: contain;
+	align-self: flex-start;
+}
+.site-footer__contact {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.7;
+}
+.site-footer__contact a {
+	color: var(--c-ink);
+	font-weight: 700;
+	text-decoration: none;
+}
+.site-footer__contact a:hover { color: var(--c-link); }
+
+/* --- Link-Spalten --- */
+.site-footer__cols {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--s-6);
+}
+.site-footer__cols nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--s-2);
+}
+.site-footer__heading {
+	margin: 0 0 var(--s-3);
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--c-ink);
+}
+.site-footer__cols a {
+	color: var(--c-ink-soft);
+	font-weight: 600;
+	text-decoration: none;
+	transition: color 140ms ease;
+}
+.site-footer__cols a:hover { color: var(--c-link); }
+
+/* --- Untere Leiste --- */
+.site-footer__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--s-4);
+	padding-top: var(--s-4);
+	border-top: 1px solid color-mix(in srgb, var(--c-sand) 25%, transparent);
+	flex-wrap: wrap;
+}
+.site-footer__meta,
+.site-footer__signature {
+	margin: 0;
+	color: var(--c-ink-soft);
+	font-size: 0.85rem;
+}
+.site-footer__signature {
+	font-style: italic;
+}
+
+/* --- Tablet/Mobil --- */
+@media (max-width: 900px) {
+	.site-footer__top {
+		grid-template-columns: 1fr;
+		gap: var(--s-7);
+	}
+}
+@media (max-width: 560px) {
+	.site-footer__cols {
+		grid-template-columns: 1fr 1fr;
+	}
+	.site-footer__bottom {
+		justify-content: flex-start;
+	}
+}

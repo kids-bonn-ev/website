@@ -1,0 +1,17 @@
+/* Wiki-Link — Port von WikiLink.astro */
+
+.wiki-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--s-2);
+	font-weight: 800;
+	color: var(--c-link);
+	text-decoration: none;
+	border-bottom: 2px dashed color-mix(in srgb, var(--c-orange) 50%, transparent);
+	padding-bottom: 2px;
+}
+
+.wiki-link:hover {
+	color: var(--c-link-hover);
+	border-bottom-color: var(--c-orange);
+}

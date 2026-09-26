@@ -1,0 +1,57 @@
+/* Tagesablauf-Kachel — Port von .day-block (index.astro) */
+
+.day-tile {
+	background: var(--tile);
+	border-radius: var(--r-lg);
+	aspect-ratio: 1 / 1.15;
+	padding: var(--s-4);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: var(--c-ink);
+}
+
+.day-tile__time {
+	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 0.78rem;
+	font-weight: 700;
+	background: rgba(255, 255, 255, 0.6);
+	padding: 0.15rem 0.55rem;
+	border-radius: var(--r-pill);
+	align-self: flex-start;
+	letter-spacing: 0.02em;
+}
+
+.day-tile h3 {
+	font-family: var(--font-display);
+	font-size: 1.4rem;
+	line-height: 1.05;
+	margin: 0;
+	color: inherit;
+}
+
+.day-tile p {
+	font-size: 0.85rem;
+	margin: var(--s-1) 0 0;
+	opacity: 0.85;
+	color: inherit;
+	max-width: none;
+}
+
+/* Orange Kachel: hellerer Text für ausreichenden Kontrast */
+.day-tile--dark {
+	color: #fff;
+}
+.day-tile--dark .day-tile__time {
+	background: rgba(255, 255, 255, 0.25);
+	color: #fff;
+}
+
+@media (max-width: 520px) {
+	.day-tile h3 {
+		font-size: 1.2rem;
+	}
+	.day-tile p {
+		font-size: 0.8rem;
+	}
+}

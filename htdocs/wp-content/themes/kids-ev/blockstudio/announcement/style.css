@@ -1,0 +1,95 @@
+/* Störer-Karte — Port von .freie (index.astro) */
+
+.kids-announcement {
+	position: relative;
+	background: var(--c-bg-cream);
+	border-radius: 2.5rem;
+	padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+	transform: rotate(-1deg);
+	box-shadow: 0 12px 0 rgba(58, 52, 44, 0.08);
+	overflow: hidden;
+}
+
+.kids-announcement__inner {
+	position: relative;
+	transform: rotate(1deg); /* Inhalt gegenrotieren, damit der Text gerade steht */
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--s-7);
+	align-items: center;
+}
+
+@media (max-width: 800px) {
+	.kids-announcement {
+		transform: rotate(-0.5deg);
+		border-radius: 2rem;
+	}
+	.kids-announcement__inner {
+		transform: rotate(0.5deg);
+		grid-template-columns: 1fr;
+		gap: var(--s-6);
+	}
+}
+
+.kids-announcement__lead h2 {
+	margin: 0 0 var(--s-4);
+}
+.kids-announcement__lead p {
+	margin: 0 0 var(--s-3);
+	max-width: 32rem;
+	color: var(--c-ink);
+}
+.kids-announcement__lead p:last-child {
+	margin-bottom: 0;
+}
+
+.kids-announcement__panel {
+	background: #fff;
+	border-radius: var(--r-lg);
+	padding: var(--s-6) var(--s-5);
+	box-shadow: var(--shadow-md);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: var(--s-4);
+}
+.kids-announcement__panel-eyebrow {
+	font-family: var(--font-display);
+	font-size: 1.6rem;
+	line-height: 1;
+	color: var(--c-ink);
+	margin: 0;
+	max-width: none;
+}
+.kids-announcement__panel-sub {
+	font-size: 0.95rem;
+	color: var(--c-ink-soft);
+	margin: calc(var(--s-3) * -1) 0 0; /* Abstand zum Aufhänger verkleinern */
+	line-height: 1.4;
+	max-width: none;
+}
+.kids-announcement__panel-ctas {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--s-4);
+	margin-top: var(--s-2);
+}
+.kids-announcement__panel-ctas .btn {
+	width: 100%;
+	justify-content: center;
+	white-space: normal;
+}
+.kids-announcement__panel-foot {
+	margin: var(--s-2) 0 0;
+	padding-top: var(--s-3);
+	border-top: 1px solid color-mix(in srgb, var(--c-ink) 12%, transparent);
+	font-size: 0.85rem;
+	color: var(--c-ink-soft);
+	line-height: 1.45;
+	max-width: none;
+}
+.kids-announcement__panel-foot strong {
+	color: var(--c-ink);
+	font-weight: 800;
+}

@@ -1,0 +1,25 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/cta-box",
+    "title": "KIDS: CTA-Box",
+    "description": "Großer oranger Kasten mit emotionalem Abschluss-CTA (Port von .kommvorbei)",
+    "category": "formatting",
+    "keywords": ["CTA", "Kasten", "Komm vorbei"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "core/paragraph",
+        "core/heading",
+        "kids/button-row"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "type": "custom/deko-layer"
+            }
+        ]
+    }
+}

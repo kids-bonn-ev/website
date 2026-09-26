@@ -1,0 +1,19 @@
+/* Tagesablauf-Grid — Port von .day-grid (index.astro) */
+
+.day-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: var(--s-3);
+}
+
+@media (max-width: 900px) {
+	.day-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 520px) {
+	.day-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

@@ -1,0 +1,48 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/announcement",
+    "title": "KIDS: Störer (Ankündigung)",
+    "description": "Leicht rotierte Ankündigungs-Karte mit Text links und weißem Panel rechts (Port von .freie)",
+    "category": "formatting",
+    "keywords": ["Störer", "Ankündigung", "Plätze"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "core/paragraph",
+        "core/heading"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "panel_eyebrow",
+                "type": "text",
+                "label": "Panel: Aufhänger (Handschrift-Zeile)"
+            },
+            {
+                "id": "panel_text",
+                "type": "text",
+                "label": "Panel: Untertext"
+            },
+            {
+                "id": "panel_button",
+                "type": "group",
+                "label": "Panel: Button",
+                "attributes": [
+                    { "id": "label", "type": "text", "label": "Beschriftung" },
+                    { "id": "url", "type": "text", "label": "Link (URL)" }
+                ]
+            },
+            {
+                "id": "panel_foot",
+                "type": "richtext",
+                "label": "Panel: Fußnote"
+            },
+            {
+                "type": "custom/deko-layer"
+            }
+        ]
+    }
+}

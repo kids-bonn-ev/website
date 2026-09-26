@@ -1,0 +1,23 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/feature-grid",
+    "title": "KIDS: Feature-Grid",
+    "description": "Sticky Kopf links, 2×2-Karten-Grid rechts (Port von .besonders)",
+    "category": "formatting",
+    "keywords": ["Features", "Besonders", "Grid"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "kids/feature-card"
+    ],
+    "blockstudio": {
+        "attributes": [
+            { "id": "eyebrow", "type": "text", "label": "Eyebrow" },
+            { "id": "heading", "type": "richtext", "label": "Überschrift" },
+            { "id": "lead", "type": "richtext", "label": "Lead-Text" }
+        ]
+    }
+}

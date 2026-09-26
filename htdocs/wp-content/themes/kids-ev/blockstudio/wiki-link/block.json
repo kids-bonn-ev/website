@@ -1,0 +1,26 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/wiki-link",
+    "title": "KIDS: Wiki-Link",
+    "description": "Externer Link ins Familien-Wiki mit gestrichelter Unterstreichung (Port von WikiLink.astro)",
+    "category": "formatting",
+    "keywords": ["Wiki", "Link", "Doku"],
+    "supports": {
+        "customClassName": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "label",
+                "type": "text",
+                "label": "Beschriftung"
+            },
+            {
+                "id": "href",
+                "type": "text",
+                "label": "Link (URL)",
+                "default": "https://docs.kids-bonn.de/docs/f5f02dd9-0071-4b55-8301-8d6ee5411431/"
+            }
+        ]
+    }
+}

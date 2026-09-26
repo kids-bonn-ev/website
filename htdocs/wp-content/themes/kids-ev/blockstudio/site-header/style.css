@@ -1,0 +1,133 @@
+/* Site-Header — Port von Header.astro */
+
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: var(--c-bg);
+	border-bottom: 1px solid var(--c-bg-sand);
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	gap: var(--s-4);
+	padding-block: var(--s-3);
+}
+
+.brand {
+	margin-right: auto; /* schiebt alles andere nach rechts */
+}
+.brand img {
+	height: 30px;
+	width: auto;
+}
+
+/* --- Nav --- */
+.site-nav__list {
+	display: flex;
+	align-items: center;
+	gap: var(--s-2);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-nav a {
+	font-weight: 700;
+	color: var(--c-ink);
+	text-decoration: none;
+	padding: var(--s-2) var(--s-3);
+	border-radius: var(--r-pill);
+	transition: background 140ms ease, color 140ms ease;
+}
+
+.site-nav a:hover {
+	background: var(--c-accent-soft);
+	color: var(--c-link);
+}
+
+/* Dünne Trennlinie zwischen Eltern-Lernpfad und Jobs/Spenden */
+.site-nav__sep {
+	width: 1px;
+	align-self: stretch;
+	background: var(--c-bg-sand);
+	margin-inline: var(--s-2);
+}
+
+/* Farbpunkt als Zielgruppen-Hinweis (Jobs/Spenden) */
+.site-nav__dot::before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	margin-right: 0.5rem;
+	vertical-align: middle;
+	transform: translateY(-1px);
+}
+.site-nav__dot--gruen::before { background: var(--c-gruen); }
+.site-nav__dot--gelb::before { background: var(--c-gelb); }
+
+/* --- Burger (nur mobil) --- */
+.nav-toggle { display: none; }
+.nav-toggle-label {
+	display: none;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 5px;
+	padding: var(--s-2);
+}
+.nav-toggle-label span {
+	display: block;
+	width: 26px;
+	height: 3px;
+	border-radius: 2px;
+	background: var(--c-ink);
+	transition: transform 200ms ease;
+}
+
+/* --- Mobil --- */
+@media (max-width: 900px) {
+	.site-header__inner {
+		gap: var(--s-3);
+	}
+
+	.site-nav {
+		order: 99; /* Anker-Nav in ein absolutes Panel unterhalb schieben */
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: var(--c-bg);
+		border-bottom: 1px solid var(--c-bg-sand);
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 250ms ease;
+	}
+	.site-nav__list {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		padding: var(--s-3) var(--s-5) var(--s-5);
+	}
+	.site-nav a {
+		display: block;
+		padding-block: var(--s-3);
+	}
+	.site-nav__sep { display: none; }
+
+	.nav-toggle-label { display: flex; }
+	.nav-toggle:checked ~ .site-nav {
+		max-height: 500px;
+	}
+	.nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+		transform: rotate(45deg) translate(6px, 6px);
+	}
+	.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+		opacity: 0;
+	}
+	.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+		transform: rotate(-45deg) translate(6px, -6px);
+	}
+}

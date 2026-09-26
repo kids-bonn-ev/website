@@ -1,0 +1,23 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/section",
+    "title": "KIDS: Sektion",
+    "description": "Seitensektion mit Hintergrund-Variante, Anker und Deko-Ebene",
+    "category": "formatting",
+    "keywords": ["Sektion", "Abschnitt", "Section"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "type": "custom/section-style"
+            },
+            {
+                "type": "custom/deko-layer"
+            }
+        ]
+    }
+}

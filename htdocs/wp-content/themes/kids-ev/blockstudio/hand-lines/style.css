@@ -1,0 +1,47 @@
+/* Handschrift-Zeilen — Port von .ei-call (index.astro) */
+
+.hand-lines {
+	margin: var(--s-8) auto 0;
+	max-width: 48rem;
+	display: flex;
+	flex-direction: column;
+	gap: var(--s-3);
+}
+
+.hand-lines__line {
+	margin: 0;
+	max-width: none;
+}
+
+.hand-lines__line .hand {
+	font-size: clamp(1.6rem, 3vw, 2.2rem);
+	line-height: 1.15;
+}
+
+.hand-lines__line--q {
+	text-align: left;
+}
+.hand-lines__line--q .hand {
+	color: var(--c-orange);
+}
+
+.hand-lines__line--a {
+	text-align: right;
+	margin-top: var(--s-3);
+}
+.hand-lines__line--a .hand {
+	color: var(--c-ink);
+}
+
+@media (max-width: 600px) {
+	.hand-lines {
+		gap: var(--s-2);
+	}
+	.hand-lines__line--q,
+	.hand-lines__line--a {
+		text-align: left;
+	}
+	.hand-lines__line--a {
+		padding-left: var(--s-6);
+	}
+}

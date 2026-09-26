@@ -1,0 +1,22 @@
+/* Button-Reihe — Port von .hero__ctas / .kommvorbei__ctas */
+
+.button-row__inner {
+	display: flex;
+	gap: var(--s-4);
+	flex-wrap: wrap;
+}
+
+.button-row--center .button-row__inner {
+	justify-content: center;
+}
+
+@media (max-width: 520px) {
+	.button-row__inner {
+		flex-direction: column;
+		align-items: stretch;
+		gap: var(--s-3);
+	}
+	.button-row__inner .btn {
+		justify-content: center;
+	}
+}

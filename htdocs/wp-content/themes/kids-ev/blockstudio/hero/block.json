@@ -1,0 +1,46 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/hero",
+    "title": "KIDS: Hero",
+    "description": "Hero-Sektion für Start- und Unterseiten mit Deko-Ebene (Port von .hero / .kontakt-hero etc.)",
+    "category": "formatting",
+    "keywords": ["Hero", "Kopfbereich"],
+    "supports": {
+        "anchor": true,
+        "customClassName": true,
+        "reusable": true
+    },
+    "allowedBlocks": [
+        "core/heading",
+        "core/paragraph",
+        "kids/button-row",
+        "kids/wiki-link"
+    ],
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "variant",
+                "type": "radio",
+                "label": "Variante",
+                "default": "page",
+                "options": [
+                    { "value": "home", "label": "Startseite (hoch)" },
+                    { "value": "page", "label": "Unterseite" }
+                ]
+            },
+            {
+                "id": "align_hero",
+                "type": "radio",
+                "label": "Ausrichtung",
+                "default": "center",
+                "options": [
+                    { "value": "center", "label": "Zentriert" },
+                    { "value": "left", "label": "Linksbündig" }
+                ]
+            },
+            {
+                "type": "custom/deko-layer"
+            }
+        ]
+    }
+}

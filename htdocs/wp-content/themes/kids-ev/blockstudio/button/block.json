@@ -1,0 +1,56 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/button",
+    "title": "KIDS: Button",
+    "description": "Button mit Hard-Shadow in fünf Varianten (Port von Button.astro)",
+    "category": "formatting",
+    "keywords": ["Button", "CTA", "Link"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "label",
+                "type": "text",
+                "label": "Beschriftung"
+            },
+            {
+                "id": "href",
+                "type": "text",
+                "label": "Link (URL)"
+            },
+            {
+                "id": "variant",
+                "type": "select",
+                "label": "Variante",
+                "default": "primary",
+                "options": [
+                    { "value": "primary", "label": "Primär (Orange)" },
+                    { "value": "outline", "label": "Outline" },
+                    { "value": "ghost", "label": "Ghost (nur Text)" },
+                    { "value": "primary-inverse", "label": "Primär invers (Weiß auf Farbe)" },
+                    { "value": "outline-inverse", "label": "Outline invers (für dunkle Flächen)" }
+                ]
+            },
+            {
+                "id": "size",
+                "type": "radio",
+                "label": "Größe",
+                "default": "md",
+                "options": [
+                    { "value": "sm", "label": "Klein" },
+                    { "value": "md", "label": "Normal" },
+                    { "value": "lg", "label": "Groß" }
+                ]
+            },
+            {
+                "id": "external",
+                "type": "toggle",
+                "label": "Externer Link (neuer Tab, ↗)",
+                "default": false
+            }
+        ]
+    }
+}

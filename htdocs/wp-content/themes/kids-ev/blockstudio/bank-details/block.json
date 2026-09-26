@@ -1,0 +1,26 @@
+{
+    "$schema": "https://blockstudio.dev/schema/block",
+    "name": "kids/bank-details",
+    "title": "KIDS: Bankverbindung",
+    "description": "Definitionsliste für Empfänger/IBAN/BIC (Port von .bank-details)",
+    "category": "formatting",
+    "keywords": ["Bank", "IBAN", "Spenden"],
+    "supports": {
+        "customClassName": true,
+        "reusable": true
+    },
+    "blockstudio": {
+        "attributes": [
+            {
+                "id": "rows",
+                "type": "repeater",
+                "label": "Zeilen",
+                "attributes": [
+                    { "id": "label", "type": "text", "label": "Bezeichnung (z. B. IBAN)" },
+                    { "id": "value", "type": "text", "label": "Wert" },
+                    { "id": "mono", "type": "toggle", "label": "Monospace (für IBAN/BIC)", "default": false }
+                ]
+            }
+        ]
+    }
+}
