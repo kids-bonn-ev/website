@@ -14,7 +14,12 @@
         "core/heading",
         "core/paragraph",
         "kids/button-row",
-        "kids/wiki-link"
+        "kids/wiki-link",
+        "core/post-title",
+        "core/post-date",
+        "core/post-terms",
+        "core/query-title",
+        "core/term-description"
     ],
     "blockstudio": {
         "attributes": [

@@ -1,0 +1,31 @@
+<!-- wp:template-part {"slug":"header","tagName":"div"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
+<main class="wp-block-group">
+<!-- wp:kids/hero {"blockstudio":{"name":"kids/hero","attributes":{"variant":"page","align_hero":"center"}}} -->
+<!-- wp:post-date {"className":"eyebrow"} /-->
+
+<!-- wp:post-title {"level":1} /-->
+
+<!-- wp:post-terms {"term":"category","className":"post-hero__terms"} /-->
+<!-- /wp:kids/hero -->
+
+<!-- wp:group {"className":"prose-page post-single","layout":{"type":"constrained","contentSize":"40rem"}} -->
+<div class="wp-block-group prose-page post-single">
+	<!-- wp:post-featured-image {"className":"post-single__image"} /-->
+
+	<!-- wp:post-content {"layout":{"type":"constrained","contentSize":"40rem"}} /-->
+
+	<!-- wp:group {"tagName":"nav","className":"post-nav","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+	<nav class="wp-block-group post-nav">
+		<!-- wp:post-navigation-link {"type":"previous","label":"Vorheriger Beitrag","arrow":"arrow"} /-->
+
+		<!-- wp:post-navigation-link {"label":"Nächster Beitrag","arrow":"arrow"} /-->
+	</nav>
+	<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"div"} /-->
